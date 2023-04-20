@@ -51,7 +51,6 @@ function App() {
     </section>
 
     <section class="main2">
-
             <div class="section1">
                 <div class="careerinsite">
                     <div class="careerinsite_text">
