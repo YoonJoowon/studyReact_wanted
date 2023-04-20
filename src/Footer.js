@@ -4,7 +4,7 @@ import './App.css';
 function Footer(){
 
     return(
-        <div>
+        <div className='footer'>
             <div class="footer_line"><hr class="banner_line_line"></hr></div>    
                 <div class="footClass">
                     <div class="footbottom">

@@ -1,123 +1,89 @@
 @import "reset.css";
 
 *{
-    color: inherit;
+  color: inherit;
 }
 
 div{
-    display: block;
+  display: block;
 }
 
-/* 시작 */
 html, body {
-    margin: 0;
-    padding: 0;
-    height: 100%;
-    width: 100%;
+  margin: 0;
+  padding: 0;
+  width: 100%;
 
-    -webkit-font-smoothing: antialiased;
-    -webkit-text-size-adjust: 100%;
-
-        
-    overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+  -webkit-text-size-adjust: 100%;
+  
+  overflow-x: hidden;
 }
 
 #wrapper{
-    height : auto;
-    min-height: 100%;
-    padding-bottom: 245px;
+  height : auto;
+  min-height: 100%;
 }
 
 button, div, h1, h2, h3, h4, h5, h6, input, p, select, span, textarea {
-    font-family: inherit;
-    font-size: inherit;
-    line-height: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  line-height: inherit;
 }
 
 button{
-    border: 0;
-    background-color: transparent;
+  border: 0;
+  background-color: transparent;
 }
 
-/* header */
-
-/* .fixed {
-    position: fixed;
-} */
+/* nav */
 
 nav{
-    width: 100%;
-    height: 50px;
-    display: flex;
-    background-color: #FFFFFF;
-    top: 0;
-    box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
-    z-index: 800;
-    margin: auto;
-    position: fixed;
-    justify-content: center;
-    align-items: center;
+  width: 100%;
+  height: 50px;
+  display: flex;
+  background-color: #FFFFFF;
+  top: 0;
+  box-shadow: 0 1px 0 0 rgba(0,0,0,.1);
+  z-index: 5;
+  margin: auto;
+  position: fixed;
+  justify-content: center;
+  align-items: center;
 
 }
 
-.navCen{
-    width: 1060px;
-    margin: auto;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+.nav_cen{
+  width: 1060px;
+  display: flex;
+  align-items: center;
 }
 
-nav .bar{
-    width: 17px;
-    height: 14px;
-    display: flex;
-    padding: 15px;
-    margin-right: 70px;
-    justify-content: center;
-    align-items: center;
+.nav_cen_logo{
+  width: 100px;
+  height: 14px;
+  display: flex;
+  margin-right: 70px;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
 }
 
-.navCen p{
-    padding-left: 5px;
+.nav_cen_img{
+  background-image: url("https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=17&q=75");
+  width: 17px;
+  height: 14px;
+  margin: 5px;
+  object-fit: contain;
 }
 
-.bar2{
-    /* flex-grow: ; */
-    height: 50px;
-    text-align: center;
-    width: 621px;
-    margin: auto;
+nav li {
+  position: relative;
+  font-size: 14px;
+  line-height: 20px;
+  font-weight: 500;
+  padding: 15px;
+  display: inline-block;
 }
-
-nav ul li{
-    float: left;
-}
-
-nav li a{
-    position: relative;
-    vertical-align: middle;
-    font-size: 14px;
-    line-height: 20px;
-    font-weight: 600;
-    padding: 15px;
-    display: inline-block;
-}
-
-nav li svg{
-    position: absolute;
-    top: 10px;
-    right: -7px;
-    pointer-events: none;
-
-}
-
-a {
-    font-family: inherit;
-    text-decoration: inherit;
-    cursor: pointer;
-}
-
 
 .aside {
     width: 271px;
@@ -136,7 +102,7 @@ a {
     height: 15px;
     padding: 10px;
     padding-bottom: 10px;
-    margin-left: 20px;
+    margin-left: 20px; 
 }
 
 #login{
@@ -153,17 +119,7 @@ a {
 }
 
 .asidelogin{
-    width: 100px;
-    font-size: 13px;
-    color: #666;
-    line-height: 30px;
-    height: 30px;
-    border: 1px solid #e1e2e3;
-    border-radius: 15px;
-    padding: 0 10px;
-    margin-left: 15px;
-    font-weight: 400;
-    cursor: pointer;
+
 }
 
 /* modal */
@@ -284,6 +240,30 @@ a {
 
 .modal_email input:focus {
     border: 1px solid blue;
+}
+
+
+.input[type="text"]:invalid{
+    width: 332px;
+    height: 48px;
+    padding: 0px 12px;
+    outline: none;
+    background-color: transparent;
+    border-radius: 5px;
+    font-size: 16px;
+    font-weight: 400;
+    margin-bottom: 8px;
+    border: 1px solid red !important;
+}
+
+.input[type="text"]:invalid{
+    color: red;
+    font-weight: 500;
+    text-align: left;
+    font-size: 12px;
+    margin-bottom: 10px;
+    margin-top: 0px;
+    
 }
 
 .modal_email button{
@@ -661,9 +641,11 @@ a {
 }
 
 
+
 /* main1 */
 .main1{
-    padding-top: 50px ;
+    display: flex;
+    margin-top: 50px;
 }
 
 .main1 .slide{
@@ -680,6 +662,7 @@ a {
 }
 
 /* carousel */
+
 .slides{
     width: 100%;
     height: 300px;
@@ -689,105 +672,7 @@ a {
     display: flex;
     transform: translate3d(0, 0, 0);
     transition: transform 0.5s;
-}
-
-.slides img{
-    width: 1060px;
-    margin-right: 24px;
-    border-radius: 20px;
-}
-
-
-
-/* subslide */
-
-.main1 .subSlide{
-    position: absolute;
-    width: 330px;
-    height: 146px;
-    border-radius: 4px;
-    background-color: #ffffff;
-    float: left;
-    top: 130px;
-    left: 20px;
-    /* opacity: 0;
-    text-align: left;
-    left: 34px; */
-}
-
-
-.main1 .subSlide h2{
-    margin-left: 20px;
-    margin-right: 20px;
-    margin-top: 20px;
-    font-size: 20px;
-    line-height: 1.5;
-}
-
-.main1 .subSlide h3{
-    margin: 0 20px;
-    height: 44px;
-    font-size: 14px;
-    line-height: 1.64;
-    color: #333;
-}
-
-.main1 .subSlide01{
-    height: 1px;
-    margin: 0;
-    border: none;
-    flex-shrink: 0;
-    background-color: #e1e2e4;
-}
-
-
-.main1 .subSlide02{
-    font-size: 14px;
-    font-weight: 700;
-    line-height: 1;
-    color: #36f;
-    margin-bottom: 50px;
-}
-
-.main1 .subSlide03{
-    width: 100%;
-    height: 40px;
-    font-size: inherit;
-    font-weight: inherit;
-    align-items: center;
-    justify-content: inherit;
-    color: inherit;
-    display: flex;
-    margin-top: 6px;
-    margin-left: 20px;
-    cursor: pointer;
-}
-
-.main1 .subSlide04{
-    margin-top: -2px;
-    margin-right: -1px;
-    margin-left: 2px;
-    display: flex;
-}
-
-.main1 .subSlide05{
-    display: flex;
-    align-items: inherit;
-    justify-content: inherit;
-
-}
-
-.main1 .subSlide06{
-    user-select: none;
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    fill: currentColor;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    font-size: inherit;
-}
-
+}  
 
     .main1 .prev{
         left: calc((100% - 1210px)/2);
@@ -797,6 +682,7 @@ a {
         -ms-flex-pack: center;
         justify-content: center;
         position: absolute;
+
         top: 200px;
         width: 30px;
         height: 60px;
@@ -881,6 +767,9 @@ a {
 .main2{
     background-image: url("https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted-dev.static.wanted.co.kr%2Fbanner%2FJobsfeed_ai_banner.png&w=1440&q=75");
     height: 355.28px;
+    
+    width: 100%;
+
 
 }
 
@@ -1486,7 +1375,7 @@ a {
     height: 537px;
     margin: auto;
     margin-top: 150px;
-    padding: 70px 0px;
+    padding-top: 70px
 
 }
 
