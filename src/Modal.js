@@ -1,45 +1,33 @@
 import React, { useState } from 'react';
 import './App.css';
+import Modal2 from './Modal2';
 
-function Modal(){
+function Modal(props) {
 
-    const [articles, setArticles] = useState([
-        {
-            id: 1,
-            title: '전략기획 ',   
-            name: '아이엔지스토리',
-        },
-        {
-            id: 2,
-            title: '해외 파트너십 마케팅',   
-            name: '스와치온(SwatchOn)',
-        },
-        {
-            id: 3,
-            title: '#Sales Account Executive [AE팀]',   
-            name: '원티드랩',
-        },
-        {
-            id: 4,
-            title: '콘텐츠 마케터',   
-            name: '코스트',
-        },
+    const [modal2Open, setModal2Open] = useState(false);
+
+    // 모달창2 노출
+    const showModal2 = () => {
+        setModal2Open(true);
         
-      ]);
+    };
 
+    // 모달창 끄기
+    const closeModal = () => {
+        props.setModalOpen(false);
+    };
 
-    return(
-        <div>
-        {/* <!-- modal --> */}
+    return (
         <div id="modal">
             <div id="login_modal" className="modal_all">
                 <div className="modal-content">
-                    <button id="modal_top_close" className="modal_top_close" type="button">
+                    <button onClick={closeModal} id="modal_top_close" className="modal_top_close" type="button">
                         <svg viewBox="0 0 24 24" className="css-ckhhlt"><path d="M17.97 19.03a.749.749 0 1 0 1.06-1.06l-6.5-6.5a.749.749 0 0 0-1.06 0l-6.5 6.5a.749.749 0 1 0 1.06 1.06L12 13.06l5.97 5.97zM12 10.94 6.03 4.97a.749.749 0 1 0-1.06 1.06l6.5 6.5a.749.749 0 0 0 1.06 0l6.5-6.5a.749.749 0 1 0-1.06-1.06L12 10.94z"></path></svg>
                     </button>
-                    
+
                     <article className="modal_top">
-                        <div className="modal_top_wanted"><svg viewBox="0 0 93 28" className="css-1kn8y82"><path d="M4.77051 23H8.68066L11.626 13.7578L14.5967 23H18.5068L22.874 9.28906H18.9639L16.4248 18.0996L13.4541 9.28906H9.79785L6.82715 18.0996L4.28809 9.28906H0.37793L4.77051 23ZM22.8486 16.1191C22.8486 19.6865 25.1084 23.3301 29.5264 23.3301C31.0371 23.3428 32.332 22.9111 33.3857 22.1621V23H36.9658V9.28906H33.3857V10.127C32.332 9.37793 31.0371 8.94629 29.5264 8.95898C25.1084 8.95898 22.8486 12.5518 22.8486 16.1191ZM26.3271 16.1191C26.3145 13.6689 27.9902 12.2725 29.9326 12.2598C31.8496 12.2725 33.3604 13.6309 33.3604 16.0938C33.3604 18.5693 31.8496 20.0166 29.9326 20.0039C27.9268 20.0166 26.3145 18.5693 26.3271 16.1191ZM39.1494 23H42.8564V15.1035C42.8564 13.5166 43.7832 12.2725 45.4209 12.2598C47.1855 12.2725 47.9346 13.4658 47.9346 15.002V23H51.6416V14.3418C51.6416 11.3457 50.0928 8.9209 46.6904 8.9082C45.2432 8.9209 43.6309 9.54297 42.7803 10.8887V9.28906H39.1494V23ZM52.708 12.5645H55.1963V18.9375C55.1963 21.6035 56.8594 23.3301 59.5381 23.3301C60.6172 23.3301 61.29 23.1396 61.6201 23V19.7754C61.4297 19.8516 60.9219 19.9023 60.4775 19.9023C59.4238 19.9023 58.8779 19.5088 58.8779 18.3027V12.5645H61.6201V9.28906H58.8779V4.69336L55.2471 6.2168V9.28906H52.708V12.5645ZM62.8389 16.1445C62.8389 20.0928 65.3652 23.3428 69.5166 23.3301C72.5381 23.3428 74.7217 21.6035 75.6865 19.0898L72.3857 18.4043C71.8398 19.585 70.8369 20.3594 69.5166 20.3594C67.752 20.3594 66.5586 18.9756 66.2666 17.1094H76.1436C76.1816 16.792 76.1943 16.4746 76.1943 16.1445C76.1943 11.9551 73.4395 8.95898 69.5166 8.95898C65.4414 8.95898 62.8389 12.1836 62.8389 16.1445ZM66.4443 14.5449C66.9014 13.1992 67.9932 12.2598 69.5166 12.2598C71.04 12.2598 72.1445 13.1992 72.6143 14.5449H66.4443ZM77.4131 16.1191C77.4131 20.1055 79.9395 23.3428 84.0908 23.3301C85.6016 23.3428 86.8965 22.8984 87.9502 22.1621V23L91.5049 23.0254V3.27148L87.874 4.69336V10.0762C86.7568 9.32715 85.4365 8.95898 84.0908 8.95898C80.0029 8.95898 77.4131 12.1201 77.4131 16.1191ZM80.8662 16.1191C80.8662 13.6562 82.542 12.2725 84.4717 12.2598C86.4141 12.2725 87.9121 13.6309 87.9248 16.0684C87.9121 18.5693 86.4141 20.0166 84.4717 20.0039C82.4912 20.0166 80.8662 18.5693 80.8662 16.1191Z" fill="var(--theme-palette-colors-black-100)"></path></svg></div>
+                        <div className="modal_top_wanted">
+                            <svg viewBox="0 0 93 28" className="css-1kn8y82"><path d="M4.77051 23H8.68066L11.626 13.7578L14.5967 23H18.5068L22.874 9.28906H18.9639L16.4248 18.0996L13.4541 9.28906H9.79785L6.82715 18.0996L4.28809 9.28906H0.37793L4.77051 23ZM22.8486 16.1191C22.8486 19.6865 25.1084 23.3301 29.5264 23.3301C31.0371 23.3428 32.332 22.9111 33.3857 22.1621V23H36.9658V9.28906H33.3857V10.127C32.332 9.37793 31.0371 8.94629 29.5264 8.95898C25.1084 8.95898 22.8486 12.5518 22.8486 16.1191ZM26.3271 16.1191C26.3145 13.6689 27.9902 12.2725 29.9326 12.2598C31.8496 12.2725 33.3604 13.6309 33.3604 16.0938C33.3604 18.5693 31.8496 20.0166 29.9326 20.0039C27.9268 20.0166 26.3145 18.5693 26.3271 16.1191ZM39.1494 23H42.8564V15.1035C42.8564 13.5166 43.7832 12.2725 45.4209 12.2598C47.1855 12.2725 47.9346 13.4658 47.9346 15.002V23H51.6416V14.3418C51.6416 11.3457 50.0928 8.9209 46.6904 8.9082C45.2432 8.9209 43.6309 9.54297 42.7803 10.8887V9.28906H39.1494V23ZM52.708 12.5645H55.1963V18.9375C55.1963 21.6035 56.8594 23.3301 59.5381 23.3301C60.6172 23.3301 61.29 23.1396 61.6201 23V19.7754C61.4297 19.8516 60.9219 19.9023 60.4775 19.9023C59.4238 19.9023 58.8779 19.5088 58.8779 18.3027V12.5645H61.6201V9.28906H58.8779V4.69336L55.2471 6.2168V9.28906H52.708V12.5645ZM62.8389 16.1445C62.8389 20.0928 65.3652 23.3428 69.5166 23.3301C72.5381 23.3428 74.7217 21.6035 75.6865 19.0898L72.3857 18.4043C71.8398 19.585 70.8369 20.3594 69.5166 20.3594C67.752 20.3594 66.5586 18.9756 66.2666 17.1094H76.1436C76.1816 16.792 76.1943 16.4746 76.1943 16.1445C76.1943 11.9551 73.4395 8.95898 69.5166 8.95898C65.4414 8.95898 62.8389 12.1836 62.8389 16.1445ZM66.4443 14.5449C66.9014 13.1992 67.9932 12.2598 69.5166 12.2598C71.04 12.2598 72.1445 13.1992 72.6143 14.5449H66.4443ZM77.4131 16.1191C77.4131 20.1055 79.9395 23.3428 84.0908 23.3301C85.6016 23.3428 86.8965 22.8984 87.9502 22.1621V23L91.5049 23.0254V3.27148L87.874 4.69336V10.0762C86.7568 9.32715 85.4365 8.95898 84.0908 8.95898C80.0029 8.95898 77.4131 12.1201 77.4131 16.1191ZM80.8662 16.1191C80.8662 13.6562 82.542 12.2725 84.4717 12.2598C86.4141 12.2725 87.9121 13.6309 87.9248 16.0684C87.9121 18.5693 86.4141 20.0166 84.4717 20.0039C82.4912 20.0166 80.8662 18.5693 80.8662 16.1191Z" fill="var(--theme-palette-colors-black-100)"></path></svg></div>
                         <div className="modal_top_txt1">
                             <p>하나의 계정으로</p>
                             <p>더욱 편리하게</p>
@@ -52,13 +40,13 @@ function Modal(){
                     <article className="modal_email">
                         <div className="modal_email_txt">이메일</div>
 
-                        <form>
-                            <input type="email" id="email" placeholder="이메일을 입력하세요." onkeyUp="checkEmailValidity()"/>
+                        <div>
+                            <input type="email" id="email" placeholder="이메일을 입력하세요." onkeyUp="checkEmailValidity()" />
                             <p data-testid="Typography" color="" id="email_message"></p>
-                                {/* <!-- modal2 open --> */}
-                            <button id="modal2_open" className="modal2_open" type="button">이메일로 계속하기</button>
-                        
-                        </form>
+                            {/* <!-- modal2 open --> */}
+                            <button onClick={showModal2} id="modal2_open" className="modal2_open" type="button">이메일로 계속하기</button>
+
+                        </div>
 
                         <div className="modal_email_txt2"><p>또는</p></div>
                     </article>
@@ -84,12 +72,10 @@ function Modal(){
 
                     <div className="modal_sns_forgot">
                         계정을잊으셨나요?
-                        <div className="modal_sns_forgot_arrow">
-                            <span className=""><svg viewBox="0 0 12 12" color="var(--theme-palette-colors-gray-600)" className="css-2zw3f5"><path d="M3.34467 9.71967C3.05178 10.0126 3.05178 10.4874 3.34467 10.7803C3.63756 11.0732 4.11244 11.0732 4.40533 10.7803L8.65533 6.53033C8.94822 6.23744 8.94822 5.76256 8.65533 5.46967L4.40533 1.21967C4.11244 0.926777 3.63756 0.926777 3.34467 1.21967C3.05178 1.51256 3.05178 1.98744 3.34467 2.28033L7.06434 6L3.34467 9.71967Z" fill="var(--theme-palette-colors-gray-600)"></path></svg></span>
-                        </div>
+                        <span className="modal_sns_forgot_arrow"><svg viewBox="0 0 12 12" color="var(--theme-palette-colors-gray-600)" className="css-2zw3f5"><path d="M3.34467 9.71967C3.05178 10.0126 3.05178 10.4874 3.34467 10.7803C3.63756 11.0732 4.11244 11.0732 4.40533 10.7803L8.65533 6.53033C8.94822 6.23744 8.94822 5.76256 8.65533 5.46967L4.40533 1.21967C4.11244 0.926777 3.63756 0.926777 3.34467 1.21967C3.05178 1.51256 3.05178 1.98744 3.34467 2.28033L7.06434 6L3.34467 9.71967Z" fill="var(--theme-palette-colors-gray-600)"></path></svg></span>
                     </div>
-                    
-                    <hr className="modal_sns_line"/>
+
+                    <hr className="modal_sns_line" />
 
                     <article className="modal_bot">
                         <div className="modal_bot_txt1">
@@ -97,63 +83,15 @@ function Modal(){
                         </div>
 
                         <div><p className="modal_bot_txt2" data-testid="Typography" color="var(--theme-palette-colors-gray-600)">© Wantedlab, Inc.</p></div>
-                        
+
                     </article>
                 </div>
                 <div className="modal_back"></div>
             </div>
-        </div>      
-        
-        {/* <!-- moda2 --> */}
-        <div>
-            <div id="modal2">
-                <div id="login_modal2" className="modal_all2">
-                    <div className="modal-content2">
-                        {/* <!-- close --> */}
-                        <button id="modal_top_close2" className="modal_top_close2" type="button">
-                            <svg viewBox="0 0 24 24" className=""><path d="M17.97 19.03a.749.749 0 1 0 1.06-1.06l-6.5-6.5a.749.749 0 0 0-1.06 0l-6.5 6.5a.749.749 0 1 0 1.06 1.06L12 13.06l5.97 5.97zM12 10.94 6.03 4.97a.749.749 0 1 0-1.06 1.06l6.5 6.5a.749.749 0 0 0 1.06 0l6.5-6.5a.749.749 0 1 0-1.06-1.06L12 10.94z"></path></svg>
-                        </button>
-                        
-                        <div className="modal2_top_txt">회원가입</div>
-
-
-                        <article className="modal2_name">
-                            <div className="modal2_name_txt">이름</div>
-                            <input type="text" placeholder="이름을 입력해주세요"/>
-                        </article>
-
-                        <article className="modal2_number">
-
-                            <div className="modal2_number_txt">휴대폰 번호</div>
-                            <div className="">
-                                <select className="modal2_number_select" name="" id="">
-                                    <option value="">대한민국 +82</option>
-                                </select>
-                            </div>
-                            <input className="modal2_number_input" type="text" placeholder="(예시) 01012345678"/>
-
-                            <button className="modal2_number_pass">인증번호 받기</button>
-                            <input className="modal2_number_input2" type="text" placeholder="인증번호를 입력해 주세요."/>
-                        </article>
-
-                        <article className="modal2_password">
-                            <div className="modal2_password_txt">비밀번호</div>
-                            <input className="" type="text" placeholder="비밀번호를 입력해 주세요"/>
-
-                            <div className="modal2_password_txt2">
-                                <p>영문 대소문자, 숫자, 특수문자를 3가지 이상으로 조합하여</p>
-                                <p>8자 이상 입력해주세요.</p>
-
-                            </div>
-                        </article>
-
-                        <button className="modal2_btn2" type="button"><p>회원가입하기</p></button>
-
-                    </div>
-                </div>
-            </div>    
+            {modal2Open && <Modal2 setModal2Open={setModal2Open} />}
         </div>
-    </div>
+        
+
     )
 }
 

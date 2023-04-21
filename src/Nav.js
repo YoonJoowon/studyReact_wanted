@@ -1,11 +1,20 @@
 import React, { useState } from 'react';
 import './App.css';
 import Btn_round from './Btn_round';
+import Modal from './Modal';
 
-function Nav(){
+function Nav() {
 
-    return(
-        <div>
+        // 모달창 노출 여부 state
+        const [modalOpen, setModalOpen] = useState(false);
+
+        // 모달창 노출
+        const showModal = () => {
+            setModalOpen(true);
+        };
+
+    return (
+
         <div className="nav">
             <nav>
                 <div className="nav_cen">
@@ -22,19 +31,23 @@ function Nav(){
                         <li>프리랜서</li>
                         <li>AI합격예측</li>
                     </ul>
-                    <div class="aside">
-                        <button class="asideImg" type="button">
+                    <div className="aside">
+                        <button className="asideImg" type="button">
                         </button>
-                        <button id="login" type="button">회원가입/로그인</button>
+                        <button onClick={showModal} id="login" type="button">회원가입/로그인</button>
+
                         <p>
                             <Btn_round>기업 서비스</Btn_round>
                         </p>
                     </div>
                 </div>
             </nav>
+
+            {modalOpen && <Modal setModalOpen={setModalOpen} />}
         </div>
-    </div>
-        )
-    }
+
+
+    )
+}
 
 export default Nav;
