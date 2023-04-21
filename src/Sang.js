@@ -39,7 +39,6 @@ function Sang() {
                             </div>
                         </div>
                     </div>
-
                     <SangSide/>
                 </section>
 
