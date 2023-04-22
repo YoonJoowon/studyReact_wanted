@@ -40,6 +40,7 @@ function Sang() {
                         </div>
                     </div>
                     <SangSide/>
+                    
                 </section>
 
                 <section className="section2">
