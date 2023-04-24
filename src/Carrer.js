@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App.css';
 
-function Carrer_() {
+function Carrer() {
     const [articles, setArticles] = useState([
         {
             id: 1,
@@ -90,4 +90,4 @@ function Carrer_() {
     )
 }
 
-export default Carrer_;
+export default Carrer;

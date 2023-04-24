@@ -10,7 +10,6 @@ function X(props) {
   
     return visible ? (
       <div>
-        <p>내용</p>
         <button onClick={handleClick}>X</button>
       </div>
     ) : null;

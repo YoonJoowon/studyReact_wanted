@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App_chae.css';
 
-function Chae_Banner() {
+function ChaeBanner() {
 
     return (
             <section>
@@ -29,4 +29,4 @@ function Chae_Banner() {
     )
 }
 
-export default Chae_Banner;
+export default ChaeBanner;

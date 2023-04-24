@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App_chae.css';
 
-function Chae_Match() {
+function ChaeMatch() {
 
     return (
         <section>
@@ -27,4 +27,4 @@ function Chae_Match() {
     )
 }
 
-export default Chae_Match;
+export default ChaeMatch;

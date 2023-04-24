@@ -3,26 +3,26 @@ import './App_Sang.css';
 
 function SangSide() {
     const [isFixed, setIsFixed] = useState(false);
-    const threshold = 6200;
+    const hold = 6200;
   
     useEffect(() => {
       function handleScroll() {
-        if (window.scrollY > threshold) {
+        if (window.scrollY > hold) {
           setIsFixed(true);
         } else {
           setIsFixed(false);
         }
       }
-  
+      
       window.addEventListener("scroll", handleScroll);
   
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
-    }, [threshold]);
-
+    }, [hold]);
+    
     return (
-        <div className = {isFixed ? "fixed  aside1" : "aside1"}>
+        <div className = {isFixed ? "aside1 fixed" : ""}>
             <div className="aside1">
                 <div className="aside1_padding">
                     <div className="aside1_1">
@@ -73,7 +73,7 @@ function SangSide() {
                             </div>
                             <div>10</div>
                         </button>
-
+                        
                         <button type="button" className="aside1_bottom_btn2" data-attribute-id="position__like__list" data-position-id="91536" data-position-name="웹 프론트엔드 개발자(React)">
                             <ul>
                                 <li className="aside1_bottom_btn2_1" style={{ backgroundImage: "url('https://lh3.googleusercontent.com/a/AATXAJyptvBO9pOC55mAwO0IA3-llT_OIJ3QyPcS1-DN=s96-c'), url('https://static.wanted.co.kr/images/userweb/profile_default.png')" }}>
@@ -85,7 +85,6 @@ function SangSide() {
                             </ul>
                         </button>
                     </div>
-
                 </div>
             </div>
         </div>

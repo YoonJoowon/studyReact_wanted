@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App_chae.css';
 
-function Chae_slide() {
+function Chaeslide() {
 
 
     return (
@@ -70,4 +70,4 @@ function Chae_slide() {
     )
 }
 
-export default Chae_slide;
+export default Chaeslide;

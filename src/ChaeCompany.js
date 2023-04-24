@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App_chae.css';
 
-function Chae_Company(){
+function ChaeCompany(){
 
     const [articles, setArticles] = useState([
         {
@@ -274,4 +274,4 @@ function Chae_Company(){
     )
 }
 
-export default Chae_Company;
+export default ChaeCompany;

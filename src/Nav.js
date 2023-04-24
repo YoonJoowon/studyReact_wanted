@@ -5,13 +5,13 @@ import Modal from './Modal';
 
 function Nav() {
 
-        // 모달창 노출 여부 state
-        const [modalOpen, setModalOpen] = useState(false);
+    // 모달창 노출 여부 state
+    const [modalOpen, setModalOpen] = useState(false);
 
-        // 모달창 노출
-        const showModal = () => {
-            setModalOpen(true);
-        };
+    // 모달창 노출
+    const showModal = () => {
+        setModalOpen(true);
+    };
 
     return (
 
@@ -35,6 +35,7 @@ function Nav() {
                         <button className="asideImg" type="button">
                         </button>
                         <button onClick={showModal} id="login" type="button">회원가입/로그인</button>
+                        {modalOpen && <Modal setModalOpen={setModalOpen} />}
 
                         <p>
                             <Btn_round>기업 서비스</Btn_round>
@@ -42,8 +43,6 @@ function Nav() {
                     </div>
                 </div>
             </nav>
-
-            {modalOpen && <Modal setModalOpen={setModalOpen} />}
         </div>
 
 

@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import './App_chae.css';
 
-function Chae_Position(){
+function ChaePosition(){
 
     const [articles, setArticles] = useState([
         {
@@ -123,4 +123,4 @@ function Chae_Position(){
     )
 }
 
-export default Chae_Position;
+export default ChaePosition;
