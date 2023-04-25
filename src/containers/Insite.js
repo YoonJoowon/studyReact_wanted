@@ -7,19 +7,19 @@ function Insite() {
       id: 1,
       title: '안전하고 쉬운 해외 부동산 투자를 위해ㅣ이지웅 빌드블록 부대표',
       summary: '‘누구나 안전하고 쉽게 부동산 투자하는 세상’을 꿈꾸는 빌드블록의 성장 비밀은 무엇일까. 고인물은 살아남을 수 없다는 생존형 스타트업 ‘빌드블록’의 이지웅 부대표를 만나봤다.',
-      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fi.ytimg.com%2Fvi%2FNcEwC6tr5LU%2Fhq720_2.jpg%3Fsqp%3D-oaymwEdCJYDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE%3D%26rs%3DAOn4CLA0BLz_o58fbcgnH6LLa3W0fAUHRw&w=750&q=100',
+      image: 'https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2FeyW6%2Fimage%2FZWQHTLNV8yprx0P6p1Omq_Dt7ts.jpg&w=750&q=100',
     },
     {
       id: 2,
       title: '지옥철이 지겹다면, ‘언제든’ 이곳 바다로 오세요',
       summary: '제주에서의 색다른 경험과 잠깐의 휴식이 가져다 주는 충전은 어디에서도 쉽게느낄 수 없는 제주 위케이션 만의 선물입니다.',
-      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fi.ytimg.com%2Fvi%2FNcEwC6tr5LU%2Fhq720_2.jpg%3Fsqp%3D-oaymwEdCJYDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE%3D%26rs%3DAOn4CLA0BLz_o58fbcgnH6LLa3W0fAUHRw&w=750&q=100',
+      image: 'https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2FbFXF%2Fimage%2FvDWbKKHTT5gRGoC7GIxJZa3hVB4.jpeg&w=750&q=100',
     },
     {
       id: 3,
       title: '끝나지 않는 코로나, 비대면 조직문화 활성화를 위한 과제 - 송창용',
       summary: '코로나 19의 충격파는 이미 20세기 초 세계 대 공황을 넘어선지 오래입니다. 비대면 상황에서도 나름의 길을 찾아요.',
-      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2126%2Fff86edbf.jpg&w=1200&q=90',
+      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20220703%2F14%2F51209230.jpg&w=750&q=100',
     },
     {
       id: 4,
@@ -31,19 +31,19 @@ function Insite() {
       id: 5,
       title: '지옥철이 지겹다면, ‘언제든’ 이곳 바다로 오세요',
       summary: '제주에서의 색다른 경험과 잠깐의 휴식이 가져다 주는 충전은 어디에서도 쉽게느낄 수 없는 제주 위케이션 만의 선물입니다.',
-      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2126%2Fff86edbf.jpg&w=1200&q=90',
+      image: 'https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2F1J9E%2Fimage%2F65hU_AZK4PA3KRaAPh0nY5N7Auc.png&w=750&q=100',
     },
     {
       id: 6,
       title: '지옥철이 지겹다면, ‘언제든’ 이곳 바다로 오세요',
       summary: '제주에서의 색다른 경험과 잠깐의 휴식이 가져다 주는 충전은 어디에서도 쉽게느낄 수 없는 제주 위케이션 만의 선물입니다.',
-      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2126%2Fff86edbf.jpg&w=1200&q=90',
+      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20220204%2F6%2F92347876.jpg&w=750&q=100',
     },
     {
       id: 7,
       title: '지옥철이 지겹다면, ‘언제든’ 이곳 바다로 오세요',
       summary: '제주에서의 색다른 경험과 잠깐의 휴식이 가져다 주는 충전은 어디에서도 쉽게느낄 수 없는 제주 위케이션 만의 선물입니다.',
-      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fi.ytimg.com%2Fvi%2FNcEwC6tr5LU%2Fhq720_2.jpg%3Fsqp%3D-oaymwEdCJYDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE%3D%26rs%3DAOn4CLA0BLz_o58fbcgnH6LLa3W0fAUHRw&w=750&q=100',
+      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2169%2Ff7b90036.jpg&w=1200&q=90',
     },
     {
       id: 8,
@@ -55,29 +55,30 @@ function Insite() {
       id: 9,
       title: '지옥철이 지겹다면, ‘언제든’ 이곳 바다로 오세요',
       summary: '제주에서의 색다른 경험과 잠깐의 휴식이 가져다 주는 충전은 어디에서도 쉽게느낄 수 없는 제주 위케이션 만의 선물입니다.',
-      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fi.ytimg.com%2Fvi%2FNcEwC6tr5LU%2Fhq720_2.jpg%3Fsqp%3D-oaymwEdCJYDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE%3D%26rs%3DAOn4CLA0BLz_o58fbcgnH6LLa3W0fAUHRw&w=750&q=100',
+      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20220516%2F17%2F75369770.jpg&w=750&q=100',
     },
     {
       id: 10,
       title: '지옥철이 지겹다면, ‘언제든’ 이곳 바다로 오세요',
       summary: '제주에서의 색다른 경험과 잠깐의 휴식이 가져다 주는 충전은 어디에서도 쉽게느낄 수 없는 제주 위케이션 만의 선물입니다.',
-      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fi.ytimg.com%2Fvi%2FNcEwC6tr5LU%2Fhq720_2.jpg%3Fsqp%3D-oaymwEdCJYDENAFSFXyq4qpAw8IARUAAIhCcAHAAQbQAQE%3D%26rs%3DAOn4CLA0BLz_o58fbcgnH6LLa3W0fAUHRw&w=750&q=100',
+      image: 'https://image.wanted.co.kr/optimize?src=http%3A%2F%2Ft1.daumcdn.net%2Fbrunch%2Fservice%2Fuser%2FA1Z%2Fimage%2FeDrgPRtEQn2wenPIrjRPa7vF-A4.png&w=750&q=100',
     },
     {
       id: 11,
       title: '지옥철이 지겹다면, ‘언제든’ 이곳 바다로 오세요',
       summary: '제주에서의 색다른 경험과 잠깐의 휴식이 가져다 주는 충전은 어디에서도 쉽게느낄 수 없는 제주 위케이션 만의 선물입니다.',
-      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2126%2Fff86edbf.jpg&w=1200&q=90',
+      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted.video.kr.kollus.com%2Fkr%2Fsnapshot%2Fwanted%2F20210308%2F4%2F00307525.jpg&w=750&q=100',
     },
     {
       id: 12,
       title: '지옥철이 지겹다면, ‘언제든’ 이곳 바다로 오세요',
       summary: '제주에서의 색다른 경험과 잠깐의 휴식이 가져다 주는 충전은 어디에서도 쉽게느낄 수 없는 제주 위케이션 만의 선물입니다.',
-      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F2126%2Fff86edbf.jpg&w=1200&q=90',
+      image: 'https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fevents%2F1843%2F874b5387.jpg&w=1200&q=90',
     },
   ]);
 
   return (
+    
     <section className="main2">
       <div className="section1">
         <div className="careerinsite">

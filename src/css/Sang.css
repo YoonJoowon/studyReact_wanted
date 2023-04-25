@@ -12,7 +12,6 @@ div{
 html, body {
     margin: 0;
     padding: 0;
-    height: 100%;
     width: 100%;
 
     -webkit-font-smoothing: antialiased;
@@ -22,7 +21,6 @@ html, body {
 #wrapper{
     height : auto;
     min-height: 100%;
-    padding-bottom: 245px;
 }
 
 button, div, h1, h2, h3, h4, h5, h6, input, p, select, span, textarea {
@@ -162,484 +160,6 @@ a {
     margin-left: 15px;
     font-weight: 400;
     cursor: pointer;
-}
-
-/* modal */
-.modal_all{
-    background-color: white;
-    border-radius: 5px;
-    width: 100%;
-    max-height: calc(100vh - 100px);
-    overflow: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background-color: var(--theme-palette-colors-contents-bg);
-    border: 1px solid var(--theme-palette-colors-bluegray-200);
-    display: none;
-}
-
-.modal-content{
-    overflow: auto;
-    position: fixed;
-    background-color: white;
-    width: 398px;
-    height: 800px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    margin-top: 100px;
-    z-index: 11;
-}
-
-.modal_top_close{
-    float: right;
-    cursor: pointer;
-    padding: 5px;
-}
-
-.modal_top_close svg{
-    width: 22px;
-    height: 22px;
-    float: right;
-}
-
-.modal_top_wanted{
-    width: 93px;
-    height: 28px;
-    margin: auto;
-    display: block;
-}
-
-.modal_top svg{
-    padding-top: 56px;
-
-    width: 93px;
-    height: 28px;
-    margin-bottom: 30px;
-
-}
-
-.modal_top_txt1{
-    color: black;
-    font-weight: bold;
-    text-align: center;
-    font-size: 26px;
-    margin-bottom: 22px;
-    margin-top: 90px;
-}
-
-.modal_top_txt1 p{
-    margin-bottom: 6px;
-}
-
-.modal_top_txt2{
-    color: gray;
-    font-weight:400;
-    text-align: center;
-    font-size: 13px;
-    margin-bottom: 45px;
-}
-
-.modal_top_txt2 p{
-    margin-bottom: 6px;
-}
-
-.modal_email{
-    width: 360px;
-    height: 70px;
-    margin: auto;
-    margin-bottom: 130px;
-}
-
-.modal_email_txt{
-    color: rgb(66, 66, 66);
-    font-weight:400;
-    font-size: 13px;
-    margin-bottom: 8px;
-}
-
-
-.modal_email input{
-    padding: 0px 12px;
-    width: 332px;
-    height: 48px;
-
-    outline: none;
-    background-color: transparent;
-    border: 1px solid rgb(233, 230, 230);
-    color: rgb(163, 163, 163);
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 400;
-    margin: auto;
-    margin-bottom: 8px;
-}
-
-.modal_email button{
-    color: rgb(151, 151, 151);
-    background-color: rgb(241, 241, 241);
-    border: none;
-    cursor: default;
-
-    width: 100%;
-    height: 50px;
-    min-height: 50px;
-    border-radius: 25px;
-    font-size: 16px;
-    margin-bottom: 10px;
-    cursor: pointer;
-    border: none;
-    margin-top: 30px;
-}
-
-.modal_email button :hover{
-    background-color: rgb(63, 63, 255);
-    color: white;
-}
-
-.modal_email_txt2 p{
-    text-align: center;
-    font-size : 12px;
-    color: gray;
-}
-
-
-.modal_sns{
-    display: flex;
-    width: 328px;
-    height: 78px;
-    margin: auto;
-}
-
-
-.modal_sns_icon svg{
-    width: 55px;
-    height: 55px;
-
-    display: flex;
-    align-items: center;
-    justify-content: center;
-} 
-
-.modal_sns_icon{
-    margin: auto;
-    text-align: center;
-    color: gray;
-    font-size: 13px;
-    margin-top: 8px;
-}
-
-.modal_sns_forgot{
-    text-align: center;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    font-size: 14px;
-}
-
-.modal_sns_line{
-    margin-top: 30px;
-    color: gray;
-    opacity: 0.2;
-}
-
-.modal_bot .modal_bot_txt1 p{
-    margin-top: 20px;
-    text-align: center;
-    font-size: 13px;
-}
-
-.modal_bot .modal_bot_txt1 span{
-    font-weight: 900;
-    margin-left: 12px;
-}
-
-.modal_bot_txt2{
-    color: gray;
-    font-weight: 400;
-    text-align: center;
-    font-size: 12px;
-    margin-top: 20px;
-    margin-bottom: 30px;
-}
-
-
-.modal_bot_select{
-    width: 140px;
-    height: 44px;
-
-}
-
-.modal_bot_select_op{
-   
-}
-
-
-.modal_sns_forgot_arrow{    
-    user-select: none;
-    width: 1em;
-    height: 1em;
-    display: inline-block;
-    fill: currentColor;
-    -webkit-flex-shrink: 0;
-    -ms-flex-negative: 0;
-    flex-shrink: 0;
-    font-size: inherit;
-    margin-left: 3px;
-    width: 12px;
-    height: 12px;
-
-}
-
-.modal_bot{
-    width: 358px;
-    margin: auto;
-}
-
-
-.modal_bot_arrow{
-    position: absolute;
-    right: 20px;
-    font-size: 10px;
-    top: 50%;
-    -webkit-transform: translateY(-50%);
-    -moz-transform: translateY(-50%);
-    -ms-transform: translateY(-50%);
-    transform: translateY(-50%);
-
-}
-
-.modal_bot_img{
-    width: 26px;
-    height: 16px;
-}
-
-.modal_bot_arrow .path{
-    width: 10px;
-    height: 10px;
-}
-
-.modal_back{
-    position:fixed;
-    top:0;
-    left:0;
-    width:100%;
-    height:100%;
-    background:rgba(0, 0, 0, 0.5);
-    z-index:10;
-}
-
-/* modal2 */
-.modal_all2{
-    background-color: white;
-    border-radius: 5px;
-    width: 100%;
-    max-height: calc(100vh - 100px);
-    overflow: auto;
-    display: -webkit-box;
-    display: -webkit-flex;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-flex-direction: column;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    background-color: var(--theme-palette-colors-contents-bg);
-    border: 1px solid var(--theme-palette-colors-bluegray-200);
-    display: none;
-}
-
-.modal-content2{
-    overflow: auto;
-    position: fixed;
-    background-color: white;
-    width: 398px;
-    height: 800px;
-    margin: 0 auto;
-    left: 0;
-    right: 0;
-    margin-top: 100px;
-    z-index: 11;
-}
-
-.modal_top_close2{
-    cursor: pointer;
-    padding: 5px;
-    position: absolute;
-    right: 0;
-}
-
-.modal_top_close2 svg{
-    width: 22px;
-    height: 22px;
-    float: right;
-}
-
-.modal2_top_txt{
-    font-size: 18px;
-    font-weight: 550;
-    text-align: center;
-    color: rgb(77, 77, 77);
-    margin-top: 25px;
-}
-
-.modal2_name{
-    width: 360px;
-    height: 70px;
-    margin: auto;
-    margin-top: 70px;
-}
-
-.modal2_name_txt{
-    color: rgb(66, 66, 66);
-    font-weight:400;
-    font-size: 13px;
-    margin-bottom: 8px;
-}
-
-.modal2_number_select{
-    padding: 0px 12px;
-    width: 355px;
-    height: 48px;
-
-    outline: none;
-    background-color: transparent;
-    border: 1px solid rgb(233, 230, 230);
-    color: rgb(58, 58, 58);
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 400;
-    margin: auto;
-    margin-bottom: 8px;
-
-}
-
-
-.modal2_name input{
-    padding: 0px 12px;
-    width: 332px;
-    height: 48px;
-
-    outline: none;
-    background-color: transparent;
-    border: 1px solid rgb(233, 230, 230);
-    color: rgb(163, 163, 163);
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 400;
-    margin: auto;
-}
-
-.modal2_number{
-    width: 360px;
-    height: 70px;
-    margin: auto;
-    margin-top: 30px;
-}
-
-.modal2_number_txt{
-    color: rgb(66, 66, 66);
-    font-weight:400;
-    font-size: 13px;
-    margin-bottom: 8px;
-}
-
-
-.modal2_number_input{
-    padding: 0px 12px;
-    width: 200px;
-    height: 48px;
-
-    outline: none;
-    background-color: transparent;
-    border: 1px solid rgb(233, 230, 230);
-    color: rgb(163, 163, 163);
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 8px;
-}
-
-.modal2_number_txt p{
-    text-align: center;
-    font-size : 12px;
-    color: gray;
-}
-
-.modal2_number_input2{
-    padding: 0px 12px;
-    width: 330px;
-    height: 48px;
-
-    outline: none;
-    background-color: rgba(243, 243, 243, 0.671);
-    border: 1px solid rgb(233, 230, 230);
-    color: rgb(163, 163, 163);
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 400;
-    margin-bottom: 8px;
-}
-
-
-.modal2_password{
-    width: 360px;
-    height: 70px;
-    margin: auto;
-    margin-top: 140px;
-}
-
-.modal2_password_txt{
-    color: rgb(66, 66, 66);
-    font-weight:400;
-    font-size: 13px;
-    margin-bottom: 8px;
-}
-
-
-.modal2_password input{
-    padding: 0px 12px;
-    width: 332px;
-    height: 48px;
-
-    outline: none;
-    background-color: transparent;
-    border: 1px solid rgb(233, 230, 230);
-    color: rgb(163, 163, 163);
-    border-radius: 5px;
-    font-size: 16px;
-    font-weight: 400;
-    margin: auto;
-}
-
-.modal2_password_txt2 p{
-    color: rgb(66, 66, 66);
-    font-weight:400;
-    font-size: 13px;
-    margin-bottom: 8px;
-    margin-top: 8px;
-}
-
-
-.modal2_btn2{
-    background-color: rgb(245, 245, 245);
-    width: 350px;
-    border-radius: 30px;
-    padding: 10px;
-    margin-top: 100px;
-    margin-left: 19px;
-}
-
-.modal2_btn2 p{
-    color: rgb(138, 138, 138);
-    font-weight:400;
-    font-size: 16px;
-    text-align: center;
-    margin-bottom: 8px;
-    margin-top: 8px;
 }
 
 /* section1 */
@@ -961,18 +481,6 @@ a {
     font-weight: 600;
 }
 
-.section2{
-    
-}
-
-.section2{
-    
-}
-
-.section2{
-    
-}
-
 .section2 .section2_high{
     border: 1px solid #00aead;
     color: #00aead;
@@ -1237,6 +745,7 @@ a {
     width: 1060px;
     padding: 70px 0px;
     margin: auto;
+    height: 1000px;
 }
 
 .feature h2{
@@ -1540,30 +1049,28 @@ a {
 
     } 
 
-
 /* footer */
-footer{
+.footer {
     height: 245px;
-    position : relative;
-    transform : translateY(-100%);
+    position: relative;
+    /* transform : translateY(-100%); */
 }
 
-.footer_line{
+.footer_line {
     opacity: 0.2;
     width: 100%;
     margin: auto;
 }
 
-footer .footClass{
+.footer .footClass {
     padding: 18px 0px;
     background-color: #fff;
-    border-top: 1px solid #ececec;
     display: flex;
     width: 1060px;
     margin: auto;
 }
 
-footer .footbottom{
+.footer .footbottom {
     flex-grow: 1;
     display: flex;
     align-items: center;
@@ -1573,7 +1080,7 @@ footer .footbottom{
     display: flex;
 }
 
-footer .footbottom a{
+.footer .footbottom a {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -1581,12 +1088,12 @@ footer .footbottom a{
     width: 113px;
 }
 
-footer .variable{
+.footer .variable {
     display: flex;
 
 }
 
-footer .footbottom span{
+.footer .footbottom span {
     font-size: 15px;
     color: #3a3a3a;
     font-weight: 600;
@@ -1595,24 +1102,24 @@ footer .footbottom span{
     white-space: nowrap;
 }
 
-footer .footbottom2{
+.footer .footbottom2 {
     display: flex;
     flex-wrap: nowrap;
     line-height: 2.6;
 }
 
-.footbottom2 a{
+.footbottom2 a {
     position: relative;
     display: block;
     float: left;
     height: 20px;
 }
 
-.footbottom2 a img{
+.footbottom2 a img {
     margin-left: 14px;
 }
 
-.rowClass{
+.rowClass {
     border-top: 1px solid #ececec;
     padding-top: 25px;
 
@@ -1626,7 +1133,7 @@ footer .footbottom2{
 }
 
 
-.rowClassTxt{
+.rowClassTxt {
     width: 770px;
     height: 60px;
     float: left;

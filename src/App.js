@@ -1,50 +1,23 @@
-import Nav from './containers/Nav';
-import Footer from './containers/Footer';
+import React from "react";
+import Main from "./Main";
+import ChaeYong from "./ChaeYong";
+import Sang from "./Sang";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 
-import './css/App.css';
-// import Insite from './containers/Insite';
-// import Carrer from './containers/Carrer';
-// import Slide from './containers/Slide';
-// import Information from './containers/Information';
-// import InsiteBar2 from './containers/InsiteBar2';
-
-// import './css/App_chae.css'
-// import Chaeslide from './containersChaeyong/Chaeslide';
-// import ChaeMatch from './containersChaeyong/ChaeMatch';
-// import ChaeBanner from './containersChaeyong/ChaeBanner';
-// import ChaeCompany from './containersChaeyong/ChaeCompany';
-// import ChaePosition from './containersChaeyong/ChaePosition';
-
-import './css/App_Sang.css';
-import Sang from './containersSangse/Sang';
 
 function App() {
-    return (
-        <div className='wrapper'>
-            <Nav/>
+  return (
+    <div className="wrapper">
+      <BrowserRouter>
+        <Routes>
+          <Route path="/Main" element={<Main/>}></Route>
+          <Route path="/ChaeYong" element={<ChaeYong/>}></Route>
+          <Route path="/Sang" element={<Sang/>}></Route>
 
-            {/* main */}
-            {/* <Slide></Slide>
-            <Insite></Insite>
-            <InsiteBar2/>
-            <Carrer/>
-            <Information /> */}
-
-            {/* index 채용 */}
-            {/* <Chaeslide/>            
-            <ChaeMatch/>
-            <ChaeBanner/>
-            <ChaeCompany/>
-            <ChaePosition/> */}
-
-            {/* main2 상세 */}
-            <Sang/>
-
-            
-            <Footer/>
-
-        </div>
-    );
+        </Routes>
+      </BrowserRouter>
+    </div>
+  );
 }
 
 export default App;

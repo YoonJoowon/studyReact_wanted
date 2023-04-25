@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import styled from 'styled-components';
 
-const Btn_round = styled.button`
+const BtnRound = styled.button`
     width: 100px;
     font-size: 13px;
     color: #666;
@@ -15,4 +15,4 @@ const Btn_round = styled.button`
     cursor: pointer;
 `;
 
-export default Btn_round;
+export default BtnRound;

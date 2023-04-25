@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 
-function X(props) {
+function CloseX(props) {
     const [visible, setVisible] = useState(true);
   
     const handleClick = () => {
@@ -14,4 +14,4 @@ function X(props) {
     ) : null;
   }
 
-export default X;
+export default CloseX;
