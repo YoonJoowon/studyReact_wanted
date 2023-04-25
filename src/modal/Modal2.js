@@ -1,5 +1,4 @@
 import React, { useState } from "react";
-import "./App.css";
 import Checkbox from "./Checkbox";
 
 function Modal2(porps2) {

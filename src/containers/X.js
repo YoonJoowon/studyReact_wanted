@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 
 function X(props) {
     const [visible, setVisible] = useState(true);

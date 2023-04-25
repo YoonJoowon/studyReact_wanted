@@ -1,23 +1,22 @@
-import Nav from './Nav';
-import Modal from './Modal';
-import Footer from './Footer';
+import Nav from './containers/Nav';
+import Footer from './containers/Footer';
 
-import './App.css';
-import Insite from './Insite';
-import Carrer_ from './Carrer_';
-import Slide from './Slide';
-import Information from './Information';
-import InsiteBar2 from './InsiteBar2';
+import './css/App.css';
+// import Insite from './containers/Insite';
+// import Carrer from './containers/Carrer';
+// import Slide from './containers/Slide';
+// import Information from './containers/Information';
+// import InsiteBar2 from './containers/InsiteBar2';
 
-// import './App_chae.css';
-// import Chae_slide from './Chae_slide';
-// import Chae_Match from './Chae_Match';
-// import Chae_Banner from './Chae_Banner';
-// import Chae_Company from './Chae_Company';
-// import Chae_Position from './Chae_Position';
+// import './css/App_chae.css'
+// import Chaeslide from './containersChaeyong/Chaeslide';
+// import ChaeMatch from './containersChaeyong/ChaeMatch';
+// import ChaeBanner from './containersChaeyong/ChaeBanner';
+// import ChaeCompany from './containersChaeyong/ChaeCompany';
+// import ChaePosition from './containersChaeyong/ChaePosition';
 
-// import './App_Sang.css';
-// import Sang from './Sang';
+import './css/App_Sang.css';
+import Sang from './containersSangse/Sang';
 
 function App() {
     return (
@@ -25,21 +24,21 @@ function App() {
             <Nav/>
 
             {/* main */}
-            <Slide></Slide>
+            {/* <Slide></Slide>
             <Insite></Insite>
             <InsiteBar2/>
-            <Carrer_></Carrer_>
-            <Information />
+            <Carrer/>
+            <Information /> */}
 
             {/* index 채용 */}
-            {/* <Chae_slide/>            
-            <Chae_Match/>
-            <Chae_Banner/>
-            <Chae_Company/>
-            <Chae_Position/> */}
+            {/* <Chaeslide/>            
+            <ChaeMatch/>
+            <ChaeBanner/>
+            <ChaeCompany/>
+            <ChaePosition/> */}
 
             {/* main2 상세 */}
-            {/* <Sang/> */}
+            <Sang/>
 
             
             <Footer/>

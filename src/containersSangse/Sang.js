@@ -1,7 +1,7 @@
 import React from 'react';
 import SangSide from './SangSide';
 import SangSkillBtn from './SangSkillBtn';
-import Sang_Slide from './Sang_Slide';
+import SangSlide from './SangSlide';
 
 function Sang() {
     
@@ -10,7 +10,7 @@ function Sang() {
         <div>
             <main className="main_main">
                 <section className="section1">
-                    <Sang_Slide/>
+                    <SangSlide/>
                     <SangSide/>
                 </section>
 

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import './App_Sang.css';
 
 function SangSkillBtn() {
     const [articles, setArticles] = useState([

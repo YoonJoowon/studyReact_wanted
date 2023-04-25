@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
-import './App.css';
 import Btn_round from './Btn_round';
-import Modal from './Modal';
+import Modal from '../modal/Modal';
 
 function Nav() {
 

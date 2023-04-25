@@ -1,8 +1,7 @@
 import React, { useState } from 'react';
-import './App.css';
 import styled from 'styled-components';
 
-const Chae_Btn_round = styled.button`
+const ChaeBtnRound = styled.button`
     .subTitleBtn2{
         display: flex;
         justify-content: center;
@@ -34,4 +33,4 @@ const Chae_Btn_round = styled.button`
     }
 `;
 
-export default Chae_Btn_round;
+export default ChaeBtnRound;

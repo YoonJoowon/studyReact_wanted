@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 import Modal2 from './Modal2';
 
 function Modal(props) {

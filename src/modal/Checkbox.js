@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 import styled from 'styled-components';
 
 const StyledLabel = styled.label`
@@ -11,7 +10,7 @@ const StyledLabel = styled.label`
   font-weight : 400;
   line-height : 20px;
   width : 360px;
-  margin: auto:
+  margin: auto;
   font-family: Pretendard,'Pretendard JP','Pretendard Std',-apple-system,system-ui,BlinkMacSystemFont,Roboto,'Segoe UI',Helvetica,Arial,'Apple SD Gothic Neo','Malgun Gothic','Apple Color Emoji','Segoe UI Emoji','Segoe UI Symbol',sans-serif;
 
   input[type='checkbox'] {

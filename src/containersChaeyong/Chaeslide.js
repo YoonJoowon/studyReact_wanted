@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import './App_chae.css';
+import '../css/App_chae.css'
 
 function Chaeslide() {
 

@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import './App.css';
 import InsiteBar from './InsiteBar';
 
 function Insite() {
