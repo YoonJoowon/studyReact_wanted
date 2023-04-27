@@ -1,5 +1,5 @@
 import React from "react";
-import GoogleApiWrapper from "./GoogleApiWrapper";
+// import GoogleApiWrapper from "./GoogleApiWrapper";
 
 function SangBotMap() {
   return (
@@ -16,7 +16,7 @@ function SangBotMap() {
           </div>
         </div>
         <div class="google_map">
-          <GoogleApiWrapper />
+          {/* <GoogleApiWrapper /> */}
         </div>
       </div>
       <div className="section4_mid">
