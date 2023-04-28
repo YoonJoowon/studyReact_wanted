@@ -29,6 +29,25 @@ const SlideImg = [
 
 function SangSlide() {
 
+  const wrapperRef = useRef(null);
+
+  const handleScroll = (e) => {
+    const wrapper = wrapperRef.current;
+    if (wrapper) {
+      const delta = e.deltaY;
+      const currentScroll = wrapper.scrollLeft;
+      const scrollWidth = wrapper.scrollWidth;
+      const clientWidth = wrapper.clientWidth;
+      const maxScroll = scrollWidth - clientWidth;
+
+      if (delta > 0 && currentScroll < maxScroll) {
+        wrapper.scrollLeft += clientWidth;
+      } else if (delta < 0 && currentScroll > 0) {
+        wrapper.scrollLeft -= clientWidth;
+      }
+    }
+  };
+
   return (
     <SangSlideWrapper className="main-slide">
       <Swiper
@@ -40,7 +59,7 @@ function SangSlide() {
         {SlideImg.map((x) => {
           return (
             <SwiperSlide key={x.id}>
-              <div>
+              <div oonWheel={handleScroll} ref={wrapperRef}>
                 <img src={x.image} />
               </div>
             </SwiperSlide>
@@ -64,12 +83,12 @@ const SangSlideWrapper = styled.div`
   flex-direction: row;
   align-items: flex-start;
   padding-bottom: 5px;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
   width: 700px;
   height: 504px;
   position: relative;
-    overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  overscroll-behavior: contain;
 
   .swiper-wrapper{
     display: flex;

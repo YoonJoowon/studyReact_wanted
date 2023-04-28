@@ -89,7 +89,7 @@ function InsiteBar() {
       <Swiper slidesPerView={"auto"} centeredSlides={true} spaceBetween={0}>
         {articles.map((x) => {
           return (
-            <SwiperSlide key={x.id}>
+            <SwiperSlide>
               <button>
                 <div src={x.title} alt=""></div>
               </button>
@@ -110,12 +110,13 @@ function InsiteBar() {
 export default InsiteBar;
 
 const InsiteBarStyle = styled.div`
-  .swiper {
+  .swiper{
     width: 1060px;
-    background-color: blue;
-    .swiper-wrapper {
-      width: 1060px;
-      background-color: red;
-    }
+  }
+
+  .swiper-wrapper {
+    margin: auto;
+    width: 1060px;
+    background-color: red;
   }
 `;

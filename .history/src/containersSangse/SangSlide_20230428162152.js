@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 import SangSlidePrevButton from "./SangSlidePrevButton";
@@ -28,7 +28,6 @@ const SlideImg = [
 ];
 
 function SangSlide() {
-
   return (
     <SangSlideWrapper className="main-slide">
       <Swiper
@@ -64,22 +63,21 @@ const SangSlideWrapper = styled.div`
   flex-direction: row;
   align-items: flex-start;
   padding-bottom: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
   width: 700px;
   height: 504px;
   position: relative;
-    overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  overscroll-behavior: contain;
 
   .swiper-wrapper{
     display: flex;
-    
   }
 
   .swiper img{
     width: 700px;
     height: 499px;
-    
   }
 
   .button-area {
@@ -96,10 +94,10 @@ const SangSlideWrapper = styled.div`
         top: 60%;
       }
       .main-slide-next-button {
-        right: -330px;
+        right: -50px;
       }
       .main-slide-prev-button {
-        left: -330px;
+        left: -350px;
       }
     }
   }

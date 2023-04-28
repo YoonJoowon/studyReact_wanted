@@ -89,14 +89,12 @@ function InsiteBar() {
       <Swiper slidesPerView={"auto"} centeredSlides={true} spaceBetween={0}>
         {articles.map((x) => {
           return (
-            <SwiperSlide key={x.id}>
-              <button>
-                <div src={x.title} alt=""></div>
-              </button>
+            <SwiperSlide>
+              <div src={x.title} alt=""></div>
             </SwiperSlide>
           );
         })}
-        <div className="buttonWrapper">
+        <div className="button-area">
           <div className="center">
             <InsiteBarBtnPrev />
             <InsiteBarBtnNext />
@@ -110,12 +108,70 @@ function InsiteBar() {
 export default InsiteBar;
 
 const InsiteBarStyle = styled.div`
-  .swiper {
-    width: 1060px;
-    background-color: blue;
-    .swiper-wrapper {
-      width: 1060px;
-      background-color: red;
-    }
+  .insitewrap_flex {
+    display: flex;
+  }
+
+  .insiteview {
+    margin: 30px 0;
+  }
+
+  .insite_button {
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 40px - 8px);
+  }
+
+  .swiper-wrapper {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 1012px;
+  }
+
+  .swiper-slide {
+    width: auto;
+    height: 40px;
+    position: relative;
+  }
+
+  .swiper-slide span {
+    display: block;
+    padding: 0 22px;
+    border: 1px solid #e1e2e3;
+    border-radius: 25px;
+    color: #8a8a8a;
+    font-size: 14px;
+    font-weight: 600;
+    line-height: 38px;
+    cursor: pointer;
+  }
+
+  .swiper-slide span:hover {
+    background: rgba(0, 0, 0, 0.06);
+  }
+
+  .btnDot {
+    min-width: 40px;
+    min-height: 40px;
+
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    min-width: 34px;
+    min-height: 34px;
+    border: 1px solid #e1e2e4;
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    color: #8a8a8a;
+    background-color: #fff;
+    outline: none;
+
+    float: right;
+    margin-left: 8px;
   }
 `;

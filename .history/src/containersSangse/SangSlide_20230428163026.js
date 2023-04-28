@@ -67,9 +67,6 @@ const SangSlideWrapper = styled.div`
   width: 700px;
   height: 504px;
   position: relative;
-    overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  overscroll-behavior: contain;
 
   .swiper-wrapper{
     display: flex;

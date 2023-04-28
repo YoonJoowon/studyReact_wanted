@@ -1,34 +1,33 @@
-import React, { useRef } from "react";
+import React, { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 import SangSlidePrevButton from "./SangSlidePrevButton";
 import SangSlideNextutton from "./SangSlideNextButton";
 
 const SlideImg = [
-  {
-    id: 1,
-    image:
-      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Feh1mycy7nnltf5ah__1080_790.jpg&w=1000&q=75",
-  },
-  {
-    id: 2,
-    image:
-      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fdvcf627tgxatpg7v__1080_790.jpg&w=1000&q=75",
-  },
-  {
-    id: 3,
-    image:
-      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2F6kxgpommhvckijjr__1080_790.jpg&w=1000&q=75",
-  },
-  {
-    id: 4,
-    image:
-      "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fvym9cwwcigp2tzbi__1080_790.jpg&w=1000&q=75",
-  },
+  // {
+  //   id: 1,
+  //   image:
+  //     "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Feh1mycy7nnltf5ah__1080_790.jpg&w=1000&q=75",
+  // },
+  // {
+  //   id: 2,
+  //   image:
+  //     "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fdvcf627tgxatpg7v__1080_790.jpg&w=1000&q=75",
+  // },
+  // {
+  //   id: 3,
+  //   image:
+  //     "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2F6kxgpommhvckijjr__1080_790.jpg&w=1000&q=75",
+  // },
+  // {
+  //   id: 4,
+  //   image:
+  //     "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F22333%2Fvym9cwwcigp2tzbi__1080_790.jpg&w=1000&q=75",
+  // },
 ];
 
 function SangSlide() {
-
   return (
     <SangSlideWrapper className="main-slide">
       <Swiper
@@ -64,22 +63,21 @@ const SangSlideWrapper = styled.div`
   flex-direction: row;
   align-items: flex-start;
   padding-bottom: 5px;
+  overflow-x: auto;
+  overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
   width: 700px;
   height: 504px;
   position: relative;
-    overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  overscroll-behavior: contain;
 
   .swiper-wrapper{
     display: flex;
-    
   }
 
   .swiper img{
     width: 700px;
     height: 499px;
-    
   }
 
   .button-area {
@@ -96,10 +94,10 @@ const SangSlideWrapper = styled.div`
         top: 60%;
       }
       .main-slide-next-button {
-        right: -330px;
+        right: -0;
       }
       .main-slide-prev-button {
-        left: -330px;
+        left: -0;
       }
     }
   }

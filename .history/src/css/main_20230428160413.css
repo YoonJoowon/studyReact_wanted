@@ -829,10 +829,12 @@ button {
     max-width: calc(100% - 40px - 8px);
 }
 
+
 .swiper-wrapper {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    width: 1012px;
 }
 
 .swiper-slide {

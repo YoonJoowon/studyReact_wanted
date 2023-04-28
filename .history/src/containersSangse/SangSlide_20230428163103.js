@@ -60,18 +60,16 @@ function SangSlide() {
 export default SangSlide;
 
 const SangSlideWrapper = styled.div`
-  flex-wrap: nowrap;
+
+
+  .swiper-wrapper{
+    flex-wrap: nowrap;
   flex-direction: row;
   align-items: flex-start;
   padding-bottom: 5px;
   width: 700px;
   height: 504px;
   position: relative;
-    overflow-y: hidden;
-  scroll-snap-type: x mandatory;
-  overscroll-behavior: contain;
-
-  .swiper-wrapper{
     display: flex;
     
   }

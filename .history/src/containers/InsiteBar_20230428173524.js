@@ -114,6 +114,7 @@ const InsiteBarStyle = styled.div`
     width: 1060px;
     background-color: blue;
     .swiper-wrapper {
+      margin: auto;
       width: 1060px;
       background-color: red;
     }

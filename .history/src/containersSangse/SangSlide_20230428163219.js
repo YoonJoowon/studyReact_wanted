@@ -40,7 +40,7 @@ function SangSlide() {
         {SlideImg.map((x) => {
           return (
             <SwiperSlide key={x.id}>
-              <div>
+              <div oonWheel={handleScroll} ref={wrapperRef}>
                 <img src={x.image} />
               </div>
             </SwiperSlide>
