@@ -82,6 +82,7 @@ export default function MainSlide() {
                         <a href="">
                           <img src={x.imgSrc} alt="" />
                         </a>
+                        <hr />
                         <MainSlideCard header={x.header} content={x.content} />
                       </div>
                     )}

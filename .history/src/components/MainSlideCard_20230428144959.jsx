@@ -8,10 +8,8 @@ function MainSlideCard(props) {
         <h2>{header}</h2>
         <h3>{content}</h3>
         <div className="line" />
-        
-
         <a href={linkSrc || "./"}>
-          <p>바로가기 {">"}</p>
+          <div>바로가기 {">"}</div>
         </a>
       </div>
     </SlideCardStyle>
@@ -21,7 +19,6 @@ function MainSlideCard(props) {
 export default MainSlideCard;
 
 const SlideCardStyle = styled.div`
-
   position: absolute;
   bottom: 24px;
   width: 330px;
@@ -35,13 +32,11 @@ const SlideCardStyle = styled.div`
   h2 {
     font-size: 20px;
     font-weight: 700;
-    font-family: inherit;
     margin: 20px 20px 0 20px;
     line-height: 1.5;
     color: #333;
   }
   h3 {
-    font-family: inherit;
     margin: 0 20px;
     height: 44px;
     font-size: 14px;
@@ -50,17 +45,11 @@ const SlideCardStyle = styled.div`
     color: #333;
   }
   .line {
-    height: 0.2px;
-    opacity: 0.1;
+    height: 1px;
     width: 100%;
-    background-color: #333;
+    color: #333;
   }
-
-  a{
-    text-decoration: none;
-
-  }
-  a p {
+  a div {
     margin: 6px 0 0 13px;
     font-size: 14px;
     font-weight: 700;
@@ -70,6 +59,5 @@ const SlideCardStyle = styled.div`
     display: flex;
     align-items: center;
     padding: 6px 8px;
-    
   }
 `;

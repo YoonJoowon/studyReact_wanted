@@ -103,7 +103,7 @@ function Slide() {
 }
 
 const StyledWrapper = styled.div`
-  /* padding-top: 75px;
+  padding-top: 75px;
   margin-bottom: 5px;
   width: 100%;
   height: 100%;
@@ -145,7 +145,7 @@ const StyledWrapper = styled.div`
     }
   }
   .test {
-    width: 100%; */
+    width: 100%;
     height: 300px;
     background-color: red;
   }

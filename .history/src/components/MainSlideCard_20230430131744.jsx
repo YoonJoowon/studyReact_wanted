@@ -51,11 +51,10 @@ const SlideCardStyle = styled.div`
   }
   .line {
     height: 0.2px;
-    opacity: 0.1;
+    opacity: 0.2;
     width: 100%;
     background-color: #333;
   }
-
   a{
     text-decoration: none;
 
@@ -70,6 +69,6 @@ const SlideCardStyle = styled.div`
     display: flex;
     align-items: center;
     padding: 6px 8px;
-    
+    text-decoration: none;
   }
 `;

@@ -58,11 +58,12 @@ function Slide() {
       <article className="slide">
         <div className="slideImg">
           <StyledWrapper className="main-slide">
-            <SwiperSlide
-              // loop={true}
-              // centeredSlides={true}
-              // spaceBetween={24}
-              // modules={[Autoplay]}            
+            <Swiper
+              modules={[Autoplay]}
+              loop={true}
+              centeredSlides={true}
+              spaceBetween={24}
+            
               // slidesPerView={"auto"}
               // autoplay={{
               //   delay: 2500,
@@ -94,7 +95,7 @@ function Slide() {
                   <MainSlideNextButton /> */}
                 </div>
               </div>
-            </SwiperSlide>
+            </Swiper>
           </StyledWrapper>
         </div>
       </article>
@@ -103,7 +104,7 @@ function Slide() {
 }
 
 const StyledWrapper = styled.div`
-  /* padding-top: 75px;
+  padding-top: 75px;
   margin-bottom: 5px;
   width: 100%;
   height: 100%;
@@ -145,7 +146,7 @@ const StyledWrapper = styled.div`
     }
   }
   .test {
-    width: 100%; */
+    width: 100%;
     height: 300px;
     background-color: red;
   }

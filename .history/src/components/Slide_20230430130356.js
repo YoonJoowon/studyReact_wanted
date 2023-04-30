@@ -58,16 +58,16 @@ function Slide() {
       <article className="slide">
         <div className="slideImg">
           <StyledWrapper className="main-slide">
-            <SwiperSlide
-              // loop={true}
-              // centeredSlides={true}
-              // spaceBetween={24}
-              // modules={[Autoplay]}            
-              // slidesPerView={"auto"}
-              // autoplay={{
-              //   delay: 2500,
-              //   disableOnInteraction: false,
-              // }}
+            <Swiper
+              modules={[Autoplay]}
+              slidesPerView={"auto"}
+              loop={true}
+              centeredSlides={true}
+              spaceBetween={24}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
               className="mySwiper"
             >
               {slideCards.map((x) => {
@@ -94,7 +94,7 @@ function Slide() {
                   <MainSlideNextButton /> */}
                 </div>
               </div>
-            </SwiperSlide>
+            </Swiper>
           </StyledWrapper>
         </div>
       </article>
@@ -103,7 +103,8 @@ function Slide() {
 }
 
 const StyledWrapper = styled.div`
-  /* padding-top: 75px;
+font-family: inherit;
+  padding-top: 75px;
   margin-bottom: 5px;
   width: 100%;
   height: 100%;
@@ -145,7 +146,7 @@ const StyledWrapper = styled.div`
     }
   }
   .test {
-    width: 100%; */
+    width: 100%;
     height: 300px;
     background-color: red;
   }

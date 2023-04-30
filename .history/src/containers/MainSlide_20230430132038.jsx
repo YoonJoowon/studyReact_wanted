@@ -103,6 +103,7 @@ export default function MainSlide() {
 }
 
 const StyledWrapper = styled.div`
+  font-family: 'Courier New', Courier, monospace;
   padding-top: 25px;
   margin-bottom: 5px;
   margin: auto;

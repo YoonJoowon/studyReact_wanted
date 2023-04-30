@@ -72,7 +72,7 @@ function ChaeMatch() {
       <section>
         <div className="main2">
           <div className="match1">
-          
+          <rect width="80" height="79.322" fill="url(#pattern0)"></rect>
             <img
               className="match1_img"
               src="https://static.wanted.co.kr/images/ai/logo-wantedai.png"

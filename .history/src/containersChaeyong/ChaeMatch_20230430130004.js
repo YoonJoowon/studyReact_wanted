@@ -72,10 +72,10 @@ function ChaeMatch() {
       <section>
         <div className="main2">
           <div className="match1">
-          
+            <svg width="80" height="80" viewBox="0 0 80 80" fill="none"></svg>
             <img
               className="match1_img"
-              src="https://static.wanted.co.kr/images/ai/logo-wantedai.png"
+              // src="https://static.wanted.co.kr/images/ai/logo-wantedai.png"
               width="170"
               alt="logo-wantedai"
             />
