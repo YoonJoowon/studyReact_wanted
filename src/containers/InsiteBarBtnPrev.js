@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import styled from "styled-components";
+import { useSwiper } from "swiper/react";
 
 function InsiteBarBtnPrev() {
+
+  const swiper = useSwiper();
+
   return (
     <InsiteBarBtnPrevStyle>
       <div className="swipter_btn2">
-        <button type="button" className="swipter_btnR">
+        <button onClick={() => swiper.slideNext()} className="swipter_btnR" >
           <span className="swiperArrow">
             <svg className="swiperArrowR" viewBox="0 0 18 18">
               <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
@@ -20,7 +24,7 @@ function InsiteBarBtnPrev() {
 export default InsiteBarBtnPrev;
 
 const InsiteBarBtnPrevStyle = styled.div`
-  .swipter_btn2 {
+  .sc-bZPPFW {
     right: 0;
     width: 80px;
     -ms-flex-pack: end;
@@ -37,7 +41,6 @@ const InsiteBarBtnPrevStyle = styled.div`
     display: flex;
 
     position: absolute;
-    -ms-flex-align: center;
     align-items: center;
     z-index: 1;
   }

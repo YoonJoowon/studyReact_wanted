@@ -64,10 +64,10 @@ export default function MainSlide() {
               loop={true}
               centeredSlides={true}
               spaceBetween={24}
-              // autoplay={{
-              //   delay: 2500,
-              //   disableOnInteraction: false,
-              // }}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
               className="mySwiper"
             >
               {slideCards.map((x) => {

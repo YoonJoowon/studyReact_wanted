@@ -1,7 +1,7 @@
 import React from "react";
 import "./css/Chae.css";
 
-import ChaeSlide from "./containersChaeyong/ChaeSlide";
+import Chaeslide from "./containersChaeyong/Chaeslide";
 import ChaeMatch from "./containersChaeyong/ChaeMatch";
 import ChaeBanner from "./containersChaeyong/ChaeBanner";
 import ChaeCompany from "./containersChaeyong/ChaeCompany";
@@ -11,7 +11,7 @@ function ChaeYong() {
 
   return (
     <div className="wrapper">
-      <ChaeSlide />
+      <Chaeslide />
       <ChaeMatch />
       <ChaeBanner />
       <ChaeCompany />
