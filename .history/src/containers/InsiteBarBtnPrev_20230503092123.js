@@ -25,7 +25,7 @@ export default InsiteBarBtnPrev;
 
 const InsiteBarBtnPrevStyle = styled.div`
   .sc-bZPPFW {
-    right: 40;
+    right: 0;
     width: 80px;
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -37,15 +37,12 @@ const InsiteBarBtnPrevStyle = styled.div`
       to(hsla(0, 0%, 100%, 0))
     );
     background: linear-gradient(270deg, #fff 21.82%, hsla(0, 0%, 100%, 0));
+
     display: flex;
+
     position: absolute;
     align-items: center;
     z-index: 1;
-  }
-
-  .swipter_btn2 :hover{
-    background-color: #d4d4d4;
-    cursor: pointer;
   }
 
   .swipter_btnR {

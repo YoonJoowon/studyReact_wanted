@@ -111,15 +111,15 @@ function InsiteBar() {
             <InsiteBarBtnPrev />
             <InsiteBarBtnNext />
           </div>
+          <button type="button" class="InterestTagSlide">
+              <svg width="18" height="18" viewBox="0 0 24 24">
+                <path
+                  fill="currentColor"
+                  d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
+                ></path>
+              </svg>
+            </button>
         </Swiper>
-        <button type="button" class="InterestTagSlide">
-          <svg width="18" height="18" viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
-            ></path>
-          </svg>
-        </button>
       </div>
     </InsiteBarStyle>
   );
@@ -133,7 +133,7 @@ const InsiteBarStyle = styled.div`
   }
 
   .swiper {
-    width: 1012px;
+    width: 1060px;
     display: flex;
     overflow-x: hidden;
     overflow-y: hidden;
@@ -171,16 +171,14 @@ const InsiteBarStyle = styled.div`
   .buttonWrapper {
     position: absolute;
     margin: auto;
-    width: 1012px;
-    background-color: red;
+    width: 1060px;
   }
 
   .InterestTagSlide {
     display: block;
     justify-content: center;
     align-items: center;
-    margin-left: 6px;
-    min-width: 40px;
+    min-width: 34px;
     min-height: 34px;
     border: 1px solid #e1e2e4;
     -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
@@ -188,7 +186,5 @@ const InsiteBarStyle = styled.div`
     border-radius: 4px;
     color: #8a8a8a;
     background-color: #fff;
-    cursor: pointer;
   }
-
 `;

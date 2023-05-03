@@ -25,7 +25,7 @@ export default InsiteBarBtnPrev;
 
 const InsiteBarBtnPrevStyle = styled.div`
   .sc-bZPPFW {
-    right: 40;
+    right: 0;
     width: 80px;
     -ms-flex-pack: end;
     justify-content: flex-end;

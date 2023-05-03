@@ -24,11 +24,11 @@ const articles = [
   },
   {
     id: 5,
-    title: "IT기술",
+    title: "IT/기술",
   },
   {
     id: 6,
-    title: "취업이직",
+    title: "취업/이직",
   },
   {
     id: 7,
@@ -48,7 +48,7 @@ const articles = [
   },
   {
     id: 11,
-    title: "경영전략",
+    title: "경영/전략",
   },
   {
     id: 12,
@@ -64,7 +64,7 @@ const articles = [
   },
   {
     id: 15,
-    title: "UXUI",
+    title: "UX/UI",
   },
   {
     id: 16,
@@ -87,40 +87,30 @@ const articles = [
 function InsiteBar() {
   return (
     <InsiteBarStyle>
-      <div className="insiteBarWrap">
-        <Swiper
-          navigation={true}
-          spaceBetween={8}
-          slidesPerView={"auto"}
-          // centeredSlides={true}
-          slidesPerGroup={3}
-          watchOverflow={true}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-        >
-          {articles.map((x) => {
-            return (
-              <SwiperSlide key={x.id}>
-                <button>{x.title}</button>
-              </SwiperSlide>
-            );
-          })}
-          <div className="buttonWrapper">
-            <InsiteBarBtnPrev />
-            <InsiteBarBtnNext />
-          </div>
-        </Swiper>
-        <button type="button" class="InterestTagSlide">
-          <svg width="18" height="18" viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
-            ></path>
-          </svg>
-        </button>
-      </div>
+      <Swiper
+        navigation={true}
+        spaceBetween={8}
+        slidesPerView={"auto"}
+        // centeredSlides={true}
+        watchOverflow = {true}
+
+        pagination={{
+          clickable: true,
+        }}
+        modules={[Pagination]}
+      >
+        {articles.map((x) => {
+          return (
+            <SwiperSlide key={x.id}>
+              <button>{x.title}</button>
+            </SwiperSlide>
+          );
+        })}
+        <div className="buttonWrapper">
+          <InsiteBarBtnPrev />
+          <InsiteBarBtnNext />
+        </div>
+      </Swiper>
     </InsiteBarStyle>
   );
 }
@@ -128,15 +118,11 @@ function InsiteBar() {
 export default InsiteBar;
 
 const InsiteBarStyle = styled.div`
-  .insiteBarWrap {
-    display: flex;
-  }
-
   .swiper {
-    width: 1012px;
+    width: 1060px;
     display: flex;
     overflow-x: hidden;
-    overflow-y: hidden;
+    overflow-Y: hidden;
     position: relative;
     .swiper-wrapper {
       width: 1060px;
@@ -157,38 +143,20 @@ const InsiteBarStyle = styled.div`
     color: #8a8a8a;
     height: 40px;
     position: relative;
-    /* flex-shrink: 0; */
+    flex-shrink: 0;
 
     border: 1px solid #e1e2e3;
     border-radius: 30px;
     cursor: pointer;
   }
 
-  .swiper-slide :hover {
-    background-color: #d4d4d4;
+  .swiper-slide button :hover{
+    background-color: #8a8a8a;
   }
 
   .buttonWrapper {
     position: absolute;
     margin: auto;
-    width: 1012px;
-    background-color: red;
+    width: 1060px;
   }
-
-  .InterestTagSlide {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin-left: 6px;
-    min-width: 40px;
-    min-height: 34px;
-    border: 1px solid #e1e2e4;
-    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
-    color: #8a8a8a;
-    background-color: #fff;
-    cursor: pointer;
-  }
-
 `;

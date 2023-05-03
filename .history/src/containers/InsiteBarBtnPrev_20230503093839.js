@@ -25,7 +25,7 @@ export default InsiteBarBtnPrev;
 
 const InsiteBarBtnPrevStyle = styled.div`
   .sc-bZPPFW {
-    right: 40;
+    right: 0;
     width: 80px;
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -41,11 +41,6 @@ const InsiteBarBtnPrevStyle = styled.div`
     position: absolute;
     align-items: center;
     z-index: 1;
-  }
-
-  .swipter_btn2 :hover{
-    background-color: #d4d4d4;
-    cursor: pointer;
   }
 
   .swipter_btnR {
@@ -67,6 +62,11 @@ const InsiteBarBtnPrevStyle = styled.div`
     box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.05);
     color: #8a8a8a;
     position: relative;
+  }
+
+  .swipter_btn2 :hover{
+    background-color: #d4d4d4;
+
   }
 
   .swiperArrow {

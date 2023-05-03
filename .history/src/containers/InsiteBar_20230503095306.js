@@ -111,15 +111,16 @@ function InsiteBar() {
             <InsiteBarBtnPrev />
             <InsiteBarBtnNext />
           </div>
+
         </Swiper>
         <button type="button" class="InterestTagSlide">
-          <svg width="18" height="18" viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
-            ></path>
-          </svg>
-        </button>
+            <svg width="18" height="18" viewBox="0 0 24 24">
+              <path
+                fill="currentColor"
+                d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
+              ></path>
+            </svg>
+          </button>
       </div>
     </InsiteBarStyle>
   );
@@ -179,7 +180,6 @@ const InsiteBarStyle = styled.div`
     display: block;
     justify-content: center;
     align-items: center;
-    margin-left: 6px;
     min-width: 40px;
     min-height: 34px;
     border: 1px solid #e1e2e4;
@@ -188,7 +188,5 @@ const InsiteBarStyle = styled.div`
     border-radius: 4px;
     color: #8a8a8a;
     background-color: #fff;
-    cursor: pointer;
   }
-
 `;

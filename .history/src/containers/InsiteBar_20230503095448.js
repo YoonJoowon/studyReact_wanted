@@ -191,4 +191,7 @@ const InsiteBarStyle = styled.div`
     cursor: pointer;
   }
 
+  .InterestTagSlide button :hover {
+    cursor: pointer;
+  }
 `;

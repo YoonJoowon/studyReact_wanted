@@ -188,7 +188,9 @@ const InsiteBarStyle = styled.div`
     border-radius: 4px;
     color: #8a8a8a;
     background-color: #fff;
-    cursor: pointer;
   }
 
+  .InterestTagSlide <button></button> :hover {
+    cursor: pointer;
+  }
 `;

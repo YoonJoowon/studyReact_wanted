@@ -2,53 +2,50 @@ import React, { useState } from "react";
 import styled from "styled-components";
 import { useSwiper } from "swiper/react";
 
-function InsiteBarBtnPrev() {
+function InsiteBarBtnNext() {
 
   const swiper = useSwiper();
 
   return (
-    <InsiteBarBtnPrevStyle>
-      <div className="swipter_btn2">
-        <button onClick={() => swiper.slideNext()} className="swipter_btnR" >
+    <InsiteBarBtnNextStyle>
+      <div className="swipter_btn1">
+        <button onClick={() => swiper.slidePrev()} className="swipter_btnL">
           <span className="swiperArrow">
-            <svg className="swiperArrowR" viewBox="0 0 18 18">
-              <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
+            <svg className="swiperArrowL" viewBox="0 0 18 18">
+              <path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path>
             </svg>
           </span>
         </button>
       </div>
-    </InsiteBarBtnPrevStyle>
+    </InsiteBarBtnNextStyle>
   );
 }
 
-export default InsiteBarBtnPrev;
+export default InsiteBarBtnNext;
 
-const InsiteBarBtnPrevStyle = styled.div`
-  .sc-bZPPFW {
-    right: 40;
+const InsiteBarBtnNextStyle = styled.div`
+  .sc-jItqcz {
+    left: 0;
     width: 80px;
-    -ms-flex-pack: end;
-    justify-content: flex-end;
+    -ms-flex-pack: start;
+    justify-content: flex-start;
     background: -webkit-gradient(
       linear,
-      right top,
       left top,
+      right top,
       color-stop(21.82%, #fff),
       to(hsla(0, 0%, 100%, 0))
     );
-    background: linear-gradient(270deg, #fff 21.82%, hsla(0, 0%, 100%, 0));
+    background: linear-gradient(90deg, #fff 21.82%, hsla(0, 0%, 100%, 0));
+
     display: flex;
+
     position: absolute;
     align-items: center;
-    z-index: 1;
+    z-index: 2;
   }
 
-  .swipter_btn2 :hover{
-    background-color: #d4d4d4;
-    cursor: pointer;
-  }
-
-  .swipter_btnR {
+  .swipter_btnL {
     width: 40px;
     height: 40px;
     font-size: 18px;
@@ -77,7 +74,7 @@ const InsiteBarBtnPrevStyle = styled.div`
     justify-content: inherit;
   }
 
-  .swiperArrowR {
+  .swiperArrowL {
     user-select: none;
     width: 1em;
     height: 1em;

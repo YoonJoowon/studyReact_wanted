@@ -25,7 +25,6 @@ export default InsiteBarBtnPrev;
 
 const InsiteBarBtnPrevStyle = styled.div`
   .sc-bZPPFW {
-    right: 40;
     width: 80px;
     -ms-flex-pack: end;
     justify-content: flex-end;
@@ -41,6 +40,10 @@ const InsiteBarBtnPrevStyle = styled.div`
     position: absolute;
     align-items: center;
     z-index: 1;
+  }
+
+  .swipter_btn2{
+    right: 20;
   }
 
   .swipter_btn2 :hover{
