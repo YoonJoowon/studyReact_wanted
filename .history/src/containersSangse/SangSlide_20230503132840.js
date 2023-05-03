@@ -30,6 +30,7 @@ const SlideImg = [
 ];
 
 function SangSlide() {
+
   return (
     <SangSlideWrapper className="main-slide">
       <Swiper
@@ -38,9 +39,9 @@ function SangSlide() {
         spaceBetween={0}
         scrollbar={{
           hide: true,
-          draggable: true,
         }}
         modules={[Scrollbar]}
+        
         className="mySwiper"
       >
         <div>
@@ -75,8 +76,8 @@ const SangSlideWrapper = styled.div`
   /* overflow-y: hidden; */
 
   .swiper {
-    width: 700px;
-    height: 504px;
+    width: 100%;
+    height: 100%;
     position: relative;
     display: flex;
   }
@@ -93,14 +94,16 @@ const SangSlideWrapper = styled.div`
 
   .button-area {
     display: flex;
+    /* position: absolute; */
     width: 700px;
     height: 490px;
     z-index: 1;
+    position: fixed;
 
     .main-slide-prev-button,
     .main-slide-next-button {
       position: absolute;
-      top: 45%;
+      top: 40%;
     }
     .main-slide-next-button {
       right: 0;
@@ -117,9 +120,5 @@ const SangSlideWrapper = styled.div`
     outline: 1px solid rgba(0, 0, 0, 0.05);
     width: 700px;
     height: 490px;
-  }
-
-  .swiper-scrollbar {
-    height: 15px;
   }
 `;

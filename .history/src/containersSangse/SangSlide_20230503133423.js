@@ -93,6 +93,7 @@ const SangSlideWrapper = styled.div`
 
   .button-area {
     display: flex;
+    /* position: absolute; */
     width: 700px;
     height: 490px;
     z-index: 1;
@@ -100,7 +101,7 @@ const SangSlideWrapper = styled.div`
     .main-slide-prev-button,
     .main-slide-next-button {
       position: absolute;
-      top: 45%;
+      top: 40%;
     }
     .main-slide-next-button {
       right: 0;

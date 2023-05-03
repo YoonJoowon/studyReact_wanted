@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 import SangSlidePrevButton from "./SangSlidePrevButton";
 import SangSlideNextutton from "./SangSlideNextButton";
-import { Scrollbar } from "swiper";
-import "swiper/css/scrollbar";
 
 const SlideImg = [
   {
@@ -36,12 +34,8 @@ function SangSlide() {
         slidesPerView={"auto"}
         centeredSlides={true}
         spaceBetween={0}
-        scrollbar={{
-          hide: true,
-          draggable: true,
-        }}
-        modules={[Scrollbar]}
         className="mySwiper"
+        // scrollbar={true}
       >
         <div>
           {SlideImg.map((x) => {
@@ -71,12 +65,11 @@ const SangSlideWrapper = styled.div`
   width: 700px;
   height: 504px;
   position: relative;
-  overflow-x: hidden;
-  /* overflow-y: hidden; */
+  overflow-y: hidden;
 
   .swiper {
-    width: 700px;
-    height: 504px;
+    width: 100%;
+    height: 100%;
     position: relative;
     display: flex;
   }
@@ -93,14 +86,16 @@ const SangSlideWrapper = styled.div`
 
   .button-area {
     display: flex;
+    /* position: absolute; */
     width: 700px;
     height: 490px;
     z-index: 1;
+    position: fixed;
 
     .main-slide-prev-button,
     .main-slide-next-button {
       position: absolute;
-      top: 45%;
+      top: 40%;
     }
     .main-slide-next-button {
       right: 0;
@@ -117,9 +112,5 @@ const SangSlideWrapper = styled.div`
     outline: 1px solid rgba(0, 0, 0, 0.05);
     width: 700px;
     height: 490px;
-  }
-
-  .swiper-scrollbar {
-    height: 15px;
   }
 `;

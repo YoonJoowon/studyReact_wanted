@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 import SangSlidePrevButton from "./SangSlidePrevButton";
 import SangSlideNextutton from "./SangSlideNextButton";
-import { Scrollbar } from "swiper";
-import "swiper/css/scrollbar";
 
 const SlideImg = [
   {
@@ -36,11 +34,6 @@ function SangSlide() {
         slidesPerView={"auto"}
         centeredSlides={true}
         spaceBetween={0}
-        scrollbar={{
-          hide: true,
-          draggable: true,
-        }}
-        modules={[Scrollbar]}
         className="mySwiper"
       >
         <div>
@@ -55,8 +48,10 @@ function SangSlide() {
           })}
         </div>
         <div className="button-area">
-          <SangSlidePrevButton />
-          <SangSlideNextutton />
+          <div className="center">
+            <SangSlidePrevButton />
+            <SangSlideNextutton />
+          </div>
         </div>
       </Swiper>
     </SangSlideWrapper>
@@ -66,24 +61,10 @@ function SangSlide() {
 export default SangSlide;
 
 const SangSlideWrapper = styled.div`
-  flex-direction: row;
-  padding-bottom: 5px;
-  width: 700px;
-  height: 504px;
-  position: relative;
-  overflow-x: hidden;
-  /* overflow-y: hidden; */
-
-  .swiper {
-    width: 700px;
-    height: 504px;
-    position: relative;
-    display: flex;
-  }
+  flex-wrap: nowrap;/
 
   .swiper-wrapper {
-    /* scroll-snap-type: x; */
-    /* overscroll-behavior: contain; */
+    display: flex;
   }
 
   .swiper img {
@@ -92,23 +73,24 @@ const SangSlideWrapper = styled.div`
   }
 
   .button-area {
-    display: flex;
-    width: 700px;
-    height: 490px;
+    position: absolute;
     z-index: 1;
-
-    .main-slide-prev-button,
-    .main-slide-next-button {
-      position: absolute;
-      top: 45%;
-    }
-    .main-slide-next-button {
-      right: 0;
-      margin-right: 20px;
-    }
-    .main-slide-prev-button {
-      left: 0;
-      margin-left: 10px;
+    top: 40%;
+    left: 50%;
+    display: flex;
+    .center {
+      .main-slide-prev-button,
+      .main-slide-next-button {
+        position: absolute;
+        margin: auto;
+        top: 60%;
+      }
+      .main-slide-next-button {
+        right: -330px;
+      }
+      .main-slide-prev-button {
+        left: -330px;
+      }
     }
   }
 
@@ -117,9 +99,5 @@ const SangSlideWrapper = styled.div`
     outline: 1px solid rgba(0, 0, 0, 0.05);
     width: 700px;
     height: 490px;
-  }
-
-  .swiper-scrollbar {
-    height: 15px;
   }
 `;

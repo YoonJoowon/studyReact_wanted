@@ -3,8 +3,6 @@ import { Swiper, SwiperSlide } from "swiper/react";
 import styled from "styled-components";
 import SangSlidePrevButton from "./SangSlidePrevButton";
 import SangSlideNextutton from "./SangSlideNextButton";
-import { Scrollbar } from "swiper";
-import "swiper/css/scrollbar";
 
 const SlideImg = [
   {
@@ -30,33 +28,29 @@ const SlideImg = [
 ];
 
 function SangSlide() {
+
   return (
     <SangSlideWrapper className="main-slide">
       <Swiper
         slidesPerView={"auto"}
         centeredSlides={true}
         spaceBetween={0}
-        scrollbar={{
-          hide: true,
-          draggable: true,
-        }}
-        modules={[Scrollbar]}
         className="mySwiper"
       >
-        <div>
-          {SlideImg.map((x) => {
-            return (
-              <SwiperSlide key={x.id}>
-                <div>
-                  <img src={x.image} />
-                </div>
-              </SwiperSlide>
-            );
-          })}
-        </div>
+        {SlideImg.map((x) => {
+          return (
+            <SwiperSlide key={x.id}>
+              <div>
+                <img src={x.image} />
+              </div>
+            </SwiperSlide>
+          );
+        })}
         <div className="button-area">
-          <SangSlidePrevButton />
-          <SangSlideNextutton />
+          <div className="center">
+            <SangSlidePrevButton />
+            <SangSlideNextutton />
+          </div>
         </div>
       </Swiper>
     </SangSlideWrapper>
@@ -66,49 +60,47 @@ function SangSlide() {
 export default SangSlide;
 
 const SangSlideWrapper = styled.div`
+  flex-wrap: nowrap;
   flex-direction: row;
+  align-items: flex-start;
   padding-bottom: 5px;
   width: 700px;
   height: 504px;
   position: relative;
-  overflow-x: hidden;
-  /* overflow-y: hidden; */
+    overflow-y: hidden;
+  scroll-snap-type: x mandatory;
+  overscroll-behavior: contain;
 
-  .swiper {
-    width: 700px;
-    height: 504px;
-    position: relative;
+  .swiper-wrapper{
     display: flex;
+    
   }
 
-  .swiper-wrapper {
-    /* scroll-snap-type: x; */
-    /* overscroll-behavior: contain; */
-  }
-
-  .swiper img {
+  .swiper img{
     width: 700px;
     height: 499px;
+    
   }
 
   .button-area {
-    display: flex;
-    width: 700px;
-    height: 490px;
+    position: absolute;
     z-index: 1;
-
-    .main-slide-prev-button,
-    .main-slide-next-button {
-      position: absolute;
-      top: 45%;
-    }
-    .main-slide-next-button {
-      right: 0;
-      margin-right: 20px;
-    }
-    .main-slide-prev-button {
-      left: 0;
-      margin-left: 10px;
+    top: 40%;
+    left: 50%;
+    display: flex;
+    .center {
+      .main-slide-prev-button,
+      .main-slide-next-button {
+        position: absolute;
+        margin: auto;
+        top: 60%;
+      }
+      .main-slide-next-button {
+        right: -330px;
+      }
+      .main-slide-prev-button {
+        left: -330px;
+      }
     }
   }
 
@@ -117,9 +109,5 @@ const SangSlideWrapper = styled.div`
     outline: 1px solid rgba(0, 0, 0, 0.05);
     width: 700px;
     height: 490px;
-  }
-
-  .swiper-scrollbar {
-    height: 15px;
   }
 `;

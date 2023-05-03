@@ -100,7 +100,7 @@ const SangSlideWrapper = styled.div`
     .main-slide-prev-button,
     .main-slide-next-button {
       position: absolute;
-      top: 45%;
+      top: 50%;
     }
     .main-slide-next-button {
       right: 0;
