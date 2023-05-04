@@ -90,7 +90,7 @@ function InsiteBar() {
       <div className="insiteBarWrap">
         <Swiper
           navigation={true}
-          spaceBetween={8}
+          // spaceBetween={8}
           slidesPerView={"auto"}
           // centeredSlides={true}
           slidesPerGroup={3}
@@ -150,7 +150,6 @@ const InsiteBarStyle = styled.div`
   }
 
   .swiper-slide button {
-    padding: 9px 22px;
     font-weight: 700;
     font-size: 15px;
     line-height: 146.7%;
