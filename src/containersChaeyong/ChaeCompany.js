@@ -527,6 +527,192 @@ const ChaeCompanyStyle = styled.div`
     float: none;
   }
 
+  
+  /* subcard1 */
+  .subcard00 {
+    display: flex;
+    margin-top: 20px;
+  }
+
+  .subCard1 {
+    border: 1px solid black;
+    width: 540px;
+    height: 350px;
+    padding: 10px;
+  }
+
+  .subCard1_img00 {
+    border-radius: 4px;
+    width: 520px;
+    height: 270px;
+    object-fit: cover;
+    margin: 5px;
+  }
+
+  .subCard1_img {
+    border-radius: 4px;
+    width: 520px;
+    height: 270px;
+    object-fit: cover;
+  }
+
+  .subCard1_bot {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 10px;
+    margin-top: 17px;
+  }
+
+  .subCard1_bot_img {
+    height: 21px;
+  }
+
+  .subCard1_bot_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  .subCard1Education2 {
+    color: #000000;
+    border-color: #000000;
+
+    display: inline-flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 2px;
+
+    border-width: 0.5px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0 6px;
+  }
+
+  .subCard1_txt {
+    margin-top: 4px;
+    font-size: 16px;
+  }
+
+  .subCard1_txt2 {
+    height: 16px;
+    font-size: 14px;
+    font-weight: 500;
+    color: #999;
+    margin-top: 4px;
+  }
+
+  .subCard1_btn {
+    height: 40px;
+    font-size: 15px;
+    color: #36f;
+    background-color: #fff;
+    position: relative;
+
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    vertical-align: middle;
+    min-width: 64px;
+    padding: 0 27px;
+    box-sizing: border-box;
+    border-radius: 25px;
+    font-size: 16px;
+    font-weight: 700;
+    line-height: normal;
+    border: none;
+    background-color: none;
+    cursor: pointer;
+    border: 1px solid #e1e2e3;
+    padding: 12px 25.5px 11px;
+    line-height: 1;
+  }
+
+  .subCard1_btn p {
+    width: 100%;
+    font-size: inherit;
+    font-weight: inherit;
+    display: inherit;
+    -ms-flex-align: inherit;
+    align-items: inherit;
+    -ms-flex-pack: inherit;
+    justify-content: inherit;
+    color: inherit;
+  }
+
+  /* subcard2 */
+  .subCard2 {
+    border: 1px solid black;
+    width: 540px;
+    height: 350px;
+    padding: 10px;
+  }
+
+  .subCard2_img00 {
+    width: 520px;
+    height: 270px;
+    -webkit-box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
+    margin: 10px;
+  }
+
+  .subCard2_img {
+    border-radius: 4px;
+    width: 520px;
+    height: 270px;
+    object-fit: cover;
+  }
+
+  .subCard2_bot {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin: 10px;
+    margin-top: 10px;
+  }
+
+  .subCard2_bot_txt {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-style: normal;
+    line-height: normal;
+    letter-spacing: normal;
+  }
+
+  .subCard2Article2 {
+    color: #ff9100;
+    border-color: #ff9100;
+
+    display: inline-flex;
+    -ms-flex-pack: center;
+    justify-content: center;
+    -ms-flex-align: center;
+    align-items: center;
+    height: 20px;
+    border: 1px solid;
+    border-radius: 2px;
+
+    border-width: 0.5px;
+    font-size: 11px;
+    font-weight: 700;
+    line-height: normal;
+    padding: 0 6px;
+  }
+
+  .subCard2_txt {
+    margin-top: 4px;
+    font-size: 16px;
+  }
+
   /* main4 - 테마로 모아보는 오즘 채용 */
   .temaCard_bot {
     margin-top: 50px;

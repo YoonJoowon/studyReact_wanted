@@ -13,8 +13,7 @@ function Nav() {
     setModalOpen(true);
   };
 
-  
-  localStorage.setItem("id1","ysw6963@gmail.com")
+  localStorage.setItem("id1", "ysw6963@gmail.com");
 
   return (
     <NavStyle>
@@ -70,7 +69,7 @@ function Nav() {
 export default Nav;
 
 const NavStyle = styled.div`
-  nav {
+  .nav {
     width: 100%;
     height: 50px;
     display: flex;
@@ -84,12 +83,28 @@ const NavStyle = styled.div`
     align-items: center;
   }
 
-  .navCen {
+  .nav_cen {
     width: 1060px;
-    margin: auto;
     display: flex;
+    align-items: center;
+  }
+
+  .nav_cen_logo {
+    width: 100px;
+    height: 14px;
+    display: flex;
+    margin-right: 70px;
     justify-content: center;
     align-items: center;
+    cursor: pointer;
+  }
+
+  .nav_cen_img {
+    background-image: url("https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=17&q=75");
+    width: 17px;
+    height: 14px;
+    margin: 5px;
+    object-fit: contain;
   }
 
   nav .bar {
@@ -107,17 +122,31 @@ const NavStyle = styled.div`
     padding-left: 5px;
   }
 
-  .bar2 {
-    /* flex-grow: ; */
-    height: 50px;
-    text-align: center;
-    width: 621px;
-    margin: auto;
+  .nav_cen_logo {
+    width: 100px;
+    height: 14px;
+    display: flex;
+    margin-right: 70px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+  }
+
+  .nav_cen_img {
+    background-image: url("https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ficon-menu.png&w=17&q=75");
+    width: 17px;
+    height: 14px;
+    margin: 5px;
+    object-fit: contain;
   }
 
   nav ul li {
-    float: left;
     position: relative;
+    font-size: 14px;
+    line-height: 20px;
+    font-weight: 500;
+    padding: 15px;
+    display: inline-block;
   }
 
   nav li svg {

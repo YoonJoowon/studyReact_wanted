@@ -106,6 +106,7 @@ const StyledWrapper = styled.div`
   padding-top: 25px;
   margin-bottom: 5px;
   margin: auto;
+  margin-top: 50px;
   width: 1060px;
   height: 100%;
   position: relative;
@@ -131,17 +132,24 @@ const StyledWrapper = styled.div`
     }
   }
 
+  .swiper-wrapper {
+    display: flex;
+  }
+
   .swiper-slide {
     width: 1060px;
     height: 300px;
     margin: auto;
+    position: relative;
 
     .active {
       .main-slide-card {
         opacity: 100;
       }
     }
+
   }
+  
 
   .img-container {
     width: 1060px;
@@ -155,21 +163,5 @@ const StyledWrapper = styled.div`
       object-fit: cover;
       border-radius: 10px;
     }
-  }
-
-  .main1 {
-    display: flex;
-    margin-top: 50px;
-  }
-
-  .main1 .slide {
-    width: 1060px;
-    height: 300px;
-    margin: auto;
-    display: flex;
-  }
-
-  .main1 .slideImg img {
-    border-radius: 10px;
   }
 `;

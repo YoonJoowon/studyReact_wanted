@@ -72,6 +72,7 @@ const SangSlideWrapper = styled.div`
   height: 504px;
   position: relative;
   overflow-x: hidden;
+    display: flex;
   /* overflow-y: hidden; */
 
   .swiper {
@@ -84,6 +85,7 @@ const SangSlideWrapper = styled.div`
   .swiper-wrapper {
     /* scroll-snap-type: x; */
     /* overscroll-behavior: contain; */
+    display: flex;
   }
 
   .swiper img {

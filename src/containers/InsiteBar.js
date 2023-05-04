@@ -24,7 +24,7 @@ const articles = [
   },
   {
     id: 5,
-    title: "IT기술",
+    title: "IT/기술",
   },
   {
     id: 6,
@@ -64,7 +64,7 @@ const articles = [
   },
   {
     id: 15,
-    title: "UXUI",
+    title: "UX/UI",
   },
   {
     id: 16,
@@ -112,7 +112,7 @@ function InsiteBar() {
             <InsiteBarBtnNext />
           </div>
         </Swiper>
-        <button type="button" class="InterestTagSlide">
+        <button type="button" className="InterestTagSlide">
           <svg width="18" height="18" viewBox="0 0 24 24">
             <path
               fill="currentColor"
@@ -139,7 +139,7 @@ const InsiteBarStyle = styled.div`
     overflow-y: hidden;
     position: relative;
     .swiper-wrapper {
-      width: 1060px;
+      width: 1012px;
       display: flex;
     }
   }
@@ -157,11 +157,12 @@ const InsiteBarStyle = styled.div`
     color: #8a8a8a;
     height: 40px;
     position: relative;
-    /* flex-shrink: 0; */
-
     border: 1px solid #e1e2e3;
     border-radius: 30px;
     cursor: pointer;
+
+    flex-shrink: 0;
+    outline: none;
   }
 
   .swiper-slide :hover {
@@ -172,7 +173,7 @@ const InsiteBarStyle = styled.div`
     position: absolute;
     margin: auto;
     width: 1012px;
-    background-color: red;
+    height: 0px;
   }
 
   .InterestTagSlide {

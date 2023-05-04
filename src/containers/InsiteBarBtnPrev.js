@@ -44,7 +44,7 @@ const InsiteBarBtnPrevStyle = styled.div`
   }
 
   .swipter_btn2 :hover{
-    background-color: #d4d4d4;
+    background-color: #c3c3c3;
     cursor: pointer;
   }
 

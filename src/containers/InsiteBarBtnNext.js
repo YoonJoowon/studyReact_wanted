@@ -37,18 +37,18 @@ const InsiteBarBtnNextStyle = styled.div`
       to(hsla(0, 0%, 100%, 0))
     );
     background: linear-gradient(90deg, #fff 21.82%, hsla(0, 0%, 100%, 0));
-
     display: flex;
-
     position: absolute;
     align-items: center;
     z-index: 2;
   }
+
   
   .swipter_btn1 :hover{
-    background-color: #d4d4d4;
+    background-color: #c3c3c3;
     cursor: pointer;
   }
+
 
   .swipter_btnL {
     width: 40px;
