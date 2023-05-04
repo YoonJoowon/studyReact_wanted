@@ -49,7 +49,9 @@ function Nav() {
               </li>
             </ul>
             <div className="aside">
-              <button className="asideImg" type="button"></button>
+              <button className="asideImg" type="button">
+                <img alt="" src="https://img.freepik.com/premium-vector/magnifying-glass-icon-vector-illustration_230920-960.jpg?w=2000"></img>
+              </button>
               <button onClick={showModal} id="login" type="button">
                 회원가입/로그인
               </button>
@@ -182,12 +184,11 @@ const NavStyle = styled.div`
     float: right;
   }
 
-  .aside .asideImg {
-    width: 15px;
-    height: 15px;
-    padding: 10px;
-    padding-bottom: 10px;
+  .aside .asideImg img{
+    width: 20px;
+    height: 20px;
     margin-left: 20px;
+    cursor: pointer;
   }
 
   #login {

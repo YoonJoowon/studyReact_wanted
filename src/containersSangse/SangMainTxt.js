@@ -1,21 +1,43 @@
 import React from "react";
 import SangSkillBtn from "./SangSkillBtn";
 import styled from "styled-components";
+import mainTxt from "./MainTxt.json";
+import { useState } from "react";
+import { useEffect } from "react";
+
+function Text({ title, intro, introduce }) {
+  return (
+    <span>
+      <p>{title}</p>
+      <br />
+      <p>{intro}</p>
+      <br />
+      <p>{introduce}</p>
+    </span>
+  );
+}
 
 function SangMainTxt() {
+  const [texts, setTexts] = useState([]);
+  useEffect(() => {
+    setTexts(mainTxt);
+  }, []);
+
   return (
     <SangMainTxtStyle>
       <section className="section3">
         <div>
           <div className="section3_txt">
+            {texts.map((text) => (
+              <Text
+                key={text.id}
+                title={text.title}
+                intro={text.intro}
+                introduce={text.introduce}
+              />
+            ))}
             <p>
               <span>
-                ＜서비스 소개＞
-                <br />
-                <br />✓ Medmap – 메디컬 지도를 펼치세요!
-                <br />
-                메드맵은 의료진과 환자간 커뮤니케이션을 도와주는 솔루션입니다.
-                <br />
                 <br />
                 【블루비커는】
                 <br />
@@ -58,6 +80,7 @@ function SangMainTxt() {
                 공식 론칭(2020.04.16)
                 <br />
               </span>
+
               <span>
                 <br />• 아이쿱-블루비커, 3D 환자 교육 콘텐츠 제휴 (2020.08.25)
                 <br />
@@ -298,10 +321,9 @@ const SangMainTxtStyle = styled.div`
     width: calc(100% - 360px);
     margin-bottom: 40px;
     padding-right: 20px;
-    
   }
 
-  .section3_txt{
+  .section3_txt {
     width: 700px;
     margin: auto;
   }

@@ -6,7 +6,7 @@ function SangSide() {
 
   window.addEventListener("scroll", function () {
     const scrollingContainer = document.querySelector(".aside1");
-    const threshold = 5940; // 스크롤 임계값
+    const threshold = 6150; // 스크롤 임계값
 
     if (scrollingContainer && window.scrollY > threshold) {
       scrollingContainer.classList.add("fixed");
@@ -162,7 +162,7 @@ const SangSideStyle = styled.div`
 
   .aside1.fixed {
     position: absolute;
-    margin-top: 5910px;
+    margin-top: 6150px;
   }
 
   .aside1_padding {

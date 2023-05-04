@@ -90,7 +90,7 @@ function InsiteBar() {
       <div className="insiteBarWrap">
         <Swiper
           navigation={true}
-          // spaceBetween={8}
+          spaceBetween={18}
           slidesPerView={"auto"}
           // centeredSlides={true}
           slidesPerGroup={3}
@@ -145,8 +145,7 @@ const InsiteBarStyle = styled.div`
   }
 
   .swiper-slide {
-    display: flex;
-    width: 1060px;
+    /* display: flex; */
   }
 
   .swiper-slide button {
@@ -158,6 +157,8 @@ const InsiteBarStyle = styled.div`
     position: relative;
     border: 1px solid #e1e2e3;
     border-radius: 30px;
+    /* padding: 6px 22px; */
+    width: 110px;
     cursor: pointer;
 
     flex-shrink: 0;
