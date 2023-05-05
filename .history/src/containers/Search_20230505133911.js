@@ -139,7 +139,7 @@ function Search(props) {
 export default Search;
 
 const SearchStyle = styled.div`
-
+position: fixed;
 
   .searchWrapper {
     position: absolute;
@@ -148,7 +148,6 @@ const SearchStyle = styled.div`
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    overflow: hidden;
     
   }
 

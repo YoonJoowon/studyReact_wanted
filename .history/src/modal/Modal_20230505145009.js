@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import Modal2 from "./Modal2";
 import styled from "styled-components";
 import { useRef } from "react";
-import LoginPassword from "./LoginPassword";
 
 function Modal(props) {
   const [modal2Open, setModal2Open] = useState(false);
@@ -18,8 +17,6 @@ function Modal(props) {
     props.setModalOpen(false);
   };
 
-  // localstorage
-  const getEmail = localStorage.getItem("emailData");
 
   const email = useRef();
   const handleSubmit = () => {
@@ -27,6 +24,32 @@ function Modal(props) {
       localStorage.setItem("emailData", "ysw6963@gmail.com");
     }
   };
+
+  // window.localStorage.setItem("id1", "ysw6963@gmail.com");
+  // window.localStorage.getItem("id1");
+
+  // localStorage에 저장할 객체
+  const obj = {
+    id1: "ysw6963@gmail.com",
+    password1: 1234,
+  };
+
+  // 객체, 배열을 JSON 문자열로 변환
+  const objString = JSON.stringify(obj);
+
+  // setItem
+  window.localStorage.setItem("email", objString);
+
+  // getItem
+  const emailString = window.localStorage.getItem("email");
+
+  // JSON 문자열을 객체, 배열로 변환
+  const personObj = JSON.parse(emailString);
+
+  // 결과 출력
+  document.write(personObj); // {"name":"anna","age":20}
+  document.write("<br/>");
+
 
   return (
     <ModalStyle>
@@ -67,31 +90,25 @@ function Modal(props) {
                 <div className="modal_email_txt">이메일</div>
 
                 <div>
-                  {getEmail?<LoginPassword/> : 
-                    <form action="" onSubmit={handleSubmit}>
-                      <input
-                        type="email"
-                        id="email"
-                        placeholder="이메일을 입력하세요."
-                        onkeyUp="checkEmailValidity()"
-                        ref={email}
-                      />
-                      <p
-                        data-testid="Typography"
-                        color=""
-                        id="email_message"
-                      ></p>
-                      {/* <!-- modal2 open --> */}
-                      <button
-                        onClick={showModal2}
-                        id="modal2_open"
-                        className="modal2_open"
-                        type="button"
-                      >
-                        이메일로 계속하기
-                      </button>
-                    </form>
-                  }
+                  <form action="" onSubmit={handleSubmit}>
+                    <input
+                      type="email"
+                      id="email"
+                      placeholder="이메일을 입력하세요."
+                      onkeyUp="checkEmailValidity()"
+                      ref={email}
+                    />
+                    <p data-testid="Typography" color="" id="email_message"></p>
+                    {/* <!-- modal2 open --> */}
+                    <button
+                      onClick={showModal2}
+                      id="modal2_open"
+                      className="modal2_open"
+                      type="button"
+                    >
+                      이메일로 계속하기
+                    </button>
+                  </form>
                 </div>
 
                 <div className="modal_email_txt2">

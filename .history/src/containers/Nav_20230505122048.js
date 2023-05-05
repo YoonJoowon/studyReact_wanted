@@ -17,8 +17,10 @@ function Nav() {
   };
 
   const showSearch = () => {
-    setSearchOpen(true);
+    setModalOpen(true);
   };
+
+  localStorage.setItem("id1", "ysw6963@gmail.com");
 
   return (
     <NavStyle>
@@ -54,17 +56,14 @@ function Nav() {
               </li>
             </ul>
             <div className="aside">
-              <button
-                onClick={showSearch}
-                id="serach"
-                className="asideImg"
-                type="button"
-              >
-                <img
-                  alt=""
-                  src="https://img.freepik.com/premium-vector/magnifying-glass-icon-vector-illustration_230920-960.jpg?w=2000"
-                ></img>
-              </button>
+              <Link to={"/Search"}>
+                <button className="asideImg" type="button">
+                  <img
+                    alt=""
+                    src="https://img.freepik.com/premium-vector/magnifying-glass-icon-vector-illustration_230920-960.jpg?w=2000"
+                  ></img>
+                </button>
+              </Link>
 
               <button onClick={showModal} id="login" type="button">
                 회원가입/로그인
@@ -74,11 +73,10 @@ function Nav() {
                 <BtnRound>기업 서비스</BtnRound>
               </p>
             </div>
+
+            {modalOpen && <Modal setModalOpen={setModalOpen} />}
           </div>
         </nav>
-
-        {modalOpen && <Modal setModalOpen={setModalOpen} />}
-        {searchOpen && <Search setSearchOpen={setSearchOpen} />}
       </div>
     </NavStyle>
   );

@@ -20,6 +20,8 @@ function Nav() {
     setSearchOpen(true);
   };
 
+  localStorage.setItem("id1", "ysw6963@gmail.com");
+
   return (
     <NavStyle>
       <div className="nav">
@@ -76,9 +78,9 @@ function Nav() {
             </div>
           </div>
         </nav>
-
+        
         {modalOpen && <Modal setModalOpen={setModalOpen} />}
-        {searchOpen && <Search setSearchOpen={setSearchOpen} />}
+            {searchOpen && <Search setSearchOpen={setSearchOpen} />}
       </div>
     </NavStyle>
   );

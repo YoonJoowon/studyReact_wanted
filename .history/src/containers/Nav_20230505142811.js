@@ -20,6 +20,8 @@ function Nav() {
     setSearchOpen(true);
   };
 
+  // localStorage.setItem("id1", "ysw6963@gmail.com");
+
   return (
     <NavStyle>
       <div className="nav">

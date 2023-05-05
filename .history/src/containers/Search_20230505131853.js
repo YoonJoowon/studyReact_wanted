@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 
-function Search(props) {
+function Search() {
   const [articles, setArticles] = useState([
     {
       id: 1,
@@ -69,19 +69,12 @@ function Search(props) {
     },
   ]);
 
-  // 모달창 끄기
-  const closeSearch = () => {
-    props.setSearchOpen(false);
-  };
-
   return (
     <SearchStyle>
       <div className="searchWrapper">
         <div className="searchWrapperContainer">
           <div className="serchBarClose">
-            <button onClick={closeSearch} id="searchClose" type="button">
-              X
-            </button>
+            <button type="button">X</button>
           </div>
 
           <div className="searchBar">
@@ -107,8 +100,8 @@ function Search(props) {
             <h4 className="searchResults">추천 검색어</h4>
             <ul className="searchResults_wrapper">
               {articles.map((article) => (
-                <li key={article.id} className="">
-                  <span>{article.title}</span>
+                <li key={article.id} className="searchResults_item">
+                  <button>{article.title}</button>
                 </li>
               ))}
             </ul>
@@ -139,8 +132,6 @@ function Search(props) {
 export default Search;
 
 const SearchStyle = styled.div`
-
-
   .searchWrapper {
     position: absolute;
     left: 0;
@@ -148,8 +139,6 @@ const SearchStyle = styled.div`
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    overflow: hidden;
-    
   }
 
   .searchWrapperContainer {
@@ -165,9 +154,6 @@ const SearchStyle = styled.div`
     font-size: 30px;
     color: #e1e2e4;
     text-align: right;
-    button {
-      cursor: pointer;
-    }
   }
 
   .searchBar {
@@ -226,12 +212,7 @@ const SearchStyle = styled.div`
       padding: 0 16px;
       border-radius: 999px;
       margin: 7px 6px;
-      max-width: 200px;
-      text-align: center;
-
-      /* button {
-        margin: auto;
-      } */
+      /* max-width: 150px; */
     }
   }
 

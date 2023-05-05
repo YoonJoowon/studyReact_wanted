@@ -20,6 +20,8 @@ function Nav() {
     setSearchOpen(true);
   };
 
+  localStorage.setItem("id1", "ysw6963@gmail.com");
+
   return (
     <NavStyle>
       <div className="nav">
@@ -66,6 +68,7 @@ function Nav() {
                 ></img>
               </button>
 
+
               <button onClick={showModal} id="login" type="button">
                 회원가입/로그인
               </button>
@@ -74,11 +77,10 @@ function Nav() {
                 <BtnRound>기업 서비스</BtnRound>
               </p>
             </div>
+            {modalOpen && <Modal setModalOpen={setModalOpen} />}
+              {searchOpen && <Search setSearchOpen={setSearchOpen} />}
           </div>
         </nav>
-
-        {modalOpen && <Modal setModalOpen={setModalOpen} />}
-        {searchOpen && <Search setSearchOpen={setSearchOpen} />}
       </div>
     </NavStyle>
   );

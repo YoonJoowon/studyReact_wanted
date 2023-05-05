@@ -79,7 +79,7 @@ function Search(props) {
       <div className="searchWrapper">
         <div className="searchWrapperContainer">
           <div className="serchBarClose">
-            <button onClick={closeSearch} id="searchClose" type="button">
+            <button onClick={closeSearch} id="modal_top_close" type="button">
               X
             </button>
           </div>
@@ -139,8 +139,6 @@ function Search(props) {
 export default Search;
 
 const SearchStyle = styled.div`
-
-
   .searchWrapper {
     position: absolute;
     left: 0;
@@ -148,8 +146,6 @@ const SearchStyle = styled.div`
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    overflow: hidden;
-    
   }
 
   .searchWrapperContainer {
@@ -165,7 +161,7 @@ const SearchStyle = styled.div`
     font-size: 30px;
     color: #e1e2e4;
     text-align: right;
-    button {
+    button{
       cursor: pointer;
     }
   }

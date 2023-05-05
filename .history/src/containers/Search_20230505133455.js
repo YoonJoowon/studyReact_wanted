@@ -139,8 +139,6 @@ function Search(props) {
 export default Search;
 
 const SearchStyle = styled.div`
-
-
   .searchWrapper {
     position: absolute;
     left: 0;
@@ -148,8 +146,6 @@ const SearchStyle = styled.div`
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    overflow: hidden;
-    
   }
 
   .searchWrapperContainer {
@@ -165,7 +161,7 @@ const SearchStyle = styled.div`
     font-size: 30px;
     color: #e1e2e4;
     text-align: right;
-    button {
+    button{
       cursor: pointer;
     }
   }
@@ -189,6 +185,11 @@ const SearchStyle = styled.div`
         color: #171717;
         background: #fff;
         overflow: hidden;
+
+        :focus{
+          
+        border: 1px solid #8a8a8a;
+        }
       }
       .searchIcon {
         position: absolute;

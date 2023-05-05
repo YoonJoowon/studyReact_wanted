@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { useState } from "react";
 
-function Search(props) {
+function Search() {
   const [articles, setArticles] = useState([
     {
       id: 1,
@@ -69,17 +69,12 @@ function Search(props) {
     },
   ]);
 
-  // 모달창 끄기
-  const closeSearch = () => {
-    props.setSearchOpen(false);
-  };
-
   return (
     <SearchStyle>
       <div className="searchWrapper">
         <div className="searchWrapperContainer">
           <div className="serchBarClose">
-            <button onClick={closeSearch} id="searchClose" type="button">
+            <button type="button">
               X
             </button>
           </div>
@@ -107,8 +102,8 @@ function Search(props) {
             <h4 className="searchResults">추천 검색어</h4>
             <ul className="searchResults_wrapper">
               {articles.map((article) => (
-                <li key={article.id} className="">
-                  <span>{article.title}</span>
+                <li key={article.id} className="searchResults_item">
+                  <button>{article.title}</button>
                 </li>
               ))}
             </ul>
@@ -124,7 +119,7 @@ function Search(props) {
                   <li className="rankingSearch">
                     <span className="rankingSearch1">{search.rank}</span>
                     <span className="rankingSearch1_job">{search.title}</span>
-                    <span className="rankingSearch1Change">-</span>
+                    <span className="">-</span>
                   </li>
                 </li>
               ))}
@@ -139,8 +134,6 @@ function Search(props) {
 export default Search;
 
 const SearchStyle = styled.div`
-
-
   .searchWrapper {
     position: absolute;
     left: 0;
@@ -148,8 +141,6 @@ const SearchStyle = styled.div`
     width: 100%;
     height: 100vh;
     background-color: #fff;
-    overflow: hidden;
-    
   }
 
   .searchWrapperContainer {
@@ -161,13 +152,10 @@ const SearchStyle = styled.div`
   .serchBarClose {
     width: 700px;
     height: 32px;
-    margin: 30px 0 30px;
+    margin: 50px 0 50px;
     font-size: 30px;
     color: #e1e2e4;
     text-align: right;
-    button {
-      cursor: pointer;
-    }
   }
 
   .searchBar {
@@ -211,76 +199,5 @@ const SearchStyle = styled.div`
     color: #171717;
     margin-top: 40px;
     margin-bottom: 24px;
-  }
-
-  .searchResults_wrapper {
-    li {
-      position: relative;
-      display: inline-block;
-      font-weight: 700;
-      font-size: 14px;
-      height: 40px;
-      line-height: 40px;
-      color: #171717;
-      background-color: rgba(112, 115, 124, 0.08);
-      padding: 0 16px;
-      border-radius: 999px;
-      margin: 7px 6px;
-      max-width: 200px;
-      text-align: center;
-
-      /* button {
-        margin: auto;
-      } */
-    }
-  }
-
-  .rankingUpdate {
-    display: flex;
-    font-weight: 600;
-    font-size: 18px;
-    color: #171717;
-    margin-top: 40px;
-    margin-bottom: 24px;
-
-    .rankingUpdateTime {
-      font-weight: 400;
-      font-size: 14px;
-      color: #8a8a8a;
-      margin-left: 12px;
-    }
-  }
-
-  .searchResults_item {
-    display: inline-block;
-    width: 50%;
-
-    .rankingSearch {
-      display: flex;
-      align-items: center;
-      height: 24px;
-      margin-bottom: 16px;
-      font-size: 13px;
-      padding-right: 20px;
-
-      .rankingSearch1 {
-        display: inline-block;
-        text-align: left;
-        font-weight: 500;
-        width: 20px;
-        flex-shrink: 0;
-      }
-
-      .rankingSearch1_job {
-        margin-right: 8px;
-        overflow: hidden;
-        text-overflow: ellipsis;
-        white-space: nowrap;
-      }
-      .rankingSearch1Change {
-        font-size: 14px;
-        color: #8a8a8a;
-      }
-    }
   }
 `;

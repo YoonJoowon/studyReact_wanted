@@ -3,12 +3,11 @@ import BtnRound from "./BtnRound";
 import Modal from "../modal/Modal";
 import { Link } from "react-router-dom";
 import styled from "styled-components";
-import Search from "./Search";
 
 function Nav() {
   // 모달창 노출 여부 state
   const [modalOpen, setModalOpen] = useState(false);
-
+  
   const [searchOpen, setSearchOpen] = useState(false);
 
   // 모달창 노출
@@ -17,8 +16,10 @@ function Nav() {
   };
 
   const showSearch = () => {
-    setSearchOpen(true);
+    setModalOpen(true);
   };
+
+  localStorage.setItem("id1", "ysw6963@gmail.com");
 
   return (
     <NavStyle>
@@ -54,17 +55,13 @@ function Nav() {
               </li>
             </ul>
             <div className="aside">
-              <button
-                onClick={showSearch}
-                id="serach"
-                className="asideImg"
-                type="button"
-              >
-                <img
-                  alt=""
-                  src="https://img.freepik.com/premium-vector/magnifying-glass-icon-vector-illustration_230920-960.jpg?w=2000"
-                ></img>
-              </button>
+
+                <button className="asideImg" type="button">
+                  <img
+                    alt=""
+                    src="https://img.freepik.com/premium-vector/magnifying-glass-icon-vector-illustration_230920-960.jpg?w=2000"
+                  ></img>
+                </button>
 
               <button onClick={showModal} id="login" type="button">
                 회원가입/로그인
@@ -74,11 +71,9 @@ function Nav() {
                 <BtnRound>기업 서비스</BtnRound>
               </p>
             </div>
+            {modalOpen && <Modal setModalOpen={setModalOpen} />}
           </div>
         </nav>
-
-        {modalOpen && <Modal setModalOpen={setModalOpen} />}
-        {searchOpen && <Search setSearchOpen={setSearchOpen} />}
       </div>
     </NavStyle>
   );
@@ -204,7 +199,6 @@ const NavStyle = styled.div`
     width: 20px;
     height: 20px;
     margin-left: 20px;
-    margin-top: 4px;
     cursor: pointer;
   }
 
