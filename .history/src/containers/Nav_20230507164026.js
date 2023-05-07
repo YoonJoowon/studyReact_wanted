@@ -102,6 +102,7 @@ function Nav(props) {
                     회원가입/로그인
                   </button>
                 )}
+
                 <p>
                   <BtnRound>기업 서비스</BtnRound>
                 </p>
@@ -278,7 +279,7 @@ const NavStyle = styled.div`
       .profileAlram_btn2 {
         display: flex;
         position: relative;
-        padding-right: 5px;
+        padding-right: 10px;
 
         .profileBtn {
           background-color: #1b472d;

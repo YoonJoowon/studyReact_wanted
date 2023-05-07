@@ -79,7 +79,7 @@ function Nav(props) {
                 {isLoggedIn ? (
                   // 로그인 상태일 때
 
-                  <div className="profileAlram">
+                  <div onClick={handleLogout} className="profileAlram">
                     <div className="profileAlram_btn">
                       <img
                         src="data:image/png;base64,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"
@@ -89,9 +89,7 @@ function Nav(props) {
                     </div>
 
                     <div className="profileAlram_btn2">
-                      <button className="profileBtn" onClick={handleLogout}>
-                        주원
-                      </button>
+                      <button className="profileBtn">주원</button>
                       <p>N</p>
                     </div>
                   </div>
@@ -102,6 +100,7 @@ function Nav(props) {
                     회원가입/로그인
                   </button>
                 )}
+
                 <p>
                   <BtnRound>기업 서비스</BtnRound>
                 </p>
@@ -248,7 +247,7 @@ const NavStyle = styled.div`
     .profileAlram {
       display: flex;
       position: relative;
-      margin-bottom: 20px;
+      margin-bottom: 10px;
 
       .profileAlram_btn {
         position: relative;
@@ -270,15 +269,12 @@ const NavStyle = styled.div`
           font-size: 8px;
           border-radius: 5px;
           position: absolute;
-          text-align: center;
           right: 0;
         }
       }
 
       .profileAlram_btn2 {
         display: flex;
-        position: relative;
-        padding-right: 5px;
 
         .profileBtn {
           background-color: #1b472d;
@@ -289,7 +285,6 @@ const NavStyle = styled.div`
           font-size: 8px;
           flex-shrink: 0;
           cursor: pointer;
-
         }
         p {
           background-color: rgb(51, 102, 255);
@@ -299,7 +294,6 @@ const NavStyle = styled.div`
           font-size: 8px;
           border-radius: 5px;
           position: absolute;
-          text-align: center;
           right: 0;
           top: 5;
         }

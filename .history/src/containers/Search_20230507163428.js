@@ -119,11 +119,11 @@ function Search(props) {
             <ul>
               {search.map((search) => (
                 <li key={search.id} className="searchResults_item">
-                  <div className="rankingSearch">
+                  <li className="rankingSearch">
                     <span className="rankingSearch1">{search.rank}</span>
                     <span className="rankingSearch1_job">{search.title}</span>
                     <span className="rankingSearch1Change">-</span>
-                  </div>
+                  </li>
                 </li>
               ))}
             </ul>
