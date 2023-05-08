@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useEffect, useRef, useState } from "react";
 import Checkbox from "./Checkbox";
 import styled from "styled-components";
 
@@ -33,6 +33,48 @@ function Modal2(porps2) {
       newList[index] = isChecked;
       return newList;
     });
+  };
+
+  const isButtonBlue = checkedList[0] && checkedList[1] && checkedList[2];
+
+  // 인증번호
+  const [verificationCode, setVerificationCode] = useState(""); // 인증번호
+  const [verificationMessage, setVerificationMessage] = useState(""); //인증메세지
+
+  // 인증번호 발송 버튼 클릭 시 상태값 변경
+  const handleVerificationCodeSend = () => {
+    setVerificationCode("123456");
+    setVerificationMessage("인증 해주세요");
+  };
+
+  const [inputValue, setInputValue] = useState("");
+  const [passwordInputvalue, setPasswordInputvalue] = useState("");
+
+  const handleInputChange = (event) => {
+    setInputValue(event.target.value);
+  };
+
+  // 폼 제출 시 상태값 확인 후 처리
+  const handleSubmit = (event) => {
+    event.preventDefault();
+    if (verificationCode === inputValue) {
+      console.log("인증 성공");
+      NewLogin();
+
+    } else {
+      console.log("인증 실패");
+    }
+  };
+
+  const NewLogin = () => {
+    let password = document.getElementById("password").value;
+    // let email = document.getElementById("newLoginEmail").value;
+    localStorage.setItem("password", password);
+    // localStorage.setItem("newLoginEmail", email);
+
+    porps2.setIsLoggedIn(true);
+    porps2.setModal2Open(false);
+    porps2.setModalOpen(false);
   };
 
   return (
@@ -71,19 +113,32 @@ function Modal2(porps2) {
                 placeholder="(예시) 01012345678"
               />
 
-              <button className="modal2_number_pass">인증번호 받기</button>
+              <button
+                onClick={handleVerificationCodeSend}
+                className="modal2_number_pass"
+              >
+                인증번호 받기
+              </button>
+
               <input
                 className="modal2_number_input2"
                 type="text"
                 placeholder="인증번호를 입력해 주세요."
+                value={inputValue}
+                onChange={handleInputChange}
               />
+              <div className="verificationCount">
+                {verificationMessage}
+                {/* {timeString} */}
+              </div>
             </article>
 
             <article className="modal2_password">
               <div className="modal2_password_txt">비밀번호</div>
               <input
-                className=""
-                type="text"
+                className="newLoginPassword"
+                type="password"
+                id="password"
                 placeholder="비밀번호를 입력해 주세요"
               />
 
@@ -92,6 +147,7 @@ function Modal2(porps2) {
                 <p>8자 이상 입력해주세요.</p>
               </div>
             </article>
+
             <div className="modal2_checkbox">
               <Checkbox
                 label="전체 동의"
@@ -122,7 +178,11 @@ function Modal2(porps2) {
                 onChange={handleCheck(3)}
               />
             </div>
-            <button className="modal2_btn2" type="button">
+            <button
+              className={`modal2_btn2 ${isButtonBlue ? "blue" : ""}`}
+              type="button"
+              onClick={handleSubmit}
+            >
               <p>가입하기</p>
             </button>
           </div>
@@ -240,9 +300,14 @@ const Modal2Style = styled.div`
 
   .modal2_number {
     width: 360px;
-    height: 70px;
     margin: auto;
     margin-top: 30px;
+
+    .verificationCount {
+      color: blue;
+      margin-bottom: 15px;
+      font-size: 13px;
+    }
   }
 
   .modal2_number_txt {
@@ -278,10 +343,18 @@ const Modal2Style = styled.div`
     border: 1px solid rgb(233, 230, 230);
     color: rgb(163, 163, 163);
     border-radius: 5px;
+    margin-left: 10px;
     font-size: 16px;
     font-weight: 400;
 
     height: 52px;
+
+    :hover {
+      background-color: white;
+      color: blue;
+      font-weight: 600;
+      cursor: pointer;
+    }
   }
 
   .modal2_number_input2 {
@@ -303,7 +376,7 @@ const Modal2Style = styled.div`
     width: 360px;
     height: 70px;
     margin: auto;
-    margin-top: 140px;
+    margin-top: 10px;
     margin-bottom: 70px;
   }
 
@@ -362,5 +435,14 @@ const Modal2Style = styled.div`
     text-align: center;
     margin-bottom: 8px;
     margin-top: 8px;
+  }
+
+  .blue {
+    background-color: blue;
+    cursor: pointer;
+
+    p {
+      color: white;
+    }
   }
 `;

@@ -11,8 +11,9 @@ function LoginPassword(props) {
   const loginSuccess = () => {
     let password = document.getElementById("password").value;
     localStorage.setItem("password", password);
+    const storedPassword = localStorage.getItem("password");
 
-    if (password === "12345") {
+    if (password === storedPassword) {
       props.setLoginPasswordOpen(false);
       props.setModalOpen(false);
       props.setIsLoggedIn(true);
