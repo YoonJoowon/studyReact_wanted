@@ -8,10 +8,6 @@ import { useState } from "react";
 import ChaeFollowBtn from "../containersChaeyong/ChaeFollowBtn";
 
 function Dummy({ id, img, name, job, container, position }) {
-  // SearchListTxt = SearchListTxt.filter((contact)=>{
-  //   return contact.name.indexof(this.state.keyword)
-  // })
-
   return (
     <li className="companyChu" key={id}>
       <div className="companyChuTop">
@@ -33,32 +29,27 @@ function Dummy({ id, img, name, job, container, position }) {
 function SearchList(props) {
   const [dummys, setdummys] = useState(SearchListTxt);
 
+
   // if (!props.location) {
   //   return <div>현재 URL 경로가 정의되지 않았습니다.</div>;
   // }
+  const { state } = props.locatiom;
+  if (!state) {
+    // props.location.state가 존재하지 않을 때의 처리
+    return <div>검색 결과가 없습니다.</div>;
+  }
 
-  // const { state } = props.location;
-
-  // if (!state) {
-  //   // props.location.state가 존재하지 않을 때의 처리
-  //   return <div>검색 결과가 없습니다.</div>;
-  // }
-
-  // const searchInput = props.location.state.searchInput;
-
-  // console.log(searchInput);
+  const { searchInput } = state;
 
   return (
     <SearchhListStyle>
       <div>
         <div className="wrapper">
-          {/* {searchInput && ( */}
-            <div className="searchInput">
-              {/* {searchInput} */}
-              개발
-              <hr />
-            </div>
-          {/* )} */}
+          <div className="searchInput">
+            {searchInput}
+            <hr />
+          </div>
+
           <div className="searchCategory">
             <h2 className="searchCategoryTitle">
               연관 직무<span className="">5</span>

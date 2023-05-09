@@ -83,8 +83,6 @@ function Search(props) {
     setSearchInput(event.target.value);
   };
 
-  console.log(searchInput)
-
   return (
     <SearchStyle>
       <div className="searchWrapper">
@@ -103,11 +101,10 @@ function Search(props) {
                   type="search"
                   placeholder="검색어를 입력해 주세요."
                   id="searchInput"
-                  // value={this.state.keyword}
                 />
                 <Link
                   to={{
-                    pathname: "/SearchList/1",
+                    pathname: "/SearchList",
                     state: { searchInput: searchInput },
                   }}
                 >
@@ -116,6 +113,7 @@ function Search(props) {
                     type="button"
                     onChange={handleSearch}
                     onClick={() => {
+                      Navigate("/Sang/1");
                       closeSearch();
                     }}
                   >

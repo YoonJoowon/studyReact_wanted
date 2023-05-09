@@ -12,6 +12,7 @@ function App() {
     <div className="wrapper">
       <BrowserRouter>
         <Nav></Nav>
+        <Switch>
           <Routes>
             <Route path="/" element={<Main />}></Route>
             <Route path="/ChaeYong" element={<ChaeYong />}></Route>
@@ -19,6 +20,7 @@ function App() {
 
             <Route path="/SearchList/:id" element={<SearchList />}></Route>
           </Routes>
+        </Switch>
         <Footer />
       </BrowserRouter>
     </div>

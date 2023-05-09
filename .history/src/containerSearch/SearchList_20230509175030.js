@@ -8,6 +8,7 @@ import { useState } from "react";
 import ChaeFollowBtn from "../containersChaeyong/ChaeFollowBtn";
 
 function Dummy({ id, img, name, job, container, position }) {
+
   // SearchListTxt = SearchListTxt.filter((contact)=>{
   //   return contact.name.indexof(this.state.keyword)
   // })
@@ -44,21 +45,20 @@ function SearchList(props) {
   //   return <div>검색 결과가 없습니다.</div>;
   // }
 
-  // const searchInput = props.location.state.searchInput;
+  // const searchInput = props.location.state;
 
-  // console.log(searchInput);
+  console.log(props)
 
   return (
     <SearchhListStyle>
       <div>
         <div className="wrapper">
-          {/* {searchInput && ( */}
+        
             <div className="searchInput">
-              {/* {searchInput} */}
-              개발
+              {/* {searchInput} */}개발
               <hr />
             </div>
-          {/* )} */}
+       
           <div className="searchCategory">
             <h2 className="searchCategoryTitle">
               연관 직무<span className="">5</span>

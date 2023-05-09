@@ -12,13 +12,15 @@ function App() {
     <div className="wrapper">
       <BrowserRouter>
         <Nav></Nav>
-          <Routes>
-            <Route path="/" element={<Main />}></Route>
-            <Route path="/ChaeYong" element={<ChaeYong />}></Route>
-            <Route path="/Sang/:id" element={<Sang />}></Route>
 
-            <Route path="/SearchList/:id" element={<SearchList />}></Route>
-          </Routes>
+        <Routes>
+          <Route path="/" element={<Main />}></Route>
+          <Route path="/ChaeYong" element={<ChaeYong />}></Route>
+          <Route path="/Sang/:id" element={<Sang />}></Route>
+
+          <Route path="/SearchList/:id" element={<SearchList />}></Route>
+        </Routes>
+
         <Footer />
       </BrowserRouter>
     </div>

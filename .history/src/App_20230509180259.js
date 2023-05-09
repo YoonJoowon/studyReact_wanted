@@ -17,7 +17,7 @@ function App() {
             <Route path="/ChaeYong" element={<ChaeYong />}></Route>
             <Route path="/Sang/:id" element={<Sang />}></Route>
 
-            <Route path="/SearchList/:id" element={<SearchList />}></Route>
+            <Route path="/SearchList/:id" Component={SearchList} ></Route>
           </Routes>
         <Footer />
       </BrowserRouter>

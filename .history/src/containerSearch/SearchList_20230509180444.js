@@ -54,7 +54,7 @@ function SearchList(props) {
         <div className="wrapper">
           {/* {searchInput && ( */}
             <div className="searchInput">
-              {/* {searchInput} */}
+              {searchInput}
               개발
               <hr />
             </div>

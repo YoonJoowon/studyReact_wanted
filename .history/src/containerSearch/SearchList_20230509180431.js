@@ -44,21 +44,21 @@ function SearchList(props) {
   //   return <div>검색 결과가 없습니다.</div>;
   // }
 
-  // const searchInput = props.location.state.searchInput;
+  const searchInput = props.location.state.searchInput;
 
-  // console.log(searchInput);
+  console.log(searchInput);
 
   return (
     <SearchhListStyle>
       <div>
         <div className="wrapper">
-          {/* {searchInput && ( */}
+          {searchInput && (
             <div className="searchInput">
               {/* {searchInput} */}
               개발
               <hr />
             </div>
-          {/* )} */}
+          )}
           <div className="searchCategory">
             <h2 className="searchCategoryTitle">
               연관 직무<span className="">5</span>

@@ -83,8 +83,6 @@ function Search(props) {
     setSearchInput(event.target.value);
   };
 
-  console.log(searchInput)
-
   return (
     <SearchStyle>
       <div className="searchWrapper">
@@ -108,7 +106,7 @@ function Search(props) {
                 <Link
                   to={{
                     pathname: "/SearchList/1",
-                    state: { searchInput: searchInput },
+                    // state: { searchInput: searchInput },
                   }}
                 >
                   <button

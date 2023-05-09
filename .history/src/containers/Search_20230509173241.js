@@ -79,11 +79,9 @@ function Search(props) {
 
   const [searchInput, setSearchInput] = useState("");
 
-  const handleSearch = (event) => {
-    setSearchInput(event.target.value);
-  };
-
-  console.log(searchInput)
+  // const handleSearch = (event) => {
+  //   setSearchInput(event.target.value);
+  // };
 
   return (
     <SearchStyle>
@@ -108,7 +106,7 @@ function Search(props) {
                 <Link
                   to={{
                     pathname: "/SearchList/1",
-                    state: { searchInput: searchInput },
+                    // state: { searchInput: searchInput },
                   }}
                 >
                   <button

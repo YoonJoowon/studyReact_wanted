@@ -83,8 +83,6 @@ function Search(props) {
     setSearchInput(event.target.value);
   };
 
-  console.log(searchInput)
-
   return (
     <SearchStyle>
       <div className="searchWrapper">
