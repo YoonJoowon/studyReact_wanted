@@ -9,6 +9,7 @@ import ChaeFollowBtn from "../containersChaeyong/ChaeFollowBtn";
 import { useLocation } from "react-router-dom";
 
 function Dummy({ id, img, name, job, container, position }) {
+
   return (
     <li className="companyChu" key={id}>
       <div className="companyChuTop">
@@ -33,19 +34,18 @@ function SearchList() {
   const location = useLocation();
   const searchInput = location.state.searchInput;
 
-  const filteredData = SearchListTxt.filter((dummys) =>
-    dummys.container.includes(searchInput)
-  );
+  const filteredData = SearchListTxt.filter((dummys) => dummys.container.includes(searchInput));
+
 
   return (
     <SearchhListStyle>
       <div>
         <div className="wrapper">
           {/* {searchInput && ( */}
-          <div className="searchInput">
-            {searchInput}
-            <hr />
-          </div>
+            <div className="searchInput">
+              {searchInput}              
+              <hr />
+            </div>
           {/* )} */}
           <div className="searchCategory">
             <h2 className="searchCategoryTitle">
@@ -89,20 +89,16 @@ function SearchList() {
               </div>
             </h2>
             <ul className="searchDummys">
-              {filteredData.length === 0 ? (
-                <p>아무것도 없습니다.</p>
-              ) : (
-                filteredData.map((dummy) => (
-                  <Dummy
-                    key={dummy.id}
-                    img={dummy.img}
-                    name={dummy.name}
-                    job={dummy.job}
-                    container={dummy.container}
-                    position={dummy.position}
-                  />
-                ))
-              )}
+              {filteredData.map((dummy) => (
+                <Dummy
+                  key={dummy.id}
+                  img={dummy.img}
+                  name={dummy.name}
+                  job={dummy.job}
+                  container={dummy.container}
+                  position={dummy.position}
+                />
+              ))}
             </ul>
           </div>
 
