@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 function SangSide() {
   const [isFixed, setIsFixed] = useState(false);
+  const number = useSelector((state) => state.number);
   const dispatch = useDispatch();
 
   window.addEventListener("scroll", function () {

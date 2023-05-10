@@ -22,12 +22,18 @@ function Nav(props) {
   };
 
   // 로그인 모달창
-  const ToggleLoginModal = () => {
-    setLoginModalOpen(!LoginModalOpen);
+  const ShowLoginModal = () => {
+    setLoginModalOpen(true);
   };
 
   //로그인
   const [isLoggedIn, setIsLoggedIn] = useState(false);
+
+  function handleLogout() {
+    // 로그아웃 처리 로직
+    localStorage.removeItem("password");
+    setIsLoggedIn(false);
+  }
 
   return (
     <NavStyle>
@@ -89,18 +95,12 @@ function Nav(props) {
                     </div>
 
                     <div className="profileAlram_btn2">
-                      
-                      {LoginModalOpen && <LoginMyInfo setIsLoggedIn={setIsLoggedIn} />}
-                      <button
-                        className="profileBtn"
-                        onClick={() => {
-                          ToggleLoginModal();
-                        }}
-                      >
+                      <button className="profileBtn" onClick={() => {ShowLoginModal()}}>
                         주원
                       </button>
                       <p>N</p>
-                        
+                      
+                    {LoginModalOpen && <LoginMyInfo/>}
                     </div>
                   </div>
                 ) : (
@@ -121,6 +121,7 @@ function Nav(props) {
         {modalOpen && (
           <Modal
             setModalOpen={setModalOpen}
+            // isLoggedIn={isLoggedIn}
             setIsLoggedIn={setIsLoggedIn}
             {...props}
           />
@@ -296,6 +297,7 @@ const NavStyle = styled.div`
           font-size: 8px;
           flex-shrink: 0;
           cursor: pointer;
+
         }
         p {
           background-color: rgb(51, 102, 255);

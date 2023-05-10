@@ -5,11 +5,17 @@ import { useDispatch, useSelector } from "react-redux";
 import txt from "./SangPosition.json";
 
 function Text({ id, image, title, company, site, money }) {
+
+
   return (
     <li key={id}>
       <div data-cy="job-card" className="fatureContainer01">
         <SangPositionBtn />
-        <img src={image} alt=""></img>
+        <img
+          src={image}
+          alt=""
+
+        ></img>
         <div className="fatureContainer01_body">
           <div className="fatureContainer01_1">{title}</div>
           <div className="fatureContainer01_2">{company}</div>

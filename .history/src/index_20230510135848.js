@@ -8,16 +8,10 @@ import { createStore } from "redux";
 function reducer(currentState, action) {
   if (currentState === undefined) {
     return {
-      number :1
+      number: 1,
     };
   }
   const newState = { ...currentState };
-  if(action.type === "SAVE"){
-
-
-  }
-
-
   return newState;
 }
 

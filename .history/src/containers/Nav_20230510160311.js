@@ -29,6 +29,12 @@ function Nav(props) {
   //로그인
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
+  function handleLogout() {
+    // 로그아웃 처리 로직
+    localStorage.removeItem("password");
+    setIsLoggedIn(false);
+  }
+
   return (
     <NavStyle>
       <div>
@@ -90,7 +96,7 @@ function Nav(props) {
 
                     <div className="profileAlram_btn2">
                       
-                      {LoginModalOpen && <LoginMyInfo setIsLoggedIn={setIsLoggedIn} />}
+                      {LoginModalOpen && <LoginMyInfo />}
                       <button
                         className="profileBtn"
                         onClick={() => {

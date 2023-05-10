@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 function SangSide() {
   const [isFixed, setIsFixed] = useState(false);
+  const number = useSelector((state) => state.number);
   const dispatch = useDispatch();
 
   window.addEventListener("scroll", function () {
@@ -52,10 +53,13 @@ function SangSide() {
               <button
                 className=""
                 type="button"
-                onClick={() => {
-                  dispatch({ type: "SAVE" });
-                }}
               >
+                <svg width="13" height="17" viewBox="0 0 13 17">
+               
+                  <g fill="none" fillRule="evenodd">
+                    <use fill="currentColor"></use>
+                  </g>
+                </svg>
                 북마크하기
               </button>
             </div>

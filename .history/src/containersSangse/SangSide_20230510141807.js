@@ -4,6 +4,7 @@ import styled from "styled-components";
 
 function SangSide() {
   const [isFixed, setIsFixed] = useState(false);
+  const number = useSelector((state) => state.number);
   const dispatch = useDispatch();
 
   window.addEventListener("scroll", function () {
@@ -49,13 +50,9 @@ function SangSide() {
             </div>
 
             <div className="aside1_bookmark_btn">
-              <button
-                className=""
-                type="button"
-                onClick={() => {
-                  dispatch({ type: "SAVE" });
-                }}
-              >
+              <button className="" type="button" onClick={() => {
+                dispatch({type:"SAVE"})
+              }}>
                 북마크하기
               </button>
             </div>

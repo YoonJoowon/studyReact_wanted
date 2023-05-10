@@ -16,6 +16,9 @@ function Modal(props) {
   // 모달창2 노출
   const showModal2 = () => {
     let email = document.getElementById("email").value;
+    // let password = document.getElementById('password').value;
+    // localStorage.setItem("username", email);
+    // localStorage.setItem('password', password);
 
     if (email === "ysw6963@gmail.com") {
       // setModal2Open(true);
