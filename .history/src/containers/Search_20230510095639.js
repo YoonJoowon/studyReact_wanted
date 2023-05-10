@@ -70,6 +70,8 @@ function Search(props) {
     },
   ]);
 
+  const { id } = useParams();
+
   // 검색
   const [searchInput, setSearchInput] = useState("");
 
@@ -81,7 +83,7 @@ function Search(props) {
 
   // 모달창 끄기
   const closeSearch = () => {
-    props.setSearchOpen(false);
+        props.setSearchOpen(false);
   };
 
   return (
@@ -110,9 +112,7 @@ function Search(props) {
                   type="button"
                   onClick={() => {
                     closeSearch();
-                    navigate("/SearchList", {
-                      state: { searchInput: searchInput },
-                    });
+                    navigate("/SearchList", { state: { searchInput: searchInput } });
                   }}
                 >
                   <svg className="" viewBox="0 0 24 24">

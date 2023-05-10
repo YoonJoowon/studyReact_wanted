@@ -31,22 +31,21 @@ function Dummy({ id, img, name, job, container, position }) {
   );
 }
 
-function SearchList() {
+function SearchList(props) {
   const [dummys, setdummys] = useState(SearchListTxt);
-
-  const location = useLocation();
 
   // if (!props.location) {
   //   return <div>현재 URL 경로가 정의되지 않았습니다.</div>;
   // }
 
-  // const { state } = props.location;
+  const { state } = props.location;
 
-  // if (!state) {
-  //   // props.location.state가 존재하지 않을 때의 처리
-  //   return <div>검색 결과가 없습니다.</div>;
-  // }
+  if (!state) {
+    // props.location.state가 존재하지 않을 때의 처리
+    return <div>검색 결과가 없습니다.</div>;
+  }
 
+  const location = useLocation();
   const searchInput = location.state.searchInput;
 
 
@@ -58,7 +57,8 @@ function SearchList() {
         <div className="wrapper">
           {/* {searchInput && ( */}
             <div className="searchInput">
-              {searchInput}              
+              {searchInput}
+              개발
               <hr />
             </div>
           {/* )} */}

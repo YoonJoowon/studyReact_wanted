@@ -70,6 +70,8 @@ function Search(props) {
     },
   ]);
 
+  const { id } = useParams();
+
   // 검색
   const [searchInput, setSearchInput] = useState("");
 
