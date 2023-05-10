@@ -1,12 +1,14 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import {  useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 function LoginMyInfo(props) {
+  
   const navigate = useNavigate();
 
   const CloseLoggedInModal = () => {
     props.setIsLoggedIn();
+    props.setLoginModalOpen();
     localStorage.removeItem("password");
   };
 
@@ -35,8 +37,7 @@ function LoginMyInfo(props) {
               <button
                 type="button"
                 onClick={() => {
-                  navigate("/Bookmark", {});
-                  props.setLoginModalOpen(false);
+                  navigate("/Bookmarkt", {});
                 }}
               >
                 북마크

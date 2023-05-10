@@ -89,12 +89,8 @@ function Nav(props) {
                     </div>
 
                     <div className="profileAlram_btn2">
-                      {LoginModalOpen && (
-                        <LoginMyInfo
-                          setIsLoggedIn={setIsLoggedIn}
-                          setLoginModalOpen={setLoginModalOpen}
-                        />
-                      )}
+                      
+                      {LoginModalOpen && <LoginMyInfo setIsLoggedIn={setIsLoggedIn} />}
                       <button
                         className="profileBtn"
                         onClick={() => {
@@ -104,6 +100,7 @@ function Nav(props) {
                         주원
                       </button>
                       <p>N</p>
+                        
                     </div>
                   </div>
                 ) : (

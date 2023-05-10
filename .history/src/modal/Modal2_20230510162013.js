@@ -63,7 +63,7 @@ function Modal2(porps2) {
     }
     console.log("인증 성공");
     NewLogin();
-    
+    }
   };
 
   const NewLogin = () => {

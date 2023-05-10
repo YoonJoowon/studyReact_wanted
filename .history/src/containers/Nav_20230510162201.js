@@ -89,21 +89,18 @@ function Nav(props) {
                     </div>
 
                     <div className="profileAlram_btn2">
-                      {LoginModalOpen && (
-                        <LoginMyInfo
-                          setIsLoggedIn={setIsLoggedIn}
-                          setLoginModalOpen={setLoginModalOpen}
-                        />
-                      )}
+                      
+                      {LoginModalOpen && <LoginMyInfo setIsLoggedIn={setIsLoggedIn} />}
                       <button
                         className="profileBtn"
                         onClick={() => {
-                          ToggleLoginModal(!LoginModalOpen);
+                          ToggleLoginModal();
                         }}
                       >
                         주원
                       </button>
                       <p>N</p>
+                        
                     </div>
                   </div>
                 ) : (

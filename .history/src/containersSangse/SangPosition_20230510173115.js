@@ -5,18 +5,15 @@ import { useDispatch, useSelector } from "react-redux";
 import txt from "./SangPosition.json";
 
 function Text({ id, image, title, company, site, money }) {
+
   const dispatch = useDispatch();
 
-  function handleLiClick(event) {
-    const liBook = event.target.textContent;
-    dispatch({ type: "SAVE", payload: liBook});
-  }
+  const handleClick = () => {
+    dispatch(setSelectedText({ image, title, company, site, money }));
+  };
 
   return (
-    <li
-      key={id}
-      onClick={handleLiClick}
-    >
+    <li key={id} onClick={handleClick}>
       <div data-cy="job-card" className="fatureContainer01">
         <SangPositionBtn />
         <img src={image} alt=""></img>

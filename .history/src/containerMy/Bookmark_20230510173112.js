@@ -3,10 +3,14 @@ import { useSelector } from "react-redux";
 import styled from "styled-components";
 
 function Bookmark() {
-  const liBook = useSelector((state) => state.liBook);
+  const selectedText = useSelector((state) => state.selectedText);
+
+  if (!selectedText) {
+    return null;
+  }
   return (
     <BookmarkStyle>
-      <div className="wraaper">{liBook}</div>
+      <div></div>
     </BookmarkStyle>
   );
 }

@@ -1,9 +1,7 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
 import styled from "styled-components";
 
 function LoginMyInfo(props) {
-  const navigate = useNavigate();
 
   const CloseLoggedInModal = () => {
     props.setIsLoggedIn();
@@ -32,15 +30,7 @@ function LoginMyInfo(props) {
               <span>좋아요</span>
             </li>
             <li className="">
-              <button
-                type="button"
-                onClick={() => {
-                  navigate("/Bookmark", {});
-                  props.setLoginModalOpen(false);
-                }}
-              >
-                북마크
-              </button>
+              <span>북마크</span>
             </li>
             <hr />
             <li className="">
@@ -49,14 +39,15 @@ function LoginMyInfo(props) {
             <li className="">
               <span>포인트</span>
             </li>
-
-            <button
-              type="button"
-              className="isLogout"
-              onClick={CloseLoggedInModal}
-            >
-              <span>로그아웃</span>
-            </button>
+            <li>
+              <button
+                type="button"
+                className="isLogout"
+                onClick={CloseLoggedInModal}
+              >
+                <span>로그아웃</span>
+              </button>
+            </li>
           </ul>
         </div>
       </div>
@@ -95,29 +86,17 @@ const LoginMyInfoStyle = styled.div`
           padding: 0px;
           padding-top: 10px;
           padding-bottom: 10px;
-          cursor: pointer;
-
-          :hover {
-            width: 170px;
-            background-color: #f5f5f5;
-            border-radius: 10px;
-          }
 
           span {
             display: block;
           }
 
-          button {
+          .isLogout {
+            padding: 15px;
+            width: 100%;
+            background-color: #f5f5f5;
             cursor: pointer;
           }
-        }
-        .isLogout {
-          padding: 20px;
-          margin-top: 10px;
-          width: 100%;
-          border-radius: 0px;
-          background-color: #f5f5f5;
-          cursor: pointer;
         }
       }
     }

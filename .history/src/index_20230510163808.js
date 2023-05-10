@@ -8,13 +8,15 @@ import { createStore } from "redux";
 function reducer(currentState, action) {
   if (currentState === undefined) {
     return {
-      book:"none",
+      number :1
     };
   }
   const newState = { ...currentState };
-  if (action.type === "SAVE") {
-    newState.book = action.payload;
+  if(action.type === "SAVE"){
+
+
   }
+
 
   return newState;
 }

@@ -35,7 +35,8 @@ function LoginMyInfo(props) {
               <button
                 type="button"
                 onClick={() => {
-                  navigate("/Bookmark", {});
+                  navigate("/Bookmarkt", {});
+
                   props.setLoginModalOpen(false);
                 }}
               >

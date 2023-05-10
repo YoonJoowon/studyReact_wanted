@@ -1,10 +1,8 @@
 import React from "react";
-import { useNavigate } from "react-router-dom";
+import { Navigate } from "react-router-dom";
 import styled from "styled-components";
 
 function LoginMyInfo(props) {
-  const navigate = useNavigate();
-
   const CloseLoggedInModal = () => {
     props.setIsLoggedIn();
     localStorage.removeItem("password");
@@ -35,8 +33,7 @@ function LoginMyInfo(props) {
               <button
                 type="button"
                 onClick={() => {
-                  navigate("/Bookmark", {});
-                  props.setLoginModalOpen(false);
+                  Navigate("/Bookmarkt", {});
                 }}
               >
                 북마크
@@ -107,17 +104,13 @@ const LoginMyInfoStyle = styled.div`
             display: block;
           }
 
-          button {
+          .isLogout {
+            padding: 15px;
+            width: 100%;
+            border-radius: 0px;
+            background-color: #f5f5f5;
             cursor: pointer;
           }
-        }
-        .isLogout {
-          padding: 20px;
-          margin-top: 10px;
-          width: 100%;
-          border-radius: 0px;
-          background-color: #f5f5f5;
-          cursor: pointer;
         }
       }
     }

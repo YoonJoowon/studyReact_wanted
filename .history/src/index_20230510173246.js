@@ -5,19 +5,39 @@ import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
 import { createStore } from "redux";
 
-function reducer(currentState, action) {
-  if (currentState === undefined) {
-    return {
-      book:"none",
-    };
-  }
-  const newState = { ...currentState };
-  if (action.type === "SAVE") {
-    newState.book = action.payload;
-  }
+// function reducer(currentState, action) {
+//   if (currentState === undefined) {
+//     return {
+//       number :1
+//     };
+//   }
+//   const newState = { ...currentState };
+//   if(action.type === "SAVE"){
 
-  return newState;
-}
+//   }
+
+//   return newState;
+// }
+
+const initialState = {
+  selectedText: null,
+};
+
+const SET_SELECTED_TEXT = "SET_SELECTED_TEXT";
+
+export const setSelectedText = (text) => ({
+  type: SET_SELECTED_TEXT,
+  payload: text,
+});
+
+function reducer (state = initialState, action) {
+  switch (action.type) {
+    case SET_SELECTED_TEXT:
+      return { ...state, selectedText: action.payload };
+    default:
+      return state;
+  }
+};
 
 const store = createStore(reducer);
 

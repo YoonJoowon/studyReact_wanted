@@ -7,15 +7,12 @@ import txt from "./SangPosition.json";
 function Text({ id, image, title, company, site, money }) {
   const dispatch = useDispatch();
 
-  function handleLiClick(event) {
-    const liBook = event.target.textContent;
-    dispatch({ type: "SAVE", payload: liBook});
-  }
-
   return (
     <li
       key={id}
-      onClick={handleLiClick}
+      onClick={() => {
+        dispatch({ type: "SAVE" });
+      }}
     >
       <div data-cy="job-card" className="fatureContainer01">
         <SangPositionBtn />
