@@ -35,7 +35,7 @@ function SangPosition() {
               {SangPositions.map((text) => (
                 <Text
                   key={text.id}
-                  image={text.image}
+                  image = {text.image}
                   title={text.title}
                   company={text.company}
                   site={text.site}

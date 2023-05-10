@@ -1,7 +1,7 @@
 import React from "react";
 import SangSkillBtn from "./SangSkillBtn";
 import styled from "styled-components";
-import mainTxt from "./SangMainTxt.json";
+import mainTxt from "./MainTxt.json";
 import { useState } from "react";
 import { useEffect } from "react";
 
@@ -19,6 +19,9 @@ function Text({ title, intro, introduce }) {
 
 function SangMainTxt() {
   const [texts, setTexts] = useState(mainTxt);
+  // useEffect(() => {
+  //   setTexts(mainTxt);
+  // }, []);
 
   return (
     <SangMainTxtStyle>

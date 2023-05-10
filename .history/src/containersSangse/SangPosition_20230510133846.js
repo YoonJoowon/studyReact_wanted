@@ -2,28 +2,35 @@ import React, { useState } from "react";
 import SangPositionBtn from "./SangPositionBtn";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import txt from "./SangPosition.json";
+import SangPosition from "./SangPosition.json";
 
-function Text({ id, image, title, company, site, money }) {
+function Text({ title, intro, introduce }) {
   return (
-    <li key={id}>
-      <div data-cy="job-card" className="fatureContainer01">
-        <SangPositionBtn />
-        <img src={image} alt="" />
-        <div className="fatureContainer01_body">
-          <div className="fatureContainer01_1">{title}</div>
-          <div className="fatureContainer01_2">{company}</div>
-          <div className="fatureContainer01_3">{site}</div>
-          <div className="fatureContainer01_4">{money}</div>
+    <li key={SangPosition.id}>
+    <div data-cy="job-card" className="fatureContainer01">
+      <SangPositionBtn />
+      <img src={SangPosition.image} alt="" />
+      <div className="fatureContainer01_body">
+        <div className="fatureContainer01_1">
+          {SangPosition.title}
+        </div>
+        <div className="fatureContainer01_2">
+          {SangPosition.company}
+        </div>
+        <div className="fatureContainer01_3">{SangPosition.site}</div>
+        <div className="fatureContainer01_4">
+          {SangPosition.money}
         </div>
       </div>
-    </li>
+    </div>
+  </li>
   );
 }
 
 function SangPosition() {
+ 
   const number = useSelector((state) => state.number);
-  const [SangPositions, setSangPositions] = useState(txt);
+  const [SangPositions, setSangPositions] = useState(SangPosition)   
 
   return (
     <SangPositionStyle>
@@ -32,15 +39,13 @@ function SangPosition() {
           <h2>이 포지션을 찾고 계셨나요?</h2>
           <div className="fatureContainer">
             <ul data-cy="job-list">
-              {SangPositions.map((text) => (
-                <Text
-                  key={text.id}
-                  image={text.image}
-                  title={text.title}
-                  company={text.company}
-                  site={text.site}
-                  money={text.money}
-                />
+              {SangPositions.map((SangPosition) => (
+                    <Text
+                    key={SangPosition.id}
+                    title={SangPosition.title}
+                    intro={SangPosition.intro}
+                    introduce={SangPosition.introduce}
+                  />
               ))}
             </ul>
           </div>
@@ -100,7 +105,7 @@ const SangPositionStyle = styled.div`
   .fatureContainer01 {
     display: block;
     position: relative;
-  }
+  }  
 
   .fatureContainer01 .bookmarkBtn {
     position: absolute;

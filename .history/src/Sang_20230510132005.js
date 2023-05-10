@@ -7,10 +7,10 @@ import SangBotMap from "./containersSangse/SangBotMap";
 import SangPosition from "./containersSangse/SangPosition";
 import { useParams } from "react-router-dom";
 
-
 function Sang() {
+
   const { id } = useParams();
-  console.log(id);
+  console.log((id));
 
   return (
     <div className="wrapper">
@@ -19,7 +19,7 @@ function Sang() {
         <SangMainTxt />
         <SangBotMap />
       </main>
-        <SangPosition />
+      <SangPosition />
     </div>
   );
 }

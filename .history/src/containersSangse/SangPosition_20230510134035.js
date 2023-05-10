@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SangPositionBtn from "./SangPositionBtn";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import txt from "./SangPosition.json";
+import SangPosition from "./SangPosition.json";
 
 function Text({ id, image, title, company, site, money }) {
   return (
@@ -23,7 +23,7 @@ function Text({ id, image, title, company, site, money }) {
 
 function SangPosition() {
   const number = useSelector((state) => state.number);
-  const [SangPositions, setSangPositions] = useState(txt);
+  const [SangPositions, setSangPositions] = useState(SangPosition);
 
   return (
     <SangPositionStyle>
@@ -32,14 +32,12 @@ function SangPosition() {
           <h2>이 포지션을 찾고 계셨나요?</h2>
           <div className="fatureContainer">
             <ul data-cy="job-list">
-              {SangPositions.map((text) => (
+              {SangPositions.map((SangPosition) => (
                 <Text
-                  key={text.id}
-                  image={text.image}
-                  title={text.title}
-                  company={text.company}
-                  site={text.site}
-                  money={text.money}
+                  key={SangPosition.id}
+                  title={SangPosition.title}
+                  intro={SangPosition.intro}
+                  introduce={SangPosition.introduce}
                 />
               ))}
             </ul>

@@ -18,7 +18,7 @@ function Text({ title, intro, introduce }) {
 }
 
 function SangMainTxt() {
-  const [texts, setTexts] = useState(mainTxt);
+  // const [texts, setTexts] = useState(mainTxt);
 
   return (
     <SangMainTxtStyle>

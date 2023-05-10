@@ -2,7 +2,7 @@ import React, { useState } from "react";
 import SangPositionBtn from "./SangPositionBtn";
 import styled from "styled-components";
 import { useSelector } from "react-redux";
-import txt from "./SangPosition.json";
+import SangPosition from "./SangPosition.json";
 
 function Text({ id, image, title, company, site, money }) {
   return (
@@ -23,7 +23,7 @@ function Text({ id, image, title, company, site, money }) {
 
 function SangPosition() {
   const number = useSelector((state) => state.number);
-  const [SangPositions, setSangPositions] = useState(txt);
+  const [SangPositions, setSangPositions] = useState(SangPosition);
 
   return (
     <SangPositionStyle>
@@ -35,7 +35,6 @@ function SangPosition() {
               {SangPositions.map((text) => (
                 <Text
                   key={text.id}
-                  image={text.image}
                   title={text.title}
                   company={text.company}
                   site={text.site}

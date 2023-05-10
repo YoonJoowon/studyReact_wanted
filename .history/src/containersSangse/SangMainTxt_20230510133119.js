@@ -19,6 +19,9 @@ function Text({ title, intro, introduce }) {
 
 function SangMainTxt() {
   const [texts, setTexts] = useState(mainTxt);
+  // useEffect(() => {
+  //   setTexts(mainTxt);
+  // }, []);
 
   return (
     <SangMainTxtStyle>

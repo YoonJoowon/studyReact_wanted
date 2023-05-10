@@ -90,7 +90,7 @@ function SearchList() {
             </h2>
             <ul className="searchDummys">
               {filteredData.length === 0 ? (
-                <p>찾으시는 채용정보가 없습니다.</p>
+                <p>아무것도 없습니다.</p>
               ) : (
                 filteredData.map((dummy) => (
                   <Dummy

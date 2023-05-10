@@ -3,19 +3,7 @@ import ReactDOM from "react-dom/client";
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
 import { Provider } from "react-redux";
-import { createStore } from "redux";
-
-function reducer(currentState, action) {
-  if (currentState === undefined) {
-    return {
-      number: 1,
-    };
-  }
-  const newState = { ...currentState };
-  return newState;
-}
-
-const store = createStore(reducer);
+import store from "./store";
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
