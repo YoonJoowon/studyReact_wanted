@@ -5,6 +5,7 @@ import styled from "styled-components";
 function Bookmark() {
   const bookmarkList = useSelector((state) => state);
   console.log(bookmarkList)
+  
 
   return (
     <BookmarkStyle>
