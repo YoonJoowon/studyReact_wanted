@@ -1,35 +1,33 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SangPositionBtn from "./SangPositionBtn";
 import styled from "styled-components";
-import { useDispatch, useSelector } from "react-redux";
+import { useDispatch } from "react-redux";
 import txt from "./SangPosition.json";
 
 function Text({ id, image, title, company, site, money }) {
   const dispatch = useDispatch();
 
   function handleLiClick(event) {
-    const liBook = event.currentTarget.innerHTML;;
-    dispatch({ type: "SAVE", payload: liBook});
-    // console.log({liBook})
+    const liBook = event.currentTarget;
+    dispatch({ type: "SAVE", payload: liBook });
+    console.log({ liBook });
   }
 
-
   return (
-    <li
-      key={id}
-      onClick={handleLiClick}
-    >
-      <div data-cy="job-card" className="fatureContainer01">
-        <SangPositionBtn />
-        <img src={image} alt=""></img>
-        <div className="fatureContainer01_body">
-          <div className="fatureContainer01_1">{title}</div>
-          <div className="fatureContainer01_2">{company}</div>
-          <div className="fatureContainer01_3">{site}</div>
-          <div className="fatureContainer01_4">{money}</div>
+    <div className="fatureContainerCard">
+      <li key={id} onClick={handleLiClick}>
+        <div data-cy="job-card" className="fatureContainer01">
+          <SangPositionBtn />
+          <img src={image} alt=""></img>
+          <div className="fatureContainer01_body">
+            <div className="fatureContainer01_1">{title}</div>
+            <div className="fatureContainer01_2">{company}</div>
+            <div className="fatureContainer01_3">{site}</div>
+            <div className="fatureContainer01_4">{money}</div>
+          </div>
         </div>
-      </div>
-    </li>
+      </li>
+    </div>
   );
 }
 
@@ -69,6 +67,7 @@ const SangPositionStyle = styled.div`
     width: 1060px;
     padding: 70px 0px;
     margin: auto;
+    margin-bottom: 20px;
     height: 1000px;
   }
 
@@ -87,6 +86,22 @@ const SangPositionStyle = styled.div`
   .fatureContainer ul {
     margin: -10px;
     margin: auto;
+  }
+
+  .fatureContainerCard {
+    position: relative;
+    width: 250px;
+    display: inline-block;
+    margin: 5px;
+  }
+
+  .fatureContainerCard .bookmarkBtn {
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 30px;
+    border-radius: 3px;
+    top: 5px;
   }
 
   .fatureContainer ul li {
@@ -111,15 +126,6 @@ const SangPositionStyle = styled.div`
   .fatureContainer01 {
     display: block;
     position: relative;
-  }
-
-  .fatureContainer01 .bookmarkBtn {
-    position: absolute;
-    z-index: 1;
-    width: 40px;
-    height: 30px;
-    border-radius: 3px;
-    margin-right: 1200px;
   }
 
   .fatureContainer01_body {

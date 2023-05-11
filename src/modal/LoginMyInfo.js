@@ -8,7 +8,7 @@ function LoginMyInfo(props) {
   const CloseLoggedInModal = () => {
     props.setIsLoggedIn();
     localStorage.removeItem("password");
-  }; 
+  };
 
   return (
     <LoginMyInfoStyle>
@@ -31,16 +31,14 @@ function LoginMyInfo(props) {
             <li className="">
               <span>좋아요</span>
             </li>
-            <li className="">
-              <button
-                type="button"
-                onClick={() => {
-                  navigate("/Bookmark", {});
-                  props.setLoginModalOpen(false);
-                }}
-              >
-                북마크
-              </button>
+            <li
+              className=""
+              onClick={() => {
+                navigate("/Bookmark", {});
+                props.setLoginModalOpen(false);
+              }}
+            >
+              <button type="button">북마크</button>
             </li>
             <hr />
             <li className="">

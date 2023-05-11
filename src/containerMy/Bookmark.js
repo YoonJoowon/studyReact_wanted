@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useState } from "react";
 import { useSelector } from "react-redux";
 import styled from "styled-components";
 
 function Bookmark() {
   const bookmarkList = useSelector((state) => state);
-  // console.log(book)
+  // console.log(bookmarkList)
+
   return (
     <BookmarkStyle>
       <section className="section5">
@@ -12,10 +13,9 @@ function Bookmark() {
           <h2>북마크</h2>
           <div className="fatureContainer">
             <ul
-              data-cy="job-list"
               dangerouslySetInnerHTML={{
                 __html: bookmarkList
-                  .map((item, index) => `<li key=${index}>${item}</li>`)
+                  .map((item, index) => `<li key=${index}${item}</li>`)
                   .join(""),
               }}
             ></ul>
@@ -29,15 +29,16 @@ function Bookmark() {
 export default Bookmark;
 
 const BookmarkStyle = styled.div`
-  overflow-y: hidden;
-  overflow-x: hidden;
+
+  /* path {
+    fill: blue;
+  } */
+
+.section5 {
+  background-color: #fafafa;
+  height: 1000px;
   width: 100%;
-  height: 2500px;
-  .wraaper {
-    background-color: #fafafa;
-    width: 100%;
-    height: 100%;
-  }
+}
 
   .feature {
     width: 1060px;
