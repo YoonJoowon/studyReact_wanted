@@ -27,7 +27,7 @@ function Nav(props) {
   };
 
   //로그인
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
+  const [isLoggedIn, setIsLoggedIn] = useState(true);
 
   return (
     <NavStyle>

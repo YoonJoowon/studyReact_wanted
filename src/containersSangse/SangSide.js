@@ -148,7 +148,7 @@ const SangSideStyle = styled.div`
 
   .aside1.fixed {
     position: absolute;
-    margin-top: 6050px;
+    margin-top: 6000px;
   }
 
   .aside1_padding {

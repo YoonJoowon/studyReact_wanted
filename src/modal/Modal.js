@@ -33,7 +33,6 @@ function Modal(props) {
     props.setModalOpen(false);
   };
 
-  // localstorage
 
   return (
     <ModalStyle>

@@ -10,7 +10,7 @@ function Text({ id, image, title, company, site, money }) {
   function handleLiClick(event) {
     const liBook = event.currentTarget.innerHTML;;
     dispatch({ type: "SAVE", payload: liBook});
-    console.log({liBook})
+    // console.log({liBook})
   }
 
 
@@ -40,7 +40,7 @@ function SangPosition() {
     <SangPositionStyle>
       <section className="section5">
         <article className="feature">
-          <h2>이 포지션을 찾고 계셨나요?</h2>``
+          <h2>이 포지션을 찾고 계셨나요?</h2>
           <div className="fatureContainer">
             <ul data-cy="job-list">
               {SangPositions.map((text) => (

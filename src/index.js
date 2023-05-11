@@ -6,17 +6,16 @@ import { Provider } from "react-redux";
 import { createStore } from "redux";
 
 function reducer(currentState, action) {
+  // console.log({currentState})
   if (currentState === undefined) {
-    return {
-      book:"none",
-    };
-  }
-  const newState = { ...currentState };
-  if (action.type === "SAVE") {
-    newState.book = action.payload;
+    return [];
   }
 
-  return newState;
+  if (action.type === "SAVE") {
+    return [...currentState, action.payload];
+  }
+
+  return currentState;
 }
 
 const store = createStore(reducer);

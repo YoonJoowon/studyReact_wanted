@@ -8,7 +8,7 @@ function LoginMyInfo(props) {
   const CloseLoggedInModal = () => {
     props.setIsLoggedIn();
     localStorage.removeItem("password");
-  };
+  }; 
 
   return (
     <LoginMyInfoStyle>
