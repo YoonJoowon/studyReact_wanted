@@ -8,7 +8,7 @@ function Text({ id, image, title, company, site, money }) {
   const dispatch = useDispatch();
 
   function handleLiClick(event) {
-    const liBook = event.currentTarget;
+    const liBook = event.currentTarget.innerHTML;
     dispatch({ type: "SAVE", payload: liBook });
     console.log({ liBook });
   }
