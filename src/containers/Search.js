@@ -1,74 +1,32 @@
 import React from "react";
 import styled from "styled-components";
+import searchTxt from "./Search.json";
 import { useState } from "react";
-import { Link, Navigate, useNavigate, useParams } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
+
+function Text({ id, title }) {
+  return (
+    <li key={id} className="">
+      <span>{title}</span>
+    </li>
+  );
+}
+
+function Text2({ id, title, rank }) {
+  return (
+    <li key={id} className="searchResults_item">
+      <div className="rankingSearch">
+        <span className="rankingSearch1">{rank}</span>
+        <span className="rankingSearch1_job">{title}</span>
+        <span className="rankingSearch1Change">-</span>
+      </div>
+    </li>
+  );
+}
 
 function Search(props) {
-  const [articles, setArticles] = useState([
-    {
-      id: 1,
-      title: "#연봉상위2~5%",
-    },
-    {
-      id: 2,
-      title: "#퇴사율5%이하",
-    },
-    {
-      id: 3,
-      title: "#재택근무",
-    },
-    {
-      id: 4,
-      title: "#주4일근무",
-    },
-    {
-      id: 5,
-      title: "#주35시간",
-    },
-  ]);
-
-  const [search, setSearch] = useState([
-    {
-      id: 1,
-      title: "UIUX디자이너",
-      rank: "1",
-    },
-    {
-      id: 2,
-      title: "uiux 디자이너",
-      rank: "2",
-    },
-    {
-      id: 3,
-      title: "퍼블리셔",
-      rank: "3",
-    },
-    {
-      id: 4,
-      title: "데이터 분석가",
-      rank: "4",
-    },
-    {
-      id: 5,
-      title: "데이터 분석",
-      rank: "5",
-    },
-    {
-      id: 6,
-      title: "보안",
-      rank: "6",
-    },
-    {
-      id: 7,
-      title: "정보보안",
-      rank: "7",
-    },
-    {
-      id: 8,
-      title: "서비스기획",
-      rank: "8",
-    },
-  ]);
+  const [search1, setsearch1] = useState(searchTxt.searchTxt1);
+  const [search2, setSearch2] = useState(searchTxt.searchTxt2);
 
   // 검색
   const [searchInput, setSearchInput] = useState("");
@@ -82,6 +40,16 @@ function Search(props) {
   // 모달창 끄기
   const closeSearch = () => {
     props.setSearchOpen(false);
+  };
+
+  // 엔터키 눌러도 검색리스트 실행
+  const handleKeyDown = (event) => {
+    if (event.key === "Enter") {
+      closeSearch();
+      navigate("/SearchList", {
+        state: { searchInput: searchInput },
+      });
+    }
   };
 
   return (
@@ -103,6 +71,7 @@ function Search(props) {
                   placeholder="검색어를 입력해 주세요."
                   id="searchInput"
                   onChange={handleSearch}
+                  onKeyDown={handleKeyDown}
                   // value={this.state.keyword}
                 />
                 <button
@@ -126,10 +95,8 @@ function Search(props) {
           <div className="container" role="presentation">
             <h4 className="searchResults">추천 검색어</h4>
             <ul className="searchResults_wrapper">
-              {articles.map((article) => (
-                <li key={article.id} className="">
-                  <span>{article.title}</span>
-                </li>
+              {search1.map((search) => (
+                <Text key={search.id} id={search.id} title={search.title} />
               ))}
             </ul>
 
@@ -139,14 +106,12 @@ function Search(props) {
             </h4>
 
             <ul>
-              {search.map((search) => (
-                <li key={search.id} className="searchResults_item">
-                  <div className="rankingSearch">
-                    <span className="rankingSearch1">{search.rank}</span>
-                    <span className="rankingSearch1_job">{search.title}</span>
-                    <span className="rankingSearch1Change">-</span>
-                  </div>
-                </li>
+              {search2.map((search) => (
+                <Text2
+                  key={search.id}
+                  title={search.title}
+                  rank={search.rank}
+                />
               ))}
             </ul>
           </div>

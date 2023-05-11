@@ -3,9 +3,9 @@ import { useSelector } from "react-redux";
 import styled from "styled-components";
 
 function Bookmark() {
+  window.scrollTo(0, 0);
   const bookmarkList = useSelector((state) => state);
-  console.log(bookmarkList)
-  
+  console.log(bookmarkList);
 
   return (
     <BookmarkStyle>
@@ -30,16 +30,13 @@ function Bookmark() {
 export default Bookmark;
 
 const BookmarkStyle = styled.div`
-
-  /* path {
-    fill: blue;
-  } */
-
-.section5 {
   background-color: #fafafa;
-  height: 1000px;
+  z-index: 4;
+  margin: auto;
+  position: fixed;
   width: 100%;
-}
+  margin: auto;
+
 
   .feature {
     width: 1060px;

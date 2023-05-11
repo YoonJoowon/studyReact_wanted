@@ -42,15 +42,6 @@ function ChaePosition() {
                   <button
                     className="bookmarkBtn"
                     type="button"
-                    aria-label="bookmark button"
-                    data-attribute-id="position__bookmark__click"
-                    data-kind="add"
-                    data-job-category-id="523"
-                    data-job-category="Marketing &amp; Advertising"
-                    data-company-id="39517"
-                    data-company-name="아이엔지스토리"
-                    data-position-id="152842"
-                    data-position-name="전략기획"
                   >
                     <svg
                       width="22"
@@ -71,7 +62,7 @@ function ChaePosition() {
                       ></path>
                     </svg>
                   </button>
-                  <img src='https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F39517%2F8coxxmptdjimx8kk__400_400.jpg&amp;w=400&amp;q=75"'></img>
+                  <img alt="" src='https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F39517%2F8coxxmptdjimx8kk__400_400.jpg&amp;w=400&amp;q=75"'></img>
                   <div className="fatureContainer01_body">
                     <div className="fatureContainer01_1">
                       {articles[0].title}

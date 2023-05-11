@@ -69,14 +69,6 @@ function SangSide() {
               <button
                 className="aside1_bottom_btn1"
                 type="button"
-                data-attribute-id="position__like__click"
-                data-job-category-id="518"
-                data-job-category="IT"
-                data-company-id="22333"
-                data-company-name="블루비커"
-                data-position-id="91536"
-                data-position-name="웹 프론트엔드 개발자(React)"
-                data-kind="add"
               >
                 <div>
                   <p className="">
@@ -94,9 +86,6 @@ function SangSide() {
               <button
                 type="button"
                 className="aside1_bottom_btn2"
-                data-attribute-id="position__like__list"
-                data-position-id="91536"
-                data-position-name="웹 프론트엔드 개발자(React)"
               >
                 <ul>
                   <li

@@ -41,7 +41,6 @@ function LoginPassword(props) {
                   <label
                     data-testid="Typography"
                     color="var(--theme-palette-colors-gray-600)"
-                  
                     className=""
                   >
                     비밀번호
@@ -160,6 +159,11 @@ const LoginPasswordstyle = styled.div`
           cursor: pointer;
           border: none;
           margin-top: 30px;
+
+          :hover {
+            background-color: blue;
+            color: white;
+          }
         }
 
         .login_reset {
