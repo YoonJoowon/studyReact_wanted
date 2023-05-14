@@ -1,50 +1,35 @@
-import React from "react";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import { BookMarkAtom } from "../states/BookMarkAtom";
-import SangBookMarkCard from "../containersSangse/SangBookMarkCard";
-import BookMarkItem from "./BookMarkItem";
+import SangBookMarkCard from "./SangBookMarkCard";
+import txt from "./SangPosition.json";
 
-function Bookmark({ id, image, title, company, site, money }) {
-  window.scrollTo(0, 0);
-
-  const setItem = useSetRecoilState(BookMarkAtom);
-  const bookMark = useRecoilValue(BookMarkAtom);
+function SangPosition() {
 
   return (
-    <BookmarkStyle>
+    <SangPositionStyle>
       <section className="section5">
         <article className="feature">
-          <h2>북마크</h2>
+          <h2>이 포지션을 찾고 계셨나요?</h2>
           <div className="fatureContainer">
             <ul>
-              {bookMark.length !== 0 ? (
-                <BookMarkItem />
-              ) : (
-                <div> 아이템이 없습니다</div>
-              )}
+              <SangBookMarkCard />
             </ul>
           </div>
         </article>
       </section>
-    </BookmarkStyle>
+    </SangPositionStyle>
   );
 }
 
-export default Bookmark;
+export default SangPosition;
 
-const BookmarkStyle = styled.div`
-  background-color: #fafafa;
-  z-index: 4;
-  margin: auto;
-  position: fixed;
-  width: 100%;
-  margin: auto;
-
+const SangPositionStyle = styled.div`
+  /* feature */
   .feature {
     width: 1060px;
     padding: 70px 0px;
     margin: auto;
+    margin-bottom: 20px;
     height: 1000px;
   }
 
@@ -54,7 +39,6 @@ const BookmarkStyle = styled.div`
     line-height: 1.05;
     color: #111;
     margin-bottom: 30px;
-    margin-top: 50px;
   }
 
   .fatureContainer {
@@ -66,6 +50,13 @@ const BookmarkStyle = styled.div`
     margin: auto;
   }
 
+  .fatureContainerCard {
+    position: relative;
+    width: 250px;
+    display: inline-block;
+    margin: 5px;
+  }
+
   .fatureContainer ul li {
     padding: 5px;
     list-style: none;
@@ -75,7 +66,7 @@ const BookmarkStyle = styled.div`
     margin-bottom: 30px;
   }
 
-  .fatureContainer ul img {
+  .fatureContainer ul li img {
     width: 250px;
     height: 187.5px;
     border-radius: 4px;

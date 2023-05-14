@@ -5,25 +5,6 @@ import txt from "./SangPosition.json";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { BookMarkAtom } from "../states/BookMarkAtom";
 
-function SangBookMarkCard() {
-  const [SangPositions, setSangPositions] = useState(txt);
-  return (
-    <div className="fatureContainer">
-      {SangPositions.map((x) => (
-        <SangBookMark
-          id={x.id}
-          key={x.id}
-          image={x.image}
-          title={x.title}
-          company={x.company}
-          site={x.site}
-          money={x.money}
-        />
-      ))}
-    </div>
-  );
-}
-
 function SangBookMark({ id, image, title, company, site, money }) {
   // 아톰 불러오기
   const [cartItem, setCartItem] = useRecoilState(BookMarkAtom);
@@ -39,7 +20,7 @@ function SangBookMark({ id, image, title, company, site, money }) {
       ]);
     }
 
-    // console.log(setCartItem);
+    console.log(setCartItem);
   };
 
   return (
@@ -58,6 +39,25 @@ function SangBookMark({ id, image, title, company, site, money }) {
         </div>
       </div>
     </SangBookMarkStyle>
+  );
+}
+
+function SangBookMarkCard() {
+  const [SangPositions, setSangPositions] = useState(txt);
+  return (
+    <div className="fatureContainer">
+      {SangPositions.map((x) => (
+        <SangBookMark
+          id={x.id}
+          key={x.id}
+          image={x.image}
+          title={x.title}
+          company={x.company}
+          site={x.site}
+          money={x.money}
+        />
+      ))}
+    </div>
   );
 }
 

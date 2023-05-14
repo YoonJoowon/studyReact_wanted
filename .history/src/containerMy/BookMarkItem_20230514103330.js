@@ -1,6 +1,8 @@
 import React from "react";
 import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
 import { BookMarkAtom } from "../states/BookMarkAtom";
+import txt from "../containersSangse/SangPosition.json";
+import { useState } from "react";
 
 function BookmarkCard({ id, image, title, company, site, money }) {
   const setItem = useSetRecoilState(BookMarkAtom);
@@ -8,7 +10,7 @@ function BookmarkCard({ id, image, title, company, site, money }) {
     setItem((prev) => prev.filter((e) => e.id !== id));
   };
   return (
-    <li key={id} id={id}>
+    <li id={id}>
       <div data-cy="job-card" className="fatureContainer01">
         <button onClick={removeFromBookMark}>
           <svg
@@ -51,7 +53,6 @@ function BookmarkItem() {
       {SangPositions.map((x) => (
         <BookmarkCard
           id={x.id}
-          key={x.id}
           image={x.image}
           title={x.title}
           company={x.company}

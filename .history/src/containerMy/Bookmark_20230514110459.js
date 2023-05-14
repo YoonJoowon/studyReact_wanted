@@ -1,9 +1,9 @@
 import React from "react";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilValue,useSetRecoilState } from "recoil";
 import styled from "styled-components";
 import { BookMarkAtom } from "../states/BookMarkAtom";
 import SangBookMarkCard from "../containersSangse/SangBookMarkCard";
-import BookMarkItem from "./BookMarkItem";
+import BookMarkItem from "./BookMarkItem"
 
 function Bookmark({ id, image, title, company, site, money }) {
   window.scrollTo(0, 0);
