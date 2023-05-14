@@ -1,11 +1,15 @@
-import React, { useState } from "react";
-import { useSelector } from "react-redux";
+import React from "react";
+import { useRecoilValue,useSetRecoilState } from "recoil";
 import styled from "styled-components";
+import { BookMarkAtom } from "../states/BookMarkAtom";
+import SangBookMarkCard from "../containersSangse/SangBookMarkCard";
+import BookMarkItem from "./BookMarkItem"
 
-function Bookmark() {
+function Bookmark({ id, image, title, company, site, money }) {
   window.scrollTo(0, 0);
-  const bookmarkList = useSelector((state) => state);
-  console.log(bookmarkList);
+
+  const setItem = useSetRecoilState(BookMarkAtom);
+  const bookMark = useRecoilValue(BookMarkAtom);
 
   return (
     <BookmarkStyle>
@@ -13,13 +17,13 @@ function Bookmark() {
         <article className="feature">
           <h2>북마크</h2>
           <div className="fatureContainer">
-            <ul
-              dangerouslySetInnerHTML={{
-                __html: bookmarkList
-                  .map((item, index) => `<li key=${index}${item}</li>`)
-                  .join(""),
-              }}
-            ></ul>
+            <ul>
+              {bookMark.length !== 0 ? (
+                bookMark.map((e) => <BookMarkItem date={e} id={e.id} />)
+              ) : (
+                <div> 아이템이 없습니다</div>
+              )}
+            </ul>
           </div>
         </article>
       </section>
@@ -36,7 +40,6 @@ const BookmarkStyle = styled.div`
   position: fixed;
   width: 100%;
   margin: auto;
-
 
   .feature {
     width: 1060px;
@@ -87,13 +90,14 @@ const BookmarkStyle = styled.div`
     position: relative;
   }
 
-  .fatureContainer01 .bookmarkBtn {
+  .fatureContainer01 button {
     position: absolute;
     z-index: 1;
     width: 40px;
     height: 30px;
     border-radius: 3px;
     margin-right: 1200px;
+    cursor: pointer;
   }
 
   .fatureContainer01_body {

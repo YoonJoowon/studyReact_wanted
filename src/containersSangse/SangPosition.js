@@ -1,35 +1,7 @@
 import React, { useEffect, useState } from "react";
-import SangPositionBtn from "./SangPositionBtn";
 import styled from "styled-components";
-import { useDispatch } from "react-redux";
+import SangBookMarkCard from "./SangBookMarkCard";
 import txt from "./SangPosition.json";
-
-function Text({ id, image, title, company, site, money }) {
-  const dispatch = useDispatch();
-
-  function handleLiClick(event) {
-    const liBook = event.currentTarget.innerHTML;
-    dispatch({ type: "SAVE", payload: liBook });
-    console.log({ liBook });
-  }
-
-  return (
-    <div className="fatureContainerCard">
-      <li key={id} onClick={handleLiClick}>
-        <div data-cy="job-card" className="fatureContainer01">
-          <SangPositionBtn />
-          <img src={image} alt=""></img>
-          <div className="fatureContainer01_body">
-            <div className="fatureContainer01_1">{title}</div>
-            <div className="fatureContainer01_2">{company}</div>
-            <div className="fatureContainer01_3">{site}</div>
-            <div className="fatureContainer01_4">{money}</div>
-          </div>
-        </div>
-      </li>
-    </div>
-  );
-}
 
 function SangPosition() {
   const [SangPositions, setSangPositions] = useState(txt);
@@ -40,17 +12,8 @@ function SangPosition() {
         <article className="feature">
           <h2>이 포지션을 찾고 계셨나요?</h2>
           <div className="fatureContainer">
-            <ul data-cy="job-list">
-              {SangPositions.map((text) => (
-                <Text
-                  key={text.id}
-                  image={text.image}
-                  title={text.title}
-                  company={text.company}
-                  site={text.site}
-                  money={text.money}
-                />
-              ))}
+            <ul>
+              <SangBookMarkCard />
             </ul>
           </div>
         </article>
@@ -95,15 +58,6 @@ const SangPositionStyle = styled.div`
     margin: 5px;
   }
 
-  .fatureContainerCard .bookmarkBtn {
-    position: absolute;
-    z-index: 1;
-    width: 40px;
-    height: 30px;
-    border-radius: 3px;
-    top: 5px;
-  }
-
   .fatureContainer ul li {
     padding: 5px;
     list-style: none;
@@ -126,6 +80,16 @@ const SangPositionStyle = styled.div`
   .fatureContainer01 {
     display: block;
     position: relative;
+  }
+
+  .fatureContainer01 button {
+    position: absolute;
+    z-index: 1;
+    width: 40px;
+    height: 30px;
+    border-radius: 3px;
+    margin-right: 1200px;
+    cursor: pointer;
   }
 
   .fatureContainer01_body {

@@ -1,5 +1,4 @@
 import React from "react";
-import "./css/Chae.css";
 
 import ChaeSlide from "./containersChaeyong/ChaeSlide";
 import ChaeMatch from "./containersChaeyong/ChaeMatch";
