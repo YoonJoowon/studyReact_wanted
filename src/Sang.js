@@ -1,5 +1,4 @@
 import React from "react";
-import "./css/Sang.css";
 
 import SangMainSlide from "./containersSangse/SangMainSlide";
 import SangMainTxt from "./containersSangse/SangMainTxt";

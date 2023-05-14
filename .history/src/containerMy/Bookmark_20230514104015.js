@@ -1,9 +1,9 @@
 import React from "react";
-import { useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilValue,useSetRecoilState } from "recoil";
 import styled from "styled-components";
 import { BookMarkAtom } from "../states/BookMarkAtom";
 import SangBookMarkCard from "../containersSangse/SangBookMarkCard";
-import BookMarkItem from "./BookMarkItem";
+import BookMarkItem from "./BookMarkItem"
 
 function Bookmark({ id, image, title, company, site, money }) {
   window.scrollTo(0, 0);
@@ -19,7 +19,7 @@ function Bookmark({ id, image, title, company, site, money }) {
           <div className="fatureContainer">
             <ul>
               {bookMark.length !== 0 ? (
-                <BookMarkItem />
+                bookMark.map((e) => <BookMarkItem date={e} id={e.id} />)
               ) : (
                 <div> 아이템이 없습니다</div>
               )}

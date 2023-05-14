@@ -1,10 +1,8 @@
 import React, { useEffect, useState } from "react";
-import { useDispatch, useSelector } from "react-redux";
 import styled from "styled-components";
 
 function SangSide() {
   const [isFixed, setIsFixed] = useState(false);
-  const dispatch = useDispatch();
 
   window.addEventListener("scroll", function () {
     const scrollingContainer = document.querySelector(".aside1");
@@ -49,13 +47,7 @@ function SangSide() {
             </div>
 
             <div className="aside1_bookmark_btn">
-              <button
-                className=""
-                type="button"
-                onClick={() => {
-                  dispatch({ type: "SAVE" });
-                }}
-              >
+              <button className="" type="button">
                 북마크하기
               </button>
             </div>

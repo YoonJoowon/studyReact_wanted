@@ -5,31 +5,12 @@ import txt from "./SangPosition.json";
 import { useRecoilState, useSetRecoilState } from "recoil";
 import { BookMarkAtom } from "../states/BookMarkAtom";
 
-function SangBookMarkCard() {
-  const [SangPositions, setSangPositions] = useState(txt);
-  return (
-    <div className="fatureContainer">
-      {SangPositions.map((x) => (
-        <SangBookMark
-          id={x.id}
-          key={x.id}
-          image={x.image}
-          title={x.title}
-          company={x.company}
-          site={x.site}
-          money={x.money}
-        />
-      ))}
-    </div>
-  );
-}
-
 function SangBookMark({ id, image, title, company, site, money }) {
   // 아톰 불러오기
   const [cartItem, setCartItem] = useRecoilState(BookMarkAtom);
 
   // 이미 장바구니에 들어있는지 확인
-  const isAlreadyInCart = cartItem.findIndex((e) => e.id === id) > -1;
+  const isAlreadyInCart = cartItem.findIndex((e) => e.id === id) === -1;
 
   const AddToCart = () => {
     if (!isAlreadyInCart) {
@@ -38,12 +19,12 @@ function SangBookMark({ id, image, title, company, site, money }) {
         { id, image, title, company, site, money },
       ]);
     }
-
-    // console.log(setCartItem);
+    
+    console.log(setCartItem)
   };
 
   return (
-    <SangBookMarkStyle key={id} id={id}>
+    <SangBookMarkStyle id={id}>
       <div data-cy="job-card" className="fatureContainer01">
         <button onClick={AddToCart}>
           <SangBookMarkBtn />
@@ -58,6 +39,24 @@ function SangBookMark({ id, image, title, company, site, money }) {
         </div>
       </div>
     </SangBookMarkStyle>
+  );
+}
+
+function SangBookMarkCard() {
+  const [SangPositions, setSangPositions] = useState(txt);
+  return (
+    <div className="fatureContainer">
+      {SangPositions.map((x) => (
+        <SangBookMark
+          id={x.id}
+          image={x.image}
+          title={x.title}
+          company={x.company}
+          site={x.site}
+          money={x.money}
+        />
+      ))}
+    </div>
   );
 }
 
