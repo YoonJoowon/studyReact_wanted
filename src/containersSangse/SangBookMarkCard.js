@@ -6,7 +6,7 @@ import { useRecoilState, useSetRecoilState } from "recoil";
 import { BookMarkAtom } from "../states/BookMarkAtom";
 
 function SangBookMarkCard() {
-  const [SangPositions, setSangPositions] = useState(txt);
+  const [SangPositions, setSangPositions] = useState(txt); 
   return (
     <div className="fatureContainer">
       {SangPositions.map((x) => (

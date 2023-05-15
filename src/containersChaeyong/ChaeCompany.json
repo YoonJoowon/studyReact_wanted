@@ -1,0 +1,94 @@
+{
+    "companyIntro": [
+        {
+          "id": 1,
+          "title": "#급성장 중 ",
+          "title2": "회사를 소개합니다",
+          "title3": "포지션으로 더보기",
+          "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F37dacf86-9f6e-11ec-b909-0242ac120002.png&w=75&q=75"
+        },
+        {
+          "id": 2,
+          "title": "#50이상 기업",
+          "title2": "회사를 소개합니다",
+          "title3": "포지션으로 더보기",
+          "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Ftags%2F4cec3244-c524-11ec-901c-acde48001122.png&amp;w=75&amp;q=75"
+        },
+        {
+          "id": 3,
+          "title": "테마로 모아보는 요즘 채용"
+        }
+    ],
+
+    "companyRecommand": [
+        {
+            "id": 1,
+            "title": "미소 (miso) ",
+            "title2": "IT, 컨텐츠"
+        },
+        {
+            "id": 2,
+            "title": "여기어때컴퍼니",
+            "title2": "IT, 컨텐츠"
+        },
+        {
+            "id": 3,
+            "title": "메타비티",
+            "title2": "IT, 컨텐츠"
+        },
+        {
+            "id": 4,
+            "title": "이스턴네트워스",
+            "title2": "IT, 컨텐츠"
+        },
+        {
+            "id": 5,
+            "title": "k-유니콘기업",
+            "title2": "기업성과 사업성을 검증받은 국내 유망 기업을 소개합니다."
+        },
+        {
+            "id": 6,
+            "title": "이스턴네트워스",
+            "title2": "회사가 성장하는 만큼 성과급, 상여급으로 보상하는 기업을 소개합니다."
+        }
+    ],
+
+    "companyEx": [
+        {
+            "id" : 1,
+            "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.7dc54da0.jpg&amp;w=30&amp;q=70"
+        },
+        {
+            "id" : 2,
+            "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.ab18b5ff.png&amp;w=30&amp;q=70"
+        },
+        {
+            "id" : 3,
+            "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.a3889de2.png&amp;w=30&amp;q=70"
+        },
+        {
+            "id" : 4,
+            "img":"https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.40ff0c85.png&amp;w=30&amp;q=70"
+        },
+        {
+            "id" : 5,
+            "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.c8e0ee94.jpg&amp;w=30&amp;q=70"
+        },
+        {
+            "id" : 6,
+            "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.379b3c9c.png&amp;w=30&amp;q=70"
+        },
+        {
+            "id" : 7,
+            "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.a95bafdf.jpg&amp;w=30&amp;q=70"
+        },
+        {
+            "id" : 8,
+            "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.744b1b2a.jpg&amp;w=30&amp;q=70"
+        },
+        {
+            "id" : 9,
+            "img": "https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fwdes%2F0_5.0ad64c7d.png&amp;w=30&amp;q=70"
+        }
+    ]
+}

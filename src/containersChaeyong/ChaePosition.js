@@ -85,15 +85,6 @@ function ChaePosition() {
                   <button
                     className="bookmarkBtn"
                     type="button"
-                    aria-label="bookmark button"
-                    data-attribute-id="position__bookmark__click"
-                    data-kind="add"
-                    data-job-category-id="523"
-                    data-job-category="Marketing &amp; Advertising"
-                    data-company-id="8177"
-                    data-company-name="스와치온(SwatchOn)"
-                    data-position-id="151227"
-                    data-position-name="해외 파트너십 마케팅"
                   >
                     <svg
                       width="22"
@@ -114,7 +105,7 @@ function ChaePosition() {
                       ></path>
                     </svg>
                   </button>
-                  <img src='https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F8177%2Ffr3dtvmomfzj6gbr__400_400.jpeg&amp;w=400&amp;q=75"'></img>
+                  <img src='https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F8177%2Ffr3dtvmomfzj6gbr__400_400.jpeg&amp;w=400&amp;q=75" ' alt=""></img>
                   <div className="fatureContainer01_body">
                     <div className="fatureContainer01_1">
                       {articles[1].title}
@@ -137,15 +128,6 @@ function ChaePosition() {
                   <button
                     className="bookmarkBtn"
                     type="button"
-                    aria-label="bookmark button"
-                    data-attribute-id="position__bookmark__click"
-                    data-kind="add"
-                    data-job-category-id="530"
-                    data-job-category="Sales"
-                    data-company-id="79"
-                    data-company-name="원티드랩"
-                    data-position-id="152319"
-                    data-position-name="Sales Account Executive [AE팀]"
                   >
                     <svg
                       width="22"
@@ -166,7 +148,7 @@ function ChaePosition() {
                       ></path>
                     </svg>
                   </button>
-                  <img src='https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F79%2Fno3ey0e5mjbismfq__400_400.jpg&amp;w=400&amp;q=75"'></img>
+                  <img src='https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F79%2Fno3ey0e5mjbismfq__400_400.jpg&amp;w=400&amp;q=75"' alt=""></img>
                   <div className="fatureContainer01_body">
                     <div className="fatureContainer01_1">
                       {articles[2].title}
@@ -200,15 +182,6 @@ function ChaePosition() {
                   <button
                     className="bookmarkBtn"
                     type="button"
-                    aria-label="bookmark button"
-                    data-attribute-id="position__bookmark__click"
-                    data-kind="add"
-                    data-job-category-id="523"
-                    data-job-category="Marketing &amp; Advertising"
-                    data-company-id="35834"
-                    data-company-name="코스트"
-                    data-position-id="152265"
-                    data-position-name="콘텐츠 마케터"
                   >
                     <svg
                       width="22"
@@ -229,7 +202,7 @@ function ChaePosition() {
                       ></path>
                     </svg>
                   </button>
-                  <img src='https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F35834%2Fb8iiph247mvbglh8__400_400.jpg&amp;w=400&amp;q=75"'></img>
+                  <img src='https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fstatic.wanted.co.kr%2Fimages%2Fcompany%2F35834%2Fb8iiph247mvbglh8__400_400.jpg&amp;w=400&amp;q=75"' alt=""></img>
                   <div className="fatureContainer01_body">
                     <div className="fatureContainer01_1">
                       {articles[3].title}

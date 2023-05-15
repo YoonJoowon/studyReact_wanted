@@ -8,7 +8,7 @@ import BookMarkItem from "./BookMarkItem";
 function Bookmark({ id, image, title, company, site, money }) {
   window.scrollTo(0, 0);
 
-  // const setItem = useSetRecoilState(BookMarkAtom);
+  const setItem = useSetRecoilState(BookMarkAtom);
   const bookMark = useRecoilValue(BookMarkAtom);
 
   return (
