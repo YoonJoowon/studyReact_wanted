@@ -1,12 +1,13 @@
 import React, { useState } from "react";
 import BtnRound from "./BtnRound";
 import Modal from "../modal/Modal";
-import { Link } from "react-router-dom";
+import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Search from "./Search";
 import LoginMyInfo from "../modal/LoginMyInfo";
 
 function Nav(props) {
+  const navigate = useNavigate();
   // 모달창 노출 여부 state
   const [modalOpen, setModalOpen] = useState(false);
   const [searchOpen, setSearchOpen] = useState(false);
@@ -48,11 +49,22 @@ function Nav(props) {
                   </p>
                 </Link>
               </div>
+
               <ul>
                 <Link to={"/ChaeYong"}>
                   <li>채용</li>
                 </Link>
-                <li>이벤트</li>
+                <li>
+                  <button
+                    className="eventBtn"
+                    type="button"
+                    onClick={() => {
+                      navigate("/EventNotFound");
+                    }}
+                  >
+                    이벤트
+                  </button>
+                </li>
                 <li>직군별 연봉</li>
                 <li>이력서</li>
                 <li>
@@ -63,6 +75,7 @@ function Nav(props) {
                   AI합격예측<p>Beta</p>
                 </li>
               </ul>
+
               <div className="aside">
                 <button
                   onClick={showSearch}
@@ -216,6 +229,10 @@ const NavStyle = styled.div`
     font-weight: 500;
     padding: 15px;
     display: inline-block;
+
+    .eventBtn{
+      cursor: pointer;
+    }
   }
 
   nav li svg {

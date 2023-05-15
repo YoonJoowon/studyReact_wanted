@@ -13,7 +13,7 @@ function Text({ title, intro, introduce }) {
       <p>{intro}</p>
       <br />
       <p>{introduce}</p>
-      <br />
+      <br/>
     </span>
   );
 }
@@ -36,7 +36,6 @@ function SangMainTxt() {
             ))}
             <p>
               <span>
-          
                 Medmap은 정확하고 다양한 3D 메디컬 콘텐츠를 제공하여 시술 원리와
                 과정을 쉽게 설명할 수 있도록 도와줍니다. 또한 환자의 이해를 돕고
                 신뢰도를 향상 시키며 재방문율을 높일 수 있습니다.
