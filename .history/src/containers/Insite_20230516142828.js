@@ -96,7 +96,7 @@ export default Insite;
 
 const InsiteStyle = styled.div`
   /* main2 */
-  .main2 {
+  /* .main2 {
     width: 1060px;
     margin-top: 1500px;
     background-color: white;
@@ -129,5 +129,5 @@ const InsiteStyle = styled.div`
 
   .careerinsite_img button {
     cursor: pointer;
-  }
+  } */
 `;

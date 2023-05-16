@@ -7,7 +7,7 @@ import Footer from "./containers/Footer";
 import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
 import SearchList from "./containerSearch/SearchList";
 import Bookmark from "./containerMy/Bookmark";
-import Event from "./containersEvent/Event";
+import Event from "./containers/Event";
 
 function App() {
   return (

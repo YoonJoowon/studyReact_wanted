@@ -121,10 +121,10 @@ const InsiteStyle = styled.div`
   }
 
   .careerinsite_text {
-    line-height: 1.33;
+    /* line-height: 1.33;
     font-weight: 700;
     color: #333;
-    font-size: 22px;
+    font-size: 22px; */
   }
 
   .careerinsite_img button {

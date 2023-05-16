@@ -130,4 +130,112 @@ const InsiteStyle = styled.div`
   .careerinsite_img button {
     cursor: pointer;
   }
+
+  .insitewrap {
+    align-items: center;
+    height: 100%;
+    display: block;
+  }
+
+  .insitewrap_flex {
+    display: flex;
+  }
+
+  .insiteview {
+    margin: 30px 0;
+  }
+
+  .insite_button {
+    position: relative;
+    display: flex;
+    max-width: calc(100% - 40px - 8px);
+  }
+
+  .insiteview ul {
+    display: block;
+    width: auto;
+    margin-right: -15px;
+    font-size: 0;
+  }
+
+  .insitemenu_view > li {
+    display: inline-block;
+    width: calc(25% - 15px);
+    padding: 0 15px 10px 0;
+    vertical-align: top;
+  }
+
+  .insitemenu_view :hover {
+    transform: translateY(-1px);
+    transition: 0.1s ease-out;
+  }
+
+  .insitemenu_view .box {
+    cursor: pointer;
+  }
+
+  .insitemenu_view > li .box .img {
+    overflow: hidden;
+    position: relative;
+    height: auto;
+    padding-bottom: 70%;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0.06);
+  }
+
+  .insitemenu_view > li .box .img img {
+    position: absolute;
+    width: 250px;
+    height: 175px;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    object-position: center;
+  }
+
+  .insitemenu_view > li .box .info {
+    margin-top: 12px;
+  }
+
+  .insitemenu_view > li .box .subject {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    color: #171717;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 1.4;
+  }
+
+  .insitemenu_view > li .box .summary {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    padding-top: 5px;
+    color: #8a8a8a;
+    font-size: 13px;
+    font-weight: 400;
+    line-height: 1.4;
+  }
+
+  .insitemenu_view > li .box .icon {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
+  }
+
+  .insitemenu_view > li .box .icon .img_icon img {
+    width: 24px;
+    height: 24px;
+  }
+
+  .insitemenu_view > li .box .icon .icon_name {
+    padding-left: 5px;
+    color: #8a8a8a;
+    font-size: 12px;
+  }
 `;

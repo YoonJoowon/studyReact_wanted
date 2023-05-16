@@ -130,4 +130,14 @@ const InsiteStyle = styled.div`
   .careerinsite_img button {
     cursor: pointer;
   }
+
+  .insitewrap {
+    align-items: center;
+    height: 100%;
+    display: block;
+  }
+
+  .insitewrap_flex {
+    display: flex;
+  }
 `;

@@ -109,7 +109,7 @@ const InsiteStyle = styled.div`
   }
 
   .careerinsite {
-    display: flex;
+    /* display: flex;
     width: 1060px;
     margin: auto;
     text-align: center;
@@ -117,7 +117,7 @@ const InsiteStyle = styled.div`
     padding-bottom: 30px;
     align-items: center;
     -ms-flex-pack: center;
-    justify-content: center;
+    justify-content: center; */
   }
 
   .careerinsite_text {
