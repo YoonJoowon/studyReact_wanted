@@ -82,6 +82,7 @@ const EventStyle = styled.div`
       margin: auto;
       width: 1060px;
 
+      background-color: #a11b1b;
       height: 150px;
       margin-top: 20px;
       position: sticky;
@@ -89,7 +90,7 @@ const EventStyle = styled.div`
 
       .eventTrigger {
         z-index: 2;
-        background-color: #fff;
+        /* background-color: #fff; */
         hr {
           opacity: 0.3;
           margin-top: 20px;
@@ -100,7 +101,7 @@ const EventStyle = styled.div`
           display: flex;
           justify-content: space-between;
           width: 100%;
-          background-color: #fff;
+          /* background-color: #fff; */
         }
       }
     }

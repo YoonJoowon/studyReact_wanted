@@ -31,7 +31,7 @@ function Event() {
           </div>
         </div>
 
-        <div className="eventCardListWrapper">
+        <div className="insitewrap">          
           <div className="eventCardList">
             <InsiteList />
             <InsiteList />
@@ -47,49 +47,43 @@ export default Event;
 const EventStyle = styled.div`
   .wrapper {
     height: 100%;
+  }
+  .eventBanner {
+    margin-top: 50px;
+    background-repeat: no-repeat;
+    background-size: contain;
 
-    .eventBanner {
-      margin-top: 50px;
-      background-repeat: no-repeat;
-      background-size: contain;
-
-      img {
-        width: 100%;
-        height: 100%;
-      }
-    }
-
-    .evetInsiteBar {
-      width: 1060px;
-      margin: auto;
+    img {
+      width: 100%;
       height: 100%;
-      margin-top: 50px;
-      position: relative;
+    }
+  }
 
-      h2 {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 127.3%;
-        letter-spacing: -0.012em;
-        color: #171717;
-        max-width: 1060px;
-        width: 90%;
-      }
+  h2 {
+      font-style: normal;
+      font-weight: 600;
+      font-size: 22px;
+      line-height: 127.3%;
+      letter-spacing: -0.012em;
+      color: #171717;
+      max-width: 1060px;
+      width: 90%;
     }
 
     .eventList {
       margin: auto;
       width: 1060px;
 
-      height: 150px;
+      background-color: #a11b1b;
+      height: auto;
+      height: 100%;
       margin-top: 20px;
       position: sticky;
-      top: 0;
+      top: 50px;
 
       .eventTrigger {
         z-index: 2;
-        background-color: #fff;
+        /* background-color: #fff; */
         hr {
           opacity: 0.3;
           margin-top: 20px;
@@ -100,21 +94,20 @@ const EventStyle = styled.div`
           display: flex;
           justify-content: space-between;
           width: 100%;
-          background-color: #fff;
+          /* background-color: #fff; */
         }
       }
     }
 
-    .eventCardListWrapper {
-      width: 1060px;
-      margin: auto;
-      height: 100%;
-      margin-top: 50px;
-      position: relative;
+  .insitewrap {
+    width: 1060px;
+    margin: auto;
+    height: 100%;
+    margin-top: 50px;
+    position: relative;   
 
-      .eventCardList {
-        height: 100%;
-      }
+    .eventCardList {
+      height: 100%;
     }
   }
 `;
