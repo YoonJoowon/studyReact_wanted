@@ -96,7 +96,6 @@ const EventStyle = styled.div`
       width: 1060px;
       margin-top: 20px;
       top: 0;
-      /* height: 123px; */
 
       .eventTrigger {
         background-color: #fff;
@@ -117,6 +116,7 @@ const EventStyle = styled.div`
 
     .eventList.fixed {
       position: fixed;
+      display: block;
       width: 100%;
       margin: auto;
       background-color: #fff;

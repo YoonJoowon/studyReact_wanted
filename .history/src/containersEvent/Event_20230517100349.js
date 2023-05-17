@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import styled, { css } from "styled-components";
 import InsiteBar from "../containers/InsiteBar";
 import InsiteList from "../containers/InsiteList";
@@ -6,18 +6,6 @@ import EventFilterBtn from "./EventFilterBtn";
 import EventKetwordBtn from "./EventKetwordBtn";
 
 function Event() {
-  const [isFixed, setIsFixed] = useState(false);
-
-  window.addEventListener("scroll", function () {
-    const scrollingContainer = document.querySelector(".eventList");
-    const threshold = 390; // 스크롤 임계값
-
-    if (scrollingContainer && window.scrollY > threshold) {
-      scrollingContainer.classList.add("fixed");
-    } else if (scrollingContainer) {
-      scrollingContainer.classList.remove("fixed");
-    }
-  });
   return (
     <EventStyle>
       <div className="wrapper">
@@ -32,7 +20,7 @@ function Event() {
           <h2>다양한 커리어 관련 이벤트를 만나보세요!</h2>
         </div>
 
-        <div className={isFixed ? "eventList.fixed" : "eventList"}>
+        <div className="eventList">
           <div className="eventTrigger">
             <InsiteBar />
             <hr />
@@ -59,7 +47,6 @@ export default Event;
 const EventStyle = styled.div`
   .wrapper {
     height: 100%;
-    position: relative;
 
     .eventBanner {
       margin-top: 50px;
@@ -94,11 +81,14 @@ const EventStyle = styled.div`
     .eventList {
       margin: auto;
       width: 1060px;
+
+      height: 150px;
       margin-top: 20px;
+      position: sticky;
       top: 0;
-      /* height: 123px; */
 
       .eventTrigger {
+        z-index: 2;
         background-color: #fff;
         hr {
           opacity: 0.3;
@@ -115,28 +105,11 @@ const EventStyle = styled.div`
       }
     }
 
-    .eventList.fixed {
-      position: fixed;
-      width: 100%;
-      margin: auto;
-      background-color: #fff;
-      margin-top: 50px;
-      z-index: 2;
-      border-bottom: #3449ff 1px solid;
-
-      .eventTrigger {
-        margin: auto;
-        width: 1060px;
-        margin-top: 20px;
-        padding-bottom: 20px;
-      }
-    }
-
     .eventCardListWrapper {
       width: 1060px;
       margin: auto;
       height: 100%;
-      margin-top: 20px;
+      margin-top: 50px;
       position: relative;
 
       .eventCardList {

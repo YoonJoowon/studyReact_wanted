@@ -9,8 +9,8 @@ function Event() {
   const [isFixed, setIsFixed] = useState(false);
 
   window.addEventListener("scroll", function () {
-    const scrollingContainer = document.querySelector(".eventList");
-    const threshold = 390; // 스크롤 임계값
+    const scrollingContainer = document.querySelector(".aside1");
+    const threshold = 200; // 스크롤 임계값
 
     if (scrollingContainer && window.scrollY > threshold) {
       scrollingContainer.classList.add("fixed");
@@ -94,11 +94,13 @@ const EventStyle = styled.div`
     .eventList {
       margin: auto;
       width: 1060px;
+
       margin-top: 20px;
+      /* position: sticky; */
       top: 0;
-      /* height: 123px; */
 
       .eventTrigger {
+        z-index: 2;
         background-color: #fff;
         hr {
           opacity: 0.3;
@@ -117,26 +119,15 @@ const EventStyle = styled.div`
 
     .eventList.fixed {
       position: fixed;
-      width: 100%;
-      margin: auto;
-      background-color: #fff;
-      margin-top: 50px;
-      z-index: 2;
-      border-bottom: #3449ff 1px solid;
-
-      .eventTrigger {
-        margin: auto;
-        width: 1060px;
-        margin-top: 20px;
-        padding-bottom: 20px;
-      }
+      width: 1060px;
+      border-bottom: #2a3599 1px solid;
     }
 
     .eventCardListWrapper {
       width: 1060px;
       margin: auto;
       height: 100%;
-      margin-top: 20px;
+      margin-top: 50px;
       position: relative;
 
       .eventCardList {

@@ -9,15 +9,15 @@ function SangSide() {
     const threshold = 6050; // 스크롤 임계값
 
     if (scrollingContainer && window.scrollY > threshold) {
-      scrollingContainer.classList.add("fixed");
+      scrollingContainer.classList.add("a");
     } else if (scrollingContainer) {
-      scrollingContainer.classList.remove("fixed");
+      scrollingContainer.classList.remove("a");
     }
   });
 
   return (
     <SangSideStyle>
-      <div className={isFixed ? "aside1.fixed" : ""}>
+      <div className={isFixed ? "aside1.a" : ""}>
         <div className="aside1">
           <div className="aside1_padding">
             <div className="aside1_1">

@@ -96,7 +96,6 @@ const EventStyle = styled.div`
       width: 1060px;
       margin-top: 20px;
       top: 0;
-      /* height: 123px; */
 
       .eventTrigger {
         background-color: #fff;
@@ -136,7 +135,7 @@ const EventStyle = styled.div`
       width: 1060px;
       margin: auto;
       height: 100%;
-      margin-top: 20px;
+      /* margin-top: 50px; */
       position: relative;
 
       .eventCardList {

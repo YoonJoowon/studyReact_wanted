@@ -96,7 +96,7 @@ const EventStyle = styled.div`
       width: 1060px;
       margin-top: 20px;
       top: 0;
-      /* height: 123px; */
+      height: 123px;
 
       .eventTrigger {
         background-color: #fff;

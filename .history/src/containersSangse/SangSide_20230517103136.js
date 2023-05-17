@@ -17,7 +17,7 @@ function SangSide() {
 
   return (
     <SangSideStyle>
-      <div className={isFixed ? "aside1.fixed" : ""}>
+      <div className={isFixed ? "aside1 fixed" : ""}>
         <div className="aside1">
           <div className="aside1_padding">
             <div className="aside1_1">

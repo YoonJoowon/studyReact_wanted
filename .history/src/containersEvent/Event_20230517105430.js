@@ -96,7 +96,6 @@ const EventStyle = styled.div`
       width: 1060px;
       margin-top: 20px;
       top: 0;
-      /* height: 123px; */
 
       .eventTrigger {
         background-color: #fff;
@@ -123,6 +122,7 @@ const EventStyle = styled.div`
       margin-top: 50px;
       z-index: 2;
       border-bottom: #3449ff 1px solid;
+      margin-bottom: 1500px;
 
       .eventTrigger {
         margin: auto;

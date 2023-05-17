@@ -17,7 +17,7 @@ function SangSide() {
 
   return (
     <SangSideStyle>
-      <div className={isFixed ? "aside1.fixed" : ""}>
+      <div className={isFixed ? "aside1 fixed" : ""}>
         <div className="aside1">
           <div className="aside1_padding">
             <div className="aside1_1">
@@ -127,10 +127,10 @@ const SangSideStyle = styled.div`
     top: 70px;
   }
 
-  .aside1.fixed {
+  /* .aside1.fixed {
     position: absolute;
     margin-top: 6000px;
-  }
+  } */
 
   .aside1_padding {
     padding: 24px 20px;
