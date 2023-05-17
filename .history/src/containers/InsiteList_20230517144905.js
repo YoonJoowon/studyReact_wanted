@@ -152,9 +152,9 @@ const InsiteListStyle = styled.div`
   }
 
   /* 1100px 이하 */
-  @media (min-width: 700px) and (max-width: 1100px) {
+  @media (max-width: 1100px) {
     .insitemenu_view li {
-      width: calc((100% - 50px) / 4);
+      width: calc((100% - 50px) / 3);
 
       .box {
       }

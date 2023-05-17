@@ -73,7 +73,6 @@ const EventStyle = styled.div`
   .wrapper {
     height: 100%;
     position: relative;
-    margin: auto;
 
     .eventBanner {
       margin-top: 50px;

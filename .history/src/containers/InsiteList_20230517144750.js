@@ -95,8 +95,8 @@ const InsiteListStyle = styled.div`
 
   .insitemenu_view > li .box .img img {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: auto;
+    height: auto;
     left: 0;
     top: 0;
     object-fit: cover;
@@ -152,7 +152,7 @@ const InsiteListStyle = styled.div`
   }
 
   /* 1100px 이하 */
-  @media (min-width: 700px) and (max-width: 1100px) {
+  @media (max-width: 1100px) {
     .insitemenu_view li {
       width: calc((100% - 50px) / 4);
 

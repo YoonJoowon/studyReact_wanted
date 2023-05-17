@@ -57,23 +57,9 @@ function Event() {
 export default Event;
 
 const EventStyle = styled.div`
-  @media (min-width: 700px) and (max-width: 1100px) {
-    img {
-      width: 100%;
-      height: 300px;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .eventBanner {
-      height: 300px;
-    }
-  }
-
   .wrapper {
     height: 100%;
     position: relative;
-    margin: auto;
 
     .eventBanner {
       margin-top: 50px;
@@ -84,6 +70,19 @@ const EventStyle = styled.div`
       img {
         width: 100%;
         height: 300px;
+      }
+
+      @media (min-width: 700px) and (max-width: 1100px) {
+        img {
+          /* width: 100%; */
+          height: 300px;
+        }
+      }
+
+      @media (max-width: 700px) {
+        .eventBanner {
+          height: 300px;
+        }
       }
     }
 

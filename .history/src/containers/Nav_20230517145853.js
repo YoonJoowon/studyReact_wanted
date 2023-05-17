@@ -151,24 +151,22 @@ export default Nav;
 
 const NavStyle = styled.div`
   @media (min-width: 700px) and (max-width: 1100px) {
-    .nav {
-      display: flex;
-      -ms-flex-align: center;
-      align-items: center;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
+    .nav{
+      height: 110px;
+      margin: 0 auto;
+      width: 90%;
     }
 
     .nav_cen ul {
       justify-content: space-evenly;
     }
 
-    .nav_cen_logo {
+    .nav_cen_logo{
       width: 100%;
       height: 60px;
     }
 
-    .aside_service_btn {
+    .aside_service_btn{
       display: none;
     }
   }

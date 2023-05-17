@@ -46,71 +46,6 @@ function InsiteBar() {
   );
 }
 
-const InsiteBarStyle = styled.div`
-  .insiteBarWrap {
-    display: flex;
-  }
-
-  .swiper {
-    width: 1012px;
-    display: flex;
-    overflow-x: hidden;
-    overflow-y: hidden;
-    position: relative;
-    .swiper-wrapper {
-      width: 1012px;
-      display: flex;
-    }
-  }
-
-  .swiper-slide {
-    /* display: flex; */
-  }
-
-  .swiper-slide button {
-    font-weight: 700;
-    font-size: 15px;
-    line-height: 146.7%;
-    color: #8a8a8a;
-    height: 40px;
-    position: relative;
-    border: 1px solid #e1e2e3;
-    border-radius: 30px;
-    /* padding: 6px 22px; */
-    width: 110px;
-    cursor: pointer;
-
-    flex-shrink: 0;
-    outline: none;
-  }
-
-  .swiper-slide :hover {
-    background-color: #d4d4d4;
-  }
-
-  .buttonWrapper {
-    position: absolute;
-    margin: auto;
-    width: 1012px;
-    height: 0px;
-  }
-
-  .InterestTagSlide {
-    display: block;
-    justify-content: center;
-    align-items: center;
-    margin-left: 6px;
-    min-width: 40px;
-    min-height: 34px;
-    border: 1px solid #e1e2e4;
-    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
-    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
-    border-radius: 4px;
-    color: #8a8a8a;
-    background-color: #fff;
-    cursor: pointer;
-  }
-`;
 
 const articles = [
   {
@@ -192,3 +127,69 @@ const articles = [
 ];
 
 export default InsiteBar;
+
+const InsiteBarStyle = styled.div`
+  .insiteBarWrap {
+    display: flex;
+  }
+
+  .swiper {
+    width: 1012px;
+    display: flex;
+    overflow-x: hidden;
+    overflow-y: hidden;
+    position: relative;
+    .swiper-wrapper {
+      width: 1012px;
+      display: flex;
+    }
+  }
+
+  .swiper-slide {
+    /* display: flex; */
+  }
+
+  .swiper-slide button {
+    font-weight: 700;
+    font-size: 15px;
+    line-height: 146.7%;
+    color: #8a8a8a;
+    height: 40px;
+    position: relative;
+    border: 1px solid #e1e2e3;
+    border-radius: 30px;
+    /* padding: 6px 22px; */
+    width: 110px;
+    cursor: pointer;
+
+    flex-shrink: 0;
+    outline: none;
+  }
+
+  .swiper-slide :hover {
+    background-color: #d4d4d4;
+  }
+
+  .buttonWrapper {
+    position: absolute;
+    margin: auto;
+    width: 1012px;
+    height: 0px;
+  }
+
+  .InterestTagSlide {
+    display: block;
+    justify-content: center;
+    align-items: center;
+    margin-left: 6px;
+    min-width: 40px;
+    min-height: 34px;
+    border: 1px solid #e1e2e4;
+    -webkit-box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    box-shadow: 0 4px 4px rgba(0, 0, 0, 0.05);
+    border-radius: 4px;
+    color: #8a8a8a;
+    background-color: #fff;
+    cursor: pointer;
+  }
+`;

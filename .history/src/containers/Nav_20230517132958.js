@@ -126,7 +126,7 @@ function Nav(props) {
                     회원가입/로그인
                   </button>
                 )}
-                <p className="aside_service_btn">
+                <p>
                   <BtnRound>기업 서비스</BtnRound>
                 </p>
               </div>
@@ -150,35 +150,6 @@ function Nav(props) {
 export default Nav;
 
 const NavStyle = styled.div`
-  @media (min-width: 700px) and (max-width: 1100px) {
-    .nav {
-      display: flex;
-      -ms-flex-align: center;
-      align-items: center;
-      -ms-flex-pack: justify;
-      justify-content: space-between;
-    }
-
-    .nav_cen ul {
-      justify-content: space-evenly;
-    }
-
-    .nav_cen_logo {
-      width: 100%;
-      height: 60px;
-    }
-
-    .aside_service_btn {
-      display: none;
-    }
-  }
-
-  @media (max-width: 700px) {
-    .eventBanner {
-      height: 300px;
-    }
-  }
-
   .nav {
     width: 100%;
     height: 50px;
@@ -259,7 +230,7 @@ const NavStyle = styled.div`
     padding: 15px;
     display: inline-block;
 
-    .eventBtn {
+    .eventBtn{
       cursor: pointer;
     }
   }

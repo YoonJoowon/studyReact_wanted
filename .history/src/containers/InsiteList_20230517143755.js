@@ -95,14 +95,12 @@ const InsiteListStyle = styled.div`
 
   .insitemenu_view > li .box .img img {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 250px;
+    height: 175px;
     left: 0;
     top: 0;
     object-fit: cover;
     object-position: center;
-    max-width: 100%;
-    max-height: 100%;
   }
 
   .insitemenu_view > li .box .info {
@@ -152,11 +150,12 @@ const InsiteListStyle = styled.div`
   }
 
   /* 1100px 이하 */
-  @media (min-width: 700px) and (max-width: 1100px) {
+  @media (max-width: 1100px) {
     .insitemenu_view li {
-      width: calc((100% - 50px) / 4);
+      width: calc(50% + 15px);
 
       .box {
+        width: calc(50% - 15px);
       }
     }
   }
@@ -164,7 +163,7 @@ const InsiteListStyle = styled.div`
   /* 700px 이하 */
   @media (max-width: 700px) {
     .insitemenu_view li {
-      width: calc((100% - 20px) / 2);
+      width: calc(33.33% - 15px);
     }
   }
 `;

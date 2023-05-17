@@ -68,7 +68,7 @@ const InsiteListStyle = styled.div`
     font-size: 0;
   }
 
-  .insitemenu_view li {
+  .insitemenu_view > li {
     display: inline-block;
     width: calc(25% - 15px);
     padding: 0 15px 10px 0;
@@ -95,14 +95,12 @@ const InsiteListStyle = styled.div`
 
   .insitemenu_view > li .box .img img {
     position: absolute;
-    width: 100%;
-    height: 100%;
+    width: 250px;
+    height: 175px;
     left: 0;
     top: 0;
     object-fit: cover;
     object-position: center;
-    max-width: 100%;
-    max-height: 100%;
   }
 
   .insitemenu_view > li .box .info {
@@ -141,6 +139,9 @@ const InsiteListStyle = styled.div`
   }
 
   .insitemenu_view > li .box .icon .img_icon img {
+    display: flex;
+    align-items: center;
+    margin-top: 12px;
     width: 24px;
     height: 24px;
   }
@@ -151,20 +152,11 @@ const InsiteListStyle = styled.div`
     font-size: 12px;
   }
 
-  /* 1100px 이하 */
-  @media (min-width: 700px) and (max-width: 1100px) {
-    .insitemenu_view li {
-      width: calc((100% - 50px) / 4);
-
-      .box {
-      }
-    }
+@media screen and (max-width: 500px){
+  
+  .box{
+    grid-template-columns: repeat(2, 1fr);
   }
+}
 
-  /* 700px 이하 */
-  @media (max-width: 700px) {
-    .insitemenu_view li {
-      width: calc((100% - 20px) / 2);
-    }
-  }
 `;
