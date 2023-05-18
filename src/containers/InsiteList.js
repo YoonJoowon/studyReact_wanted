@@ -3,10 +3,6 @@ import InsiteTxt from "./Insite.json";
 import styled from "styled-components";
 
 const InsiteListStyle = styled.div`
-  @media (min-width: 700px) and (max-width: 1100px) {
-  
-  }
-
   .insiteview {
     margin-top: 15px;
   }
@@ -109,15 +105,20 @@ const InsiteListStyle = styled.div`
 
   /* 1100px 이하 */
   @media (min-width: 700px) and (max-width: 1100px) {
+    .insitemenu_view ul {
+      max-width: 1060px;
+    }
+
     .insitemenu_view li {
       width: calc((100% - 50px) / 4);
+
       .box {
       }
     }
   }
 
   /* 700px 이하 */
-  @media (max-width: 700px) {
+  @media (max-width: 715px) {
     .insitemenu_view li {
       width: calc((100% - 20px) / 2);
     }
@@ -126,7 +127,6 @@ const InsiteListStyle = styled.div`
 
 function Txt({ id, image, title, summary }) {
   return (
-    
     <li key={id}>
       <div className="box">
         <div className="img">
