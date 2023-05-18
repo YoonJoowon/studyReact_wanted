@@ -5,47 +5,6 @@ import InsiteBarBtnPrev from "./InsiteBarBtnPrev";
 import InsiteBarBtnNext from "./InsiteBarBtnNext";
 import { Navigation, Pagination } from "swiper";
 
-function InsiteBar() {
-  return (
-    <InsiteBarStyle>
-      <div className="insiteBarWrap">
-        <Swiper
-          navigation={true}
-          spaceBetween={18}
-          slidesPerView={"auto"}
-          // centeredSlides={true}
-          slidesPerGroup={3}
-          pagination={{
-            clickable: true,
-          }}
-          modules={[Pagination]}
-          watchOverflow={true}
-        >
-          {articles.map((x) => {
-            return (
-              <SwiperSlide key={x.id}>
-                <button>{x.title}</button>
-              </SwiperSlide>
-            );
-          })}
-          <div className="buttonWrapper">
-            <InsiteBarBtnPrev />
-            <InsiteBarBtnNext />
-          </div>
-        </Swiper>
-        <button type="button" className="InterestTagSlide">
-          <svg width="18" height="18" viewBox="0 0 24 24">
-            <path
-              fill="currentColor"
-              d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
-            ></path>
-          </svg>
-        </button>
-      </div>
-    </InsiteBarStyle>
-  );
-}
-
 const InsiteBarStyle = styled.div`
   .insiteBarWrap {
     display: flex;
@@ -58,7 +17,6 @@ const InsiteBarStyle = styled.div`
     overflow-y: hidden;
     position: relative;
     .swiper-wrapper {
-      width: 1012px;
       display: flex;
     }
   }
@@ -109,8 +67,60 @@ const InsiteBarStyle = styled.div`
     color: #8a8a8a;
     background-color: #fff;
     cursor: pointer;
+
+    
   }
+
+  @media (min-width: 700px) and (max-width: 1100px) {
+      .swiper {
+        width: 60%;
+
+        .swiper-wrapper {
+        }
+      }
+    }
 `;
+
+function InsiteBar() {
+  return (
+    <InsiteBarStyle>
+      <div className="insiteBarWrap">
+        <Swiper
+          navigation={true}
+          spaceBetween={18}
+          slidesPerView={"auto"}
+          // centeredSlides={true}
+          slidesPerGroup={3}
+          pagination={{
+            clickable: true,
+          }}
+          modules={[Pagination]}
+          watchOverflow={true}
+        >
+          {articles.map((x) => {
+            return (
+              <SwiperSlide key={x.id}>
+                <button>{x.title}</button>
+              </SwiperSlide>
+            );
+          })}
+          <div className="buttonWrapper">
+            <InsiteBarBtnPrev />
+            <InsiteBarBtnNext />
+          </div>
+        </Swiper>
+        <button type="button" className="InterestTagSlide">
+          <svg width="18" height="18" viewBox="0 0 24 24">
+            <path
+              fill="currentColor"
+              d="M12 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 12 10zm7 0a2 2 0 1 1-.001 4.001A2 2 0 0 1 19 10zM5 10a2 2 0 1 1-.001 4.001A2 2 0 0 1 5 10z"
+            ></path>
+          </svg>
+        </button>
+      </div>
+    </InsiteBarStyle>
+  );
+}
 
 const articles = [
   {

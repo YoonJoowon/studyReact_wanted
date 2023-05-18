@@ -1,4 +1,5 @@
-import React from "react";
+import Alert from "./Alert";
+import React, { useState } from "react";
 import styled from "styled-components";
 
 function LoginPassword(props) {
@@ -8,17 +9,21 @@ function LoginPassword(props) {
   };
 
   // 로그인완료
+
+  const [showAlert, setShowAlert] = useState(false);
+
   const loginSuccess = () => {
     let password = document.getElementById("password").value;
     // localStorage.setItem("password", password);
     const storedPassword = localStorage.getItem("password1");
 
     if (password === storedPassword) {
+      alert('로그인 되었습니다.')
       props.setLoginPasswordOpen(false);
       props.setModalOpen(false);
       props.setIsLoggedIn(true);
     } else {
-      alert("올바른 비밀번호를 입력해주세요.");
+      setShowAlert(true);
     }
   };
 
@@ -52,6 +57,7 @@ function LoginPassword(props) {
                   placeholder="비밀번호를 입력해주세요."
                   className=""
                 />
+                {showAlert && <Alert />}
                 <button
                   type="button"
                   className="btn_next"

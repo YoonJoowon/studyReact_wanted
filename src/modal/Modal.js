@@ -1,7 +1,6 @@
 import React, { useState } from "react";
 import Modal2 from "./Modal2";
 import styled from "styled-components";
-import { useRef } from "react";
 import LoginPassword from "./LoginPassword";
 
 localStorage.clear()
@@ -21,7 +20,6 @@ function Modal(props) {
       // setModal2Open(true);
       setLoginPasswordOpen(true);
     } else {
-      // alert("회원가입을 시작합니다.");
       setModal2Open(true);    
       let email = document.getElementById("email").value;
       localStorage.setItem("newEmail", email);

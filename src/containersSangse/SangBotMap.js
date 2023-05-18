@@ -1,6 +1,8 @@
 import React from "react";
 import GoogleApiWrapper from "./GoogleApiWrapper";
 import styled from "styled-components";
+import { Accordion, Button, Card } from "react-bootstrap";
+import SangBotMapAccordion from "./SangBotMapAccordion";
 
 function SangBotMap() {
   return (
@@ -44,6 +46,7 @@ function SangBotMap() {
         </div>
 
         <div className="section4_bot">
+          {/* <SangBotMapAccordion /> */}
           <svg width="24" height="24" viewBox="0 0 24 24">
             <g fill="currentColor" fillRule="evenodd">
               <path
@@ -218,6 +221,7 @@ const SangBotMapStyle = styled.div`
     font-weight: 600;
     line-height: 22px;
     color: #333;
+    text-align: left;
   }
 
   .section4 .section4_bot_arrow {

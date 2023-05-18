@@ -1,6 +1,8 @@
 import React, { useEffect, useRef, useState } from "react";
 import Checkbox from "./Checkbox";
 import styled from "styled-components";
+// import AlertJoin from "./AlertJoin";
+import { Alert, Button } from "react-bootstrap";
 
 function Modal2(porps2) {
   // 모달창 끄기
@@ -59,12 +61,23 @@ function Modal2(porps2) {
     event.preventDefault();
     if (!inputValue || verificationCode !== inputValue) {
       console.log("인증 실패");
+      setVerificationMessage("인증번호가 올바르지 않습니다")
       return;
     }
     console.log("인증 성공");
+    setShow(true);
+    // alert("회원가입되었습니다.");
     NewLogin();
-    
   };
+
+  // 로그인 실패경고
+  const [show, setShow] = useState(false);
+
+  // if (show === true) {
+  //   return (
+
+  //   );
+  // }
 
   const NewLogin = () => {
     let password = document.getElementById("password").value;
@@ -74,7 +87,7 @@ function Modal2(porps2) {
     porps2.setModal2Open(false);
     porps2.setModalOpen(false);
   };
-  
+
   return (
     <Modal2Style>
       <div id="modal2">
@@ -176,6 +189,7 @@ function Modal2(porps2) {
                 onChange={handleCheck(3)}
               />
             </div>
+
             <button
               className={`modal2_btn2 ${isButtonBlue ? "blue" : ""}`}
               type="button"
@@ -183,6 +197,15 @@ function Modal2(porps2) {
             >
               <p>가입하기</p>
             </button>
+            {/* <Alert
+              className="alertContainer"
+              variant="danger"
+              onClose={() => setShow(false)}
+              dismissible
+            >
+              <Alert.Heading></Alert.Heading>
+              <p>회원가입이 완료되었습니다.</p>
+            </Alert> */}
           </div>
         </div>
       </div>
@@ -442,5 +465,9 @@ const Modal2Style = styled.div`
     p {
       color: white;
     }
+  }
+
+  .alertContainer {
+ 
   }
 `;
