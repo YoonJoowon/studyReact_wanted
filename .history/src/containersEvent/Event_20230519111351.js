@@ -45,13 +45,13 @@ const EventStyle = styled.div`
 
     .eventList {
       margin: auto;
+      max-width: 1060px;
       margin-top: 20px;
       top: 0;
+      /* height: 123px; */
 
       .eventTrigger {
         background-color: #fff;
-        margin: auto;
-        max-width: 1060px;
         hr {
           opacity: 0.3;
           margin-top: 20px;
@@ -67,9 +67,10 @@ const EventStyle = styled.div`
       }
     }
 
-    .eventList.fixed {
+    .eventList.asd {
       position: fixed;
-      width:100%;
+      /* width:1060px; */
+      /* margin: auto; */
       margin-top: 50px;
       background-color: #fff;
       z-index: 2;
@@ -111,9 +112,9 @@ function Event() {
     const threshold = 390; // 스크롤 임계값
 
     if (scrollingContainer && window.scrollY > threshold) {
-      scrollingContainer.classList.add("fixed");
+      scrollingContainer.classList.add("asd");
     } else if (scrollingContainer) {
-      scrollingContainer.classList.remove("fixed");
+      scrollingContainer.classList.remove("asd");
     }
   });
   return (

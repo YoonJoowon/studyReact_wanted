@@ -45,13 +45,15 @@ const EventStyle = styled.div`
 
     .eventList {
       margin: auto;
+      /* max-width: 1060px; */
       margin-top: 20px;
       top: 0;
+      /* height: 123px; */
 
       .eventTrigger {
         background-color: #fff;
         margin: auto;
-        max-width: 1060px;
+        width: 100%;
         hr {
           opacity: 0.3;
           margin-top: 20px;

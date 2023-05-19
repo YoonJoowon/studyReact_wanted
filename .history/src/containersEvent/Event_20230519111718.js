@@ -51,7 +51,7 @@ const EventStyle = styled.div`
       .eventTrigger {
         background-color: #fff;
         margin: auto;
-        max-width: 1060px;
+        width: 1060px;
         hr {
           opacity: 0.3;
           margin-top: 20px;

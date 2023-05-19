@@ -45,13 +45,15 @@ const EventStyle = styled.div`
 
     .eventList {
       margin: auto;
+      max-width: 1060px;
       margin-top: 20px;
       top: 0;
+      /* height: 123px; */
 
       .eventTrigger {
-        background-color: #fff;
         margin: auto;
-        max-width: 1060px;
+        width: 1060px;
+        background-color: #fff;
         hr {
           opacity: 0.3;
           margin-top: 20px;
@@ -69,15 +71,16 @@ const EventStyle = styled.div`
 
     .eventList.fixed {
       position: fixed;
-      width:100%;
-      margin-top: 50px;
+      width: 1060px;
+      margin: auto;
       background-color: #fff;
+      margin-top: 50px;
       z-index: 2;
       border-bottom: #3449ff 1px solid;
 
       .eventTrigger {
         margin: auto;
-        width: 100%;
+        width: 1060px;
         margin-top: 20px;
         padding-bottom: 20px;
       }
