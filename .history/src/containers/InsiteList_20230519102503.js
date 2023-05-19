@@ -115,7 +115,7 @@ const InsiteListStyle = styled.div`
   /* 700px 이하 */
   @media (max-width: 768px) {
     .insitemenu_view li {
-      width: calc((100% - 40px)/2);
+      width: calc((100% - 20px)/2);
     }
   }
 `;

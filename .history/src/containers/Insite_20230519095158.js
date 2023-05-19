@@ -7,7 +7,7 @@ import InsiteList from "./InsiteList";
 const InsiteStyle = styled.div`
   /* main2 */
   .main2 {
-    max-width: 1060px;
+    width: 1060px;
     margin-top: 1500px;
     background-color: white;
     padding: 25px 0 0;

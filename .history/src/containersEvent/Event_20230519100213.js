@@ -18,9 +18,9 @@ const EventStyle = styled.div`
       max-width: 100%;
 
       img {
+        display: block;
         width: 100%;
         height: 300px;
-        object-fit: cover;
       }
     }
 
@@ -45,7 +45,7 @@ const EventStyle = styled.div`
 
     .eventList {
       margin: auto;
-      max-width: 1060px;
+      width: 1060px;
       margin-top: 20px;
       top: 0;
       /* height: 123px; */
@@ -85,7 +85,7 @@ const EventStyle = styled.div`
     }
 
     .eventCardListWrapper {
-      max-width: 1060px;
+      width: 1060px;
       margin: auto;
       height: 100%;
       margin-top: 20px;
@@ -97,10 +97,16 @@ const EventStyle = styled.div`
     }
   }
 
-  @media (max-width: 1100px) {
-    .eventBanner img{
-      
-      margin-top: 60px;
+  @media (min-width: 700px) and (max-width: 1100px) {
+    img {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .eventBanner {
+      height: 300px;
     }
   }
 `;

@@ -70,6 +70,11 @@ const InsiteBarStyle = styled.div`
   }
 
   @media (min-width: 700px) and (max-width: 1100px) {
+    .insiteBarswiper {
+      max-width: 1060px;
+
+      width: 100%;
+    }
 
     .swiper {
       max-width: calc(100% - 40px - 8px);

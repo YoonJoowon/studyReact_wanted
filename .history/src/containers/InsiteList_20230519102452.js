@@ -107,7 +107,7 @@ const InsiteListStyle = styled.div`
       width: 90%;
 
       li {
-        width: calc((100% - 60px) / 3);
+        width: calc((100% - 40px) / 3);
       }
     }
   }
@@ -115,7 +115,7 @@ const InsiteListStyle = styled.div`
   /* 700px 이하 */
   @media (max-width: 768px) {
     .insitemenu_view li {
-      width: calc((100% - 40px)/2);
+      width: calc((100% - 20px)/2);
     }
   }
 `;

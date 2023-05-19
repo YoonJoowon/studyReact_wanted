@@ -5,106 +5,6 @@ import InsiteList from "../containers/InsiteList";
 import EventFilterBtn from "./EventFilterBtn";
 import EventKetwordBtn from "./EventKetwordBtn";
 
-const EventStyle = styled.div`
-  .wrapper {
-    height: 100%;
-    position: relative;
-    margin: auto;
-
-    .eventBanner {
-      margin-top: 50px;
-      background-repeat: no-repeat;
-      background-size: contain;
-      max-width: 100%;
-
-      img {
-        width: 100%;
-        height: 300px;
-        object-fit: cover;
-      }
-    }
-
-    .evetInsiteBar {
-      width: 1060px;
-      margin: auto;
-      height: 100%;
-      margin-top: 50px;
-      position: relative;
-
-      h2 {
-        font-style: normal;
-        font-weight: 600;
-        font-size: 22px;
-        line-height: 127.3%;
-        letter-spacing: -0.012em;
-        color: #171717;
-        max-width: 1060px;
-        width: 90%;
-      }
-    }
-
-    .eventList {
-      margin: auto;
-      max-width: 1060px;
-      margin-top: 20px;
-      top: 0;
-      /* height: 123px; */
-
-      .eventTrigger {
-        background-color: #fff;
-        hr {
-          opacity: 0.3;
-          margin-top: 20px;
-          margin-bottom: 20px;
-        }
-
-        .evnetTriggerbtn {
-          display: flex;
-          justify-content: space-between;
-          width: 100%;
-          background-color: #fff;
-        }
-      }
-    }
-
-    .eventList.fixed {
-      position: fixed;
-      width: 100%;
-      margin: auto;
-      background-color: #fff;
-      margin-top: 50px;
-      z-index: 2;
-      border-bottom: #3449ff 1px solid;
-
-      .eventTrigger {
-        margin: auto;
-        width: 1060px;
-        margin-top: 20px;
-        padding-bottom: 20px;
-      }
-    }
-
-    .eventCardListWrapper {
-      max-width: 1060px;
-      margin: auto;
-      height: 100%;
-      margin-top: 20px;
-      position: relative;
-
-      .eventCardList {
-        height: 100%;
-      }
-    }
-  }
-
-  @media (max-width: 1100px) {
-    .eventBanner img{
-      
-      margin-top: 60px;
-    }
-  }
-`;
-
 function Event() {
   const [isFixed, setIsFixed] = useState(false);
 
@@ -155,3 +55,108 @@ function Event() {
 }
 
 export default Event;
+
+const EventStyle = styled.div`
+  .wrapper {
+    height: 100%;
+    position: relative;
+    margin: auto;
+
+    .eventBanner {
+      margin-top: 50px;
+      background-repeat: no-repeat;
+      background-size: contain;
+      max-width: 100%;
+
+      img {
+        width: 100%;
+        height: 300px;
+      }
+    }
+
+    .evetInsiteBar {
+      width: 1060px;
+      margin: auto;
+      height: 100%;
+      margin-top: 50px;
+      position: relative;
+
+      h2 {
+        font-style: normal;
+        font-weight: 600;
+        font-size: 22px;
+        line-height: 127.3%;
+        letter-spacing: -0.012em;
+        color: #171717;
+        max-width: 1060px;
+        width: 90%;
+      }
+    }
+
+    .eventList {
+      margin: auto;
+      width: 1060px;
+      margin-top: 20px;
+      top: 0;
+      /* height: 123px; */
+
+      .eventTrigger {
+        background-color: #fff;
+        hr {
+          opacity: 0.3;
+          margin-top: 20px;
+          margin-bottom: 20px;
+        }
+
+        .evnetTriggerbtn {
+          display: flex;
+          justify-content: space-between;
+          width: 100%;
+          background-color: #fff;
+        }
+      }
+    }
+
+    .eventList.fixed {
+      position: fixed;
+      width: 100%;
+      margin: auto;
+      background-color: #fff;
+      margin-top: 50px;
+      z-index: 2;
+      border-bottom: #3449ff 1px solid;
+
+      .eventTrigger {
+        margin: auto;
+        width: 1060px;
+        margin-top: 20px;
+        padding-bottom: 20px;
+      }
+    }
+
+    .eventCardListWrapper {
+      width: 1060px;
+      margin: auto;
+      height: 100%;
+      margin-top: 20px;
+      position: relative;
+
+      .eventCardList {
+        height: 100%;
+      }
+    }
+  }
+  
+  @media (min-width: 700px) and (max-width: 1100px) {
+    img {
+      width: 100%;
+      height: 300px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .eventBanner {
+      height: 300px;
+    }
+  }
+`;

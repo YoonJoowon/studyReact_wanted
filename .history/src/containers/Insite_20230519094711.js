@@ -7,7 +7,7 @@ import InsiteList from "./InsiteList";
 const InsiteStyle = styled.div`
   /* main2 */
   .main2 {
-    max-width: 1060px;
+    width: 1060px;
     margin-top: 1500px;
     background-color: white;
     padding: 25px 0 0;
@@ -42,11 +42,19 @@ const InsiteStyle = styled.div`
   }
 
   @media (min-width: 700px) and (max-width: 1100px) {
-    .careerinsite {
-      width: 100%;
+    .insiteBarswiper {
       max-width: 1060px;
-      padding-left: 10px;
-      padding-right: 10px;
+      width: 100%;
+    }
+
+    .swiper {
+      max-width: calc(100% - 40px - 8px);
+      display: flex;
+      overflow: hidden;
+      position: relative;
+
+      .swiper-wrapper {
+      }
     }
   }
 `;

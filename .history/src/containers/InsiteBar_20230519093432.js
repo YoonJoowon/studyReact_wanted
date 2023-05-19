@@ -70,14 +70,14 @@ const InsiteBarStyle = styled.div`
   }
 
   @media (min-width: 700px) and (max-width: 1100px) {
-
     .swiper {
-      max-width: calc(100% - 40px - 8px);
+  
       display: flex;
       overflow: hidden;
       position: relative;
 
       .swiper-wrapper {
+        width: 100%px;
       }
     }
   }

@@ -70,6 +70,15 @@ const InsiteBarStyle = styled.div`
   }
 
   @media (min-width: 700px) and (max-width: 1100px) {
+    .careerinsite {
+      width: 100%;
+      text-align: center;
+    }
+
+    .insiteBarswiper {
+      max-width: 1060px;
+      width: 100%;
+    }
 
     .swiper {
       max-width: calc(100% - 40px - 8px);

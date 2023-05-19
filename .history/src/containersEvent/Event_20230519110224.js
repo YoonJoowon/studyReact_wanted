@@ -20,7 +20,7 @@ const EventStyle = styled.div`
       img {
         width: 100%;
         height: 300px;
-        object-fit: cover;
+        /* object-fit: contain; */
       }
     }
 
@@ -97,7 +97,7 @@ const EventStyle = styled.div`
     }
   }
 
-  @media (max-width: 1100px) {
+  @media (min-width: 700px) and (max-width: 1100px) {
     .eventBanner img{
       
       margin-top: 60px;

@@ -18,24 +18,25 @@ const InsiteListStyle = styled.div`
     margin-right: -15px;
     font-size: 0;
     margin-top: 15px;
-    max-width: 1060px;
   }
 
   .insitemenu_view li {
     display: inline-block;
-    position: relative;
-    width: calc(25% - 15px);
+    max-width: calc(25% - 15px);
     padding: 0 15px 10px 0;
     vertical-align: top;
   }
 
   .insitemenu_view li:hover {
     transform: translateY(-4px);
-    transition: all 0.1s ease-out;
+    transition: 0.05s ease-out;
+  }
+
+  .insitemenu_view .box {
     cursor: pointer;
   }
 
-  .insitemenu_view > li .img {
+  .insitemenu_view > li .box .img {
     overflow: hidden;
     position: relative;
     height: auto;
@@ -44,7 +45,7 @@ const InsiteListStyle = styled.div`
     border: 1px solid rgba(0, 0, 0, 0.06);
   }
 
-  .insitemenu_view > li .img img {
+  .insitemenu_view > li .box .img img {
     position: absolute;
     width: 100%;
     height: 100%;
@@ -56,11 +57,11 @@ const InsiteListStyle = styled.div`
     max-height: 100%;
   }
 
-  .insitemenu_view > li .info {
+  .insitemenu_view > li .box .info {
     margin-top: 12px;
   }
 
-  .insitemenu_view > li .subject {
+  .insitemenu_view > li .box .subject {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -72,7 +73,7 @@ const InsiteListStyle = styled.div`
     line-height: 1.4;
   }
 
-  .insitemenu_view > li .summary {
+  .insitemenu_view > li .box .summary {
     display: -webkit-box;
     -webkit-line-clamp: 2;
     -webkit-box-orient: vertical;
@@ -85,37 +86,37 @@ const InsiteListStyle = styled.div`
     line-height: 1.4;
   }
 
-  .insitemenu_view > li .icon {
+  .insitemenu_view > li .box .icon {
     display: flex;
     align-items: center;
     margin-top: 12px;
   }
 
-  .insitemenu_view > li .icon .img_icon img {
+  .insitemenu_view > li .box .icon .img_icon img {
     width: 24px;
     height: 24px;
   }
 
-  .insitemenu_view > li .icon .icon_name {
+  .insitemenu_view > li .box .icon .icon_name {
     padding-left: 5px;
     color: #8a8a8a;
     font-size: 12px;
   }
 
-  @media (min-width: 768px) and (max-width: 991px) {
-    .insitemenu_view {
-      width: 90%;
+  /* 1100px 이하 */
+  @media (min-width: 700px) and (max-width: 1100px) {
+    .insitemenu_view li {
+      /* width: calc((100% - 50px) / 4); */
 
-      li {
-        width: calc((100% - 60px) / 3);
+      .box {
       }
     }
   }
 
   /* 700px 이하 */
-  @media (max-width: 768px) {
+  @media (max-width: 700px) {
     .insitemenu_view li {
-      width: calc((100% - 40px)/2);
+      width: calc((100% - 20px) / 2);
     }
   }
 `;
@@ -123,22 +124,24 @@ const InsiteListStyle = styled.div`
 function Txt({ id, image, title, summary }) {
   return (
     <li key={id}>
-      <div className="img">
-        <img src={image} alt={title} loading="lazy" />
-      </div>
-      <div className="info">
-        <p className="subject">{title}</p>
-        <p className="summary">{summary}</p>
-      </div>
-      <div className="icon">
-        <span className="img_icon">
-          <img
-            src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted-public.s3.ap-northeast-2.amazonaws.com%2Fwanted_opengraph.png&amp;w=60&amp;q=90"
-            alt="Wanted"
-            className=""
-          />
-        </span>
-        <span className="icon_name">Wanted</span>
+      <div className="box">
+        <div className="img">
+          <img src={image} alt={title} loading="lazy" />
+        </div>
+        <div className="info">
+          <p className="subject">{title}</p>
+          <p className="summary">{summary}</p>
+        </div>
+        <div className="icon">
+          <span className="img_icon">
+            <img
+              src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted-public.s3.ap-northeast-2.amazonaws.com%2Fwanted_opengraph.png&amp;w=60&amp;q=90"
+              alt="Wanted"
+              className=""
+            />
+          </span>
+          <span className="icon_name">Wanted</span>
+        </div>
       </div>
     </li>
   );

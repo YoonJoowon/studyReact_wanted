@@ -24,7 +24,7 @@ const InsiteListStyle = styled.div`
   .insitemenu_view li {
     display: inline-block;
     position: relative;
-    width: calc(25% - 15px);
+    max-width: calc(25% - 15px);
     padding: 0 15px 10px 0;
     vertical-align: top;
   }
@@ -102,20 +102,20 @@ const InsiteListStyle = styled.div`
     font-size: 12px;
   }
 
-  @media (min-width: 768px) and (max-width: 991px) {
+  @media (min-width: 768px) and (max-width: 1100px) {
     .insitemenu_view {
       width: 90%;
 
       li {
-        width: calc((100% - 60px) / 3);
+        width: calc((100% - 40px) / 3);
       }
     }
   }
 
   /* 700px 이하 */
-  @media (max-width: 768px) {
+  @media (max-width: 700px) {
     .insitemenu_view li {
-      width: calc((100% - 40px)/2);
+      width: calc((100% - 20px) / 2);
     }
   }
 `;

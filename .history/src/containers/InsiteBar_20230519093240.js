@@ -67,20 +67,18 @@ const InsiteBarStyle = styled.div`
     color: #8a8a8a;
     background-color: #fff;
     cursor: pointer;
+
+    
   }
 
   @media (min-width: 700px) and (max-width: 1100px) {
+      .swiper {
+        max-width: calc(100%);
 
-    .swiper {
-      max-width: calc(100% - 40px - 8px);
-      display: flex;
-      overflow: hidden;
-      position: relative;
-
-      .swiper-wrapper {
+        .swiper-wrapper {
+        }
       }
     }
-  }
 `;
 
 function InsiteBar() {

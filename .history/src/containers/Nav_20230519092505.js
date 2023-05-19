@@ -252,7 +252,7 @@ function Nav(props) {
       cursor: pointer;
     }
 
-    @media  (max-width: 1100px) {
+    @media (min-width: 700px) and (max-width: 1100px) {
       .nav {
         justify-content: left;
         height: 110px;

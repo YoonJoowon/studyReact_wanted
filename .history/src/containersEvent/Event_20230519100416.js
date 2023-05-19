@@ -20,7 +20,6 @@ const EventStyle = styled.div`
       img {
         width: 100%;
         height: 300px;
-        object-fit: cover;
       }
     }
 
@@ -85,7 +84,7 @@ const EventStyle = styled.div`
     }
 
     .eventCardListWrapper {
-      max-width: 1060px;
+      width: 1060px;
       margin: auto;
       height: 100%;
       margin-top: 20px;
@@ -97,10 +96,17 @@ const EventStyle = styled.div`
     }
   }
 
-  @media (max-width: 1100px) {
-    .eventBanner img{
-      
+  @media (min-width: 700px) and (max-width: 1100px) {
+    img {
+      width: 100%;
+      height: auto;
       margin-top: 60px;
+    }
+  }
+
+  @media (max-width: 700px) {
+    .eventBanner {
+      height: 300px;
     }
   }
 `;

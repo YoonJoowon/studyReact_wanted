@@ -4,53 +4,6 @@ import InsiteTxt from "./Insite.json";
 import styled from "styled-components";
 import InsiteList from "./InsiteList";
 
-const InsiteStyle = styled.div`
-  /* main2 */
-  .main2 {
-    max-width: 1060px;
-    margin-top: 1500px;
-    background-color: white;
-    padding: 25px 0 0;
-    margin: auto;
-  }
-
-  .section1 {
-    margin: auto;
-  }
-
-  .careerinsite {
-    display: flex;
-    width: 1060px;
-    margin: auto;
-    text-align: center;
-    padding-top: 30px;
-    padding-bottom: 30px;
-    align-items: center;
-    -ms-flex-pack: center;
-    justify-content: center;
-  }
-
-  .careerinsite_text {
-    line-height: 1.33;
-    font-weight: 700;
-    color: #333;
-    font-size: 22px;
-  }
-
-  .careerinsite_img button {
-    cursor: pointer;
-  }
-
-  @media (min-width: 700px) and (max-width: 1100px) {
-    .careerinsite {
-      width: 100%;
-      max-width: 1060px;
-      padding-left: 10px;
-      padding-right: 10px;
-    }
-  }
-`;
-
 function Txt({ id, image, title, summary }) {
   return (
     <li key={id}>
@@ -140,3 +93,41 @@ function Insite() {
 }
 
 export default Insite;
+
+const InsiteStyle = styled.div`
+  /* main2 */
+  .main2 {
+    width: 1060px;
+    margin-top: 1500px;
+    background-color: white;
+    padding: 25px 0 0;
+    margin: auto;
+  }
+
+  .section1 {
+    margin: auto;
+  }
+
+  .careerinsite {
+    display: flex;
+    width: 1060px;
+    margin: auto;
+    text-align: center;
+    padding-top: 30px;
+    padding-bottom: 30px;
+    align-items: center;
+    -ms-flex-pack: center;
+    justify-content: center;
+  }
+
+  .careerinsite_text {
+    line-height: 1.33;
+    font-weight: 700;
+    color: #333;
+    font-size: 22px;
+  }
+
+  .careerinsite_img button {
+    cursor: pointer;
+  }
+`;
