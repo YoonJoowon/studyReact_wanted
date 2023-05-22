@@ -68,7 +68,7 @@ const Baner00Style = styled.div`
     gap: 27px;
     position: relative;
 
-    width: 1060px;
+    max-width: 1060px;
     height: 119px;
     margin: auto;
     margin-top: 120px;

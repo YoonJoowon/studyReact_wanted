@@ -143,8 +143,7 @@ const CarrerStyle = styled.div`
   /* main4 */
   .main4 {
     margin: auto;
-    width: 1060px;
-    height: 430px;
+    max-width: 1060px;
     display: flex;
     margin-bottom: 100px;
   }
@@ -289,7 +288,7 @@ const CarrerStyle = styled.div`
 
   .subCard1 {
     border: 1px solid black;
-    width: 540px;
+    max-width: 540px;
     height: 350px;
     padding: 10px;
   }

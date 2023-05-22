@@ -198,7 +198,7 @@ const InformationStyle = styled.div`
 
   .main5_container {
     border: 1px solid #ececec;
-    width: 1060px;
+    max-width: 1060px;
     height: 102px;
     display: flex;
   }

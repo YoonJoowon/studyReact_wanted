@@ -333,7 +333,7 @@ function Nav(props) {
                   </svg>
                 </p>
               </Link>
-              <button id="gnbSignupBtn" class="xsSignUpButton" type="button">
+              <button id="gnbSignupBtn" className="xsSignUpButton" type="button">
                 회원가입하기
               </button>
             </div>

@@ -197,6 +197,7 @@ function Modal2(porps2) {
             >
               <p>가입하기</p>
             </button>
+            
             {/* <Alert
               className="alertContainer"
               variant="danger"
@@ -206,6 +207,7 @@ function Modal2(porps2) {
               <Alert.Heading></Alert.Heading>
               <p>회원가입이 완료되었습니다.</p>
             </Alert> */}
+
           </div>
         </div>
       </div>

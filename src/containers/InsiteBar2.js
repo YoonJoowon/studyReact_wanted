@@ -72,7 +72,7 @@ const InsiteBar2Style = styled.div`
   /* main3 */
 
   .main3 {
-    width: 1060px;
+    max-width: 1060px;
     margin: auto;
   }
 
@@ -81,7 +81,7 @@ const InsiteBar2Style = styled.div`
   }
 
   .main3_img {
-    width: 1060px;
+    max-width: 1060px;
     height: 108px;
     margin-top: 60px;
     margin-bottom: 60px;
@@ -155,7 +155,7 @@ const InsiteBar2Style = styled.div`
   }
 
   .banner {
-    width: 1000px;
+    max-width: 1000px;
     height: 40px;
     background-image: linear-gradient(
       90deg,

@@ -41,10 +41,10 @@ const InsiteStyle = styled.div`
     cursor: pointer;
   }
 
-  @media (min-width: 700px) and (max-width: 1100px) {
+  @media (max-width: 1100px) {
     .careerinsite {
       width: 100%;
-      max-width: 1060px;
+      /* max-width: 1060px; */
       padding-left: 10px;
       padding-right: 10px;
     }
