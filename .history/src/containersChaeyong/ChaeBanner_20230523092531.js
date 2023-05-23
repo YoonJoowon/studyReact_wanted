@@ -53,22 +53,23 @@ export default ChaeBanner;
 const ChaeBannerStyle = styled.div`
   /* main3 */
   .main3 {
-    max-width: 1060px;
+    width: 100%;
     height: 103px;
     display: flex;
-    margin: auto;
     margin-top: 60px;
   }
 
   .connect1 {
     position: relative;
-    width: 1060px;
+    max-idth: 1060px;
     height: 100%;
     font-size: 22px;
     font-weight: 800;
     line-height: 26px;
     color: #fff;
     margin: auto;
+
+    /* padding-right: 200px; */
   }
 
   .connect1_back {
@@ -76,7 +77,7 @@ const ChaeBannerStyle = styled.div`
     position: absolute;
     right: 0;
     bottom: 0;
-    max-width: 1060px;
+    width: 1060px;
     height: 100%;
     border-radius: 10px;
     background-color: rgb(32, 73, 196);

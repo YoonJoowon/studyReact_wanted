@@ -131,7 +131,7 @@ const StyledWrapper = styled.div`
   }
 
   .swiper-slide {
-    max-width: 1060px;
+    max-max-width: 1060px;
     height: 300px;
     margin: auto;
     position: relative;

@@ -69,6 +69,8 @@ const ChaeBannerStyle = styled.div`
     line-height: 26px;
     color: #fff;
     margin: auto;
+
+    /* padding-right: 200px; */
   }
 
   .connect1_back {

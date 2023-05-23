@@ -16,10 +16,10 @@ export default function MainSlide() {
         loop={true}
         centeredSlides={true}
         spaceBetween={24}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
         className="mySwiper"
       >
         {slideCards.map((x) => {
@@ -158,9 +158,8 @@ const StyledWrapper = styled.div`
   }
 
   @media (max-width: 1100px) {
-    .swiper-wrapper {
-      margin: 50px auto auto;
-      
+    .main-slide {
+      margin: 90px;
     }
   }
 `;

@@ -144,7 +144,7 @@ const StyledWrapper = styled.div`
   }
 
   .img-container {
-    width: 1060px;
+    max-width: 1060px;
     height: 300px;
     a {
       display: block;

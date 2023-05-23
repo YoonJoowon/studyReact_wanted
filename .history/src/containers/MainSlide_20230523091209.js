@@ -9,45 +9,51 @@ import { Autoplay } from "swiper";
 
 export default function MainSlide() {
   return (
-    <StyledWrapper className="main-slide">
-      <Swiper
-        modules={[Autoplay]}
-        slidesPerView={"auto"}
-        loop={true}
-        centeredSlides={true}
-        spaceBetween={24}
-        // autoplay={{
-        //   delay: 2500,
-        //   disableOnInteraction: false,
-        // }}
-        className="mySwiper"
-      >
-        {slideCards.map((x) => {
-          return (
-            <SwiperSlide key={x.id}>
-              {({ isActive }) => (
-                <div
-                  className={`img-container ${
-                    isActive ? "active" : "not-active"
-                  }`}
-                >
-                  <a href="">
-                    <img src={x.imgSrc} alt="" />
-                  </a>
-                  <MainSlideCard header={x.header} content={x.content} />
+    <section className="main1">
+      <article className="slide">
+        <div className="slideImg">
+          <StyledWrapper className="main-slide">
+            <Swiper
+              modules={[Autoplay]}
+              slidesPerView={"auto"}
+              loop={true}
+              centeredSlides={true}
+              spaceBetween={24}
+              autoplay={{
+                delay: 2500,
+                disableOnInteraction: false,
+              }}
+              className="mySwiper"
+            >
+              {slideCards.map((x) => {
+                return (
+                  <SwiperSlide key={x.id}>
+                    {({ isActive }) => (
+                      <div
+                        className={`img-container ${
+                          isActive ? "active" : "not-active"
+                        }`}
+                      >
+                        <a href="">
+                          <img src={x.imgSrc} alt="" />
+                        </a>
+                        <MainSlideCard header={x.header} content={x.content} />
+                      </div>
+                    )}
+                  </SwiperSlide>
+                );
+              })}
+              <div className="button-area">
+                <div className="center">
+                  <MainSlidePrevButton />
+                  <MainSlideNextButton />
                 </div>
-              )}
-            </SwiperSlide>
-          );
-        })}
-        <div className="button-area">
-          <div className="center">
-            <MainSlidePrevButton />
-            <MainSlideNextButton />
-          </div>
+              </div>
+            </Swiper>
+          </StyledWrapper>
         </div>
-      </Swiper>
-    </StyledWrapper>
+      </article>
+    </section>
   );
 }
 
@@ -101,7 +107,7 @@ const StyledWrapper = styled.div`
   margin-bottom: 5px;
   margin: auto;
   margin-top: 50px;
-  max-width: 1060px;
+  width: 1060px;
   height: 100%;
   position: relative;
   .button-area {
@@ -141,7 +147,9 @@ const StyledWrapper = styled.div`
         opacity: 100;
       }
     }
+
   }
+  
 
   .img-container {
     width: 1060px;
@@ -157,10 +165,7 @@ const StyledWrapper = styled.div`
     }
   }
 
-  @media (max-width: 1100px) {
-    .swiper-wrapper {
-      margin: 50px auto auto;
-      
-    }
+  @media (max-width:1100px) {
+    
   }
 `;

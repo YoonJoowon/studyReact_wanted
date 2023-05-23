@@ -159,7 +159,7 @@ const StyledWrapper = styled.div`
 
   @media (max-width: 1100px) {
     .swiper-wrapper {
-      margin: 50px auto auto;
+      margin: 50px 30px auto;
       
     }
   }
