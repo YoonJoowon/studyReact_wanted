@@ -6,7 +6,7 @@ function SangSide() {
 
   window.addEventListener("scroll", function () {
     const scrollingContainer = document.querySelector(".aside1");
-    const threshold = 6050; // 스크롤 임계값
+    const threshold = 6050; 
 
     if (scrollingContainer && window.scrollY > threshold) {
       scrollingContainer.classList.add("fixed");

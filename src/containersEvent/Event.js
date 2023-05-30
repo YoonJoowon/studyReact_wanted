@@ -108,7 +108,7 @@ function Event() {
 
   window.addEventListener("scroll", function () {
     const scrollingContainer = document.querySelector(".eventList");
-    const threshold = 390; // 스크롤 임계값
+    const threshold = 390;
 
     if (scrollingContainer && window.scrollY > threshold) {
       scrollingContainer.classList.add("fixed");
