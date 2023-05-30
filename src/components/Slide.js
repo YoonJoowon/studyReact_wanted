@@ -1,6 +1,5 @@
 import React, { useEffect, useRef, useState } from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import SwiperCore, { Navigation, Pagination, Autoplay } from "swiper";
+import { SwiperSlide } from "swiper/react";
 
 import "swiper/css";
 import "swiper/css/pagination";
@@ -62,7 +61,7 @@ function Slide() {
               // loop={true}
               // centeredSlides={true}
               // spaceBetween={24}
-              // modules={[Autoplay]}            
+              // modules={[Autoplay]}
               // slidesPerView={"auto"}
               // autoplay={{
               //   delay: 2500,
@@ -79,20 +78,14 @@ function Slide() {
                           isActive ? "active" : "not-active"
                         }`}
                       >
-                        <a href="">
-                          <img src={x.imgSrc} alt="" />
-                        </a>
-                        {/* <MainSlideCard header={x.header} content={x.content} /> */}
+                        <img src={x.imgSrc} alt="" />
                       </div>
                     )}
                   </SwiperSlide>
                 );
               })}
               <div className="button-area">
-                <div className="center">
-                  {/* <MainSlidePrevButton />
-                  <MainSlideNextButton /> */}
-                </div>
+                <div className="center"></div>
               </div>
             </SwiperSlide>
           </StyledWrapper>
@@ -164,22 +157,5 @@ const StyledWrapper = styled.div`
     }
   }
 `;
-
-//   /* 이전 버튼 */
-// }
-// <button type="button" className="swiper-button-prev">
-//   <svg className="" viewBox="0 0 18 18">
-//     <path d="m6.045 9 5.978-5.977a.563.563 0 1 0-.796-.796L4.852 8.602a.562.562 0 0 0 0 .796l6.375 6.375a.563.563 0 0 0 .796-.796L6.045 9z"></path>
-//   </svg>
-// </button>;
-
-// {
-//   /* 다음 버튼 */
-// }
-// <button type="button" className="swiper-button-next">
-//   <svg className="" viewBox="0 0 18 18">
-//     <path d="m11.955 9-5.978 5.977a.563.563 0 0 0 .796.796l6.375-6.375a.563.563 0 0 0 0-.796L6.773 2.227a.562.562 0 1 0-.796.796L11.955 9z"></path>
-//   </svg>
-// </button>;
 
 export default Slide;

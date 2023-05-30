@@ -3,6 +3,7 @@ import MainSlideCard from "../components/MainSlideCard";
 import MainSlidePrevButton from "../components/MainSlidePrevButton";
 import MainSlideNextButton from "../components/MainSlideNextButton";
 
+// swiper 설정
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 
@@ -33,8 +34,9 @@ export default function MainSlide() {
                           isActive ? "active" : "not-active"
                         }`}
                       >
-                        <img src={x.imgSrc} alt="" />
-
+                        <a href="">
+                          <img src={x.imgSrc} alt="" />
+                        </a>
                         <MainSlideCard header={x.header} content={x.content} />
                       </div>
                     )}
@@ -105,7 +107,7 @@ const StyledWrapper = styled.div`
   margin-bottom: 5px;
   margin: auto;
   margin-top: 50px;
-  max-width: 1060px;
+  width: 1060px;
   height: 100%;
   position: relative;
   .button-area {
@@ -145,7 +147,9 @@ const StyledWrapper = styled.div`
         opacity: 100;
       }
     }
+
   }
+  
 
   .img-container {
     width: 1060px;
@@ -158,12 +162,6 @@ const StyledWrapper = styled.div`
       height: 100%;
       object-fit: cover;
       border-radius: 10px;
-    }
-  }
-
-  @media (max-width: 1100px) {
-    .swiper-wrapper {
-      margin: 50px auto auto;
     }
   }
 `;

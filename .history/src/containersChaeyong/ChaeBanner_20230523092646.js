@@ -69,6 +69,8 @@ const ChaeBannerStyle = styled.div`
     line-height: 26px;
     color: #fff;
     margin: auto;
+
+    /* padding-right: 200px; */
   }
 
   .connect1_back {
@@ -76,7 +78,7 @@ const ChaeBannerStyle = styled.div`
     position: absolute;
     right: 0;
     bottom: 0;
-    max-width: 1060px;
+    width: 1060px;
     height: 100%;
     border-radius: 10px;
     background-color: rgb(32, 73, 196);
