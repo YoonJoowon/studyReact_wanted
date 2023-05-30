@@ -83,7 +83,6 @@ function InsiteBar() {
           navigation={true}
           spaceBetween={18}
           slidesPerView={"auto"}
-          // centeredSlides={true}
           slidesPerGroup={3}
           pagination={{
             clickable: true,

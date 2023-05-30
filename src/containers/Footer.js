@@ -34,9 +34,7 @@ const FootStyle = styled.div`
 
   .footer .footbottom .footbottom_logo {
     display: flex;
-    /* align-items: center; */
     justify-content: space-between;
-    /* margin-right: 43px; */
     width: 113px;
   }
 

@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styled from "styled-components";
 
-function CloseX(props) {
+function CloseX() {
   const [visible, setVisible] = useState(true);
 
   const handleClick = () => {
