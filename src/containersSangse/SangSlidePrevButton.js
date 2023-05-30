@@ -26,6 +26,7 @@ const StyledWrapp = styled.div`
     font-size: 16px;
     z-index: 3;
     background-color: #ffffff;
+    cursor: pointer;
 
     svg {
       width: 1em;

@@ -11,7 +11,6 @@ const BtnRound = styled.button`
     padding: 0 10px;
     margin-left: 15px;
     font-weight: 400;
-    cursor: pointer;
 `;
 
 export default BtnRound;

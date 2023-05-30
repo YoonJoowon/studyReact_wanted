@@ -131,18 +131,11 @@ function Txt({ id, image, title, summary }) {
       </div>
       <div className="icon">
         <span className="img_icon">
-          <button
-            onClick={() => {
-              navigate("/Sang/1");
-            }}
-            type="button"
-          >
-            <img
-              src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted-public.s3.ap-northeast-2.amazonaws.com%2Fwanted_opengraph.png&amp;w=60&amp;q=90"
-              alt="Wanted"
-              className=""
-            />
-          </button>
+          <img
+            src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted-public.s3.ap-northeast-2.amazonaws.com%2Fwanted_opengraph.png&amp;w=60&amp;q=90"
+            alt="Wanted"
+            className=""
+          />
         </span>
         <span className="icon_name">Wanted</span>
       </div>

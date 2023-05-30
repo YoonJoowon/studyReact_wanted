@@ -2,11 +2,13 @@ import React, { useEffect, useState } from "react";
 import SangBookMarkBtn from "./SangBookMarkBtn";
 import styled from "styled-components";
 import txt from "./SangPosition.json";
-import { useRecoilState, useSetRecoilState } from "recoil";
+import { useRecoilState } from "recoil";
 import { BookMarkAtom } from "../states/BookMarkAtom";
+import { useNavigate } from "react-router-dom";
 
 function SangBookMarkCard() {
-  const [SangPositions, setSangPositions] = useState(txt); 
+  const [SangPositions, setSangPositions] = useState(txt);
+
   return (
     <div className="fatureContainer">
       {SangPositions.map((x) => (
@@ -25,6 +27,7 @@ function SangBookMarkCard() {
 }
 
 function SangBookMark({ id, image, title, company, site, money }) {
+  const navigate = useNavigate();
   const [cartItem, setCartItem] = useRecoilState(BookMarkAtom);
   const isAlreadyInCart = cartItem.findIndex((e) => e.id === id) > -1;
   const AddToCart = () => {
@@ -42,8 +45,9 @@ function SangBookMark({ id, image, title, company, site, money }) {
         <button onClick={AddToCart}>
           <SangBookMarkBtn />
         </button>
-
-        <img src={image} alt=""></img>
+        <a href="http://localhost:3000/Sang/1">
+          <img src={image} alt=""></img>
+        </a>
         <div className="fatureContainer01_body">
           <div className="fatureContainer01_1">{title}</div>
           <div className="fatureContainer01_2">{company}</div>

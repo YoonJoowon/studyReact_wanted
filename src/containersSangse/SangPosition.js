@@ -69,9 +69,9 @@ const SangPositionStyle = styled.div`
     height: 187.5px;
     border-radius: 4px;
     box-shadow: inset 0 0 0 1px rgba(0, 0, 0, 0.1);
-    /* padding-bottom: 75%; */
     position: relative;
     background-size: cover;
+    cursor: pointer;
   }
 
   .fatureContainer01 {

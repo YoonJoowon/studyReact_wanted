@@ -5,8 +5,15 @@ import { Link, useNavigate } from "react-router-dom";
 import styled from "styled-components";
 import Search from "./Search";
 import LoginMyInfo from "../modal/LoginMyInfo";
+import NavMenu from "./NavMenu";
 
 function Nav(props) {
+  const [selectedItem, setSelectedItem] = useState("");
+
+  const handleItemClick = (item) => {
+    setSelectedItem(item);
+  };
+
   const navigate = useNavigate();
   // 모달창 노출 여부 state
   const [modalOpen, setModalOpen] = useState(false);
@@ -70,6 +77,14 @@ function Nav(props) {
       object-fit: contain;
     }
 
+    .nav_cen_img:hover .menuBar {
+      display: block;
+    }
+
+    .menuBar {
+      display: none;
+    }
+
     .nav .bar {
       width: 17px;
       height: 14px;
@@ -117,7 +132,11 @@ function Nav(props) {
 
       .eventBtn {
         cursor: pointer;
-      }
+      }     
+    }
+
+    .underLine.underlined {
+      border-bottom: 2px solid blue;
     }
 
     .nav li svg {
@@ -143,7 +162,6 @@ function Nav(props) {
 
     .aside {
       width: 271px;
-      /* height: 50px; */
       display: flex;
       padding: 10px 0px;
       height: 100%;
@@ -252,11 +270,15 @@ function Nav(props) {
       cursor: pointer;
     }
 
-    @media  (max-width: 1100px) {
+    @media (max-width: 1100px) {
       .nav {
         justify-content: left;
         height: 110px;
         margin: auto;
+      }
+
+      .nav_cen_img:hover .menuBar {
+        display: none;
       }
 
       .nav_cen {
@@ -264,9 +286,6 @@ function Nav(props) {
         margin-left: 15px;
         position: relative;
         width: 100%;
-      }
-
-      .nav_cen ul {
       }
 
       .nav_cen_logo {
@@ -322,7 +341,12 @@ function Nav(props) {
         <div className="nav">
           <div className="nav_cen">
             <div className="nav_cen_logo">
-              <div className="nav_cen_img"></div>
+              <div className="nav_cen_img">
+                <div className="menuBar">
+                  <NavMenu></NavMenu>
+                </div>
+              </div>
+
               <Link to={"/"}>
                 <p>
                   <svg width="74" height="21" viewBox="0 0 140 32">
@@ -333,16 +357,36 @@ function Nav(props) {
                   </svg>
                 </p>
               </Link>
-              <button id="gnbSignupBtn" className="xsSignUpButton" type="button">
+              <button
+                id="gnbSignupBtn"
+                className="xsSignUpButton"
+                type="button"
+              >
                 회원가입하기
               </button>
             </div>
 
             <ul>
               <Link to={"/ChaeYong"}>
-                <li>채용</li>
+                <li
+                  className={
+                    selectedItem === "recruit"
+                      ? "underLine underlined"
+                      : "underLine"
+                  }
+                  onClick={() => handleItemClick("recruit")}
+                >
+                  채용
+                </li>
               </Link>
-              <li>
+              <li
+                className={
+                  selectedItem === "event"
+                    ? "underLine underlined"
+                    : "underLine"
+                }
+                onClick={() => handleItemClick("event")}
+              >
                 <button
                   className="eventBtn"
                   type="button"
@@ -353,8 +397,17 @@ function Nav(props) {
                   이벤트
                 </button>
               </li>
-              <li>직군별 연봉</li>
-              <li className="li1">이력서</li>
+              <li
+                className={
+                  selectedItem === "resume"
+                    ? "underLine underlined"
+                    : "underLine"
+                }
+                onClick={() => handleItemClick("resume")}
+              >
+                이력서
+              </li>
+              <li className="li1">직군별 연봉</li>
               <li className="li2">
                 커뮤니티<p>New</p>
               </li>

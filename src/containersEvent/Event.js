@@ -18,6 +18,7 @@ const EventStyle = styled.div`
       max-width: 100%;
 
       img {
+        margin-top: 20px;
         width: 100%;
         height: 300px;
         object-fit: cover;
@@ -69,7 +70,7 @@ const EventStyle = styled.div`
 
     .eventList.fixed {
       position: fixed;
-      width:100%;
+      width: 100%;
       margin-top: 50px;
       background-color: #fff;
       z-index: 2;
