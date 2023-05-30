@@ -25,12 +25,8 @@ function SangBookMarkCard() {
 }
 
 function SangBookMark({ id, image, title, company, site, money }) {
-  // 아톰 불러오기
   const [cartItem, setCartItem] = useRecoilState(BookMarkAtom);
-
-  // 이미 장바구니에 들어있는지 확인
   const isAlreadyInCart = cartItem.findIndex((e) => e.id === id) > -1;
-
   const AddToCart = () => {
     if (!isAlreadyInCart) {
       setCartItem((prev) => [
@@ -38,8 +34,6 @@ function SangBookMark({ id, image, title, company, site, money }) {
         { id, image, title, company, site, money },
       ]);
     }
-
-    // console.log(setCartItem);
   };
 
   return (

@@ -1,8 +1,6 @@
 import React from "react";
 import GoogleApiWrapper from "./GoogleApiWrapper";
 import styled from "styled-components";
-import { Accordion, Button, Card } from "react-bootstrap";
-import SangBotMapAccordion from "./SangBotMapAccordion";
 
 function SangBotMap() {
   return (
@@ -46,8 +44,7 @@ function SangBotMap() {
         </div>
 
         <div className="section4_bot">
-          <SangBotMapAccordion />
-          {/* <svg width="24" height="24" viewBox="0 0 24 24">
+          <svg width="24" height="24" viewBox="0 0 24 24">
             <g fill="currentColor" fillRule="evenodd">
               <path
                 fillRule="nonzero"
@@ -69,7 +66,7 @@ function SangBotMap() {
               d="M2.71967 5.71967C2.98594 5.4534 3.4026 5.4292 3.69621 5.64705L3.78033 5.71967L9.499 11.438L15.2162 5.7211C15.4824 5.45479 15.899 5.43051 16.1927 5.64832L16.2768 5.72092C16.5431 5.98715 16.5674 6.40381 16.3496 6.69745L16.277 6.78158L10.0304 13.0302C9.76416 13.2966 9.34745 13.3208 9.0538 13.103L8.96967 13.0303L2.71967 6.78033C2.42678 6.48744 2.42678 6.01256 2.71967 5.71967Z"
               fill="currentColor"
             ></path>
-          </svg> */}
+          </svg>
         </div>
       </section>
     </SangBotMapStyle>

@@ -14,7 +14,6 @@ function LoginPassword(props) {
 
   const loginSuccess = () => {
     let password = document.getElementById("password").value;
-    // localStorage.setItem("password", password);
     const storedPassword = localStorage.getItem("password1");
 
     if (password === storedPassword) {

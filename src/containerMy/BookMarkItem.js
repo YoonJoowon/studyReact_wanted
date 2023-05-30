@@ -1,5 +1,5 @@
 import React from "react";
-import { useRecoilState, useRecoilValue, useSetRecoilState } from "recoil";
+import { useRecoilState, useSetRecoilState } from "recoil";
 import { BookMarkAtom } from "../states/BookMarkAtom";
 
 function BookmarkCard({ id, image, title, company, site, money }) {

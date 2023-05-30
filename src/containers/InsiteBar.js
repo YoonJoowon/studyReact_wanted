@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { Swiper, SwiperSlide } from "swiper/react";
 import InsiteBarBtnPrev from "./InsiteBarBtnPrev";
 import InsiteBarBtnNext from "./InsiteBarBtnNext";
-import { Navigation, Pagination } from "swiper";
+import { Pagination } from "swiper";
 
 const InsiteBarStyle = styled.div`
   .insiteBarWrap {
@@ -21,10 +21,6 @@ const InsiteBarStyle = styled.div`
     }
   }
 
-  .swiper-slide {
-    /* display: flex; */
-  }
-
   .swiper-slide button {
     font-weight: 700;
     font-size: 15px;
@@ -34,7 +30,6 @@ const InsiteBarStyle = styled.div`
     position: relative;
     border: 1px solid #e1e2e3;
     border-radius: 30px;
-    /* padding: 6px 22px; */
     width: 110px;
     cursor: pointer;
 
@@ -76,9 +71,6 @@ const InsiteBarStyle = styled.div`
       display: flex;
       overflow: hidden;
       position: relative;
-
-      .swiper-wrapper {
-      }
     }
   }
 `;

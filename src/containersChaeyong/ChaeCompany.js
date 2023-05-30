@@ -217,8 +217,6 @@ function ChaeCompany() {
 export default ChaeCompany;
 
 const ChaeCompanyStyle = styled.div`
-  /* main2 */
-
   /* main4 */
   .main4 {
     margin: auto;

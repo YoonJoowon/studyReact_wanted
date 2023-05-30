@@ -4,13 +4,11 @@ import MainSlidePrevButton from "../components/MainSlidePrevButton";
 import MainSlideNextButton from "../components/MainSlideNextButton";
 import data from "./ChaeSlide.json";
 
-// swiper 설정
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay } from "swiper";
 import { useState } from "react";
 
 export default function ChaeSlide() {
-
   const [slideCards, setslideCards] = useState(data);
 
   return (
@@ -39,9 +37,8 @@ export default function ChaeSlide() {
                           isActive ? "active" : "not-active"
                         }`}
                       >
-                        <a href="">
-                          <img src={x.imgSrc} alt="" />
-                        </a>
+                        <img src={x.imgSrc} alt="" />
+
                         <MainSlideCard header={x.header} content={x.content} />
                       </div>
                     )}
@@ -107,9 +104,7 @@ const StyledWrapper = styled.div`
         opacity: 100;
       }
     }
-
   }
-  
 
   .img-container {
     width: 1060px;

@@ -3,7 +3,6 @@ import SangSkillBtn from "./SangSkillBtn";
 import styled from "styled-components";
 import mainTxt from "./SangMainTxt.json";
 import { useState } from "react";
-import { useEffect } from "react";
 
 function Text({ title, intro, introduce }) {
   return (

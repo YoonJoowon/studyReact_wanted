@@ -1,11 +1,9 @@
 import React, { useState } from "react";
 import InsiteTxt from "./Insite.json";
 import styled from "styled-components";
+import { useNavigate } from "react-router-dom";
 
 const InsiteListStyle = styled.div`
-  .insiteview {
-  }
-
   .insite_button {
     position: relative;
     display: flex;
@@ -115,12 +113,13 @@ const InsiteListStyle = styled.div`
   /* 700px 이하 */
   @media (max-width: 768px) {
     .insitemenu_view li {
-      width: calc((100% - 40px)/2);
+      width: calc((100% - 40px) / 2);
     }
   }
 `;
 
 function Txt({ id, image, title, summary }) {
+  const navigate = useNavigate();
   return (
     <li key={id}>
       <div className="img">
@@ -132,11 +131,18 @@ function Txt({ id, image, title, summary }) {
       </div>
       <div className="icon">
         <span className="img_icon">
-          <img
-            src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted-public.s3.ap-northeast-2.amazonaws.com%2Fwanted_opengraph.png&amp;w=60&amp;q=90"
-            alt="Wanted"
-            className=""
-          />
+          <button
+            onClick={() => {
+              navigate("/Sang/1");
+            }}
+            type="button"
+          >
+            <img
+              src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted-public.s3.ap-northeast-2.amazonaws.com%2Fwanted_opengraph.png&amp;w=60&amp;q=90"
+              alt="Wanted"
+              className=""
+            />
+          </button>
         </span>
         <span className="icon_name">Wanted</span>
       </div>

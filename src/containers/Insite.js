@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import InsiteBar from "./InsiteBar";
-import InsiteTxt from "./Insite.json";
 import styled from "styled-components";
 import InsiteList from "./InsiteList";
 
@@ -44,41 +43,13 @@ const InsiteStyle = styled.div`
   @media (max-width: 1100px) {
     .careerinsite {
       width: 100%;
-      /* max-width: 1060px; */
       padding-left: 10px;
       padding-right: 10px;
     }
   }
 `;
 
-function Txt({ id, image, title, summary }) {
-  return (
-    <li key={id}>
-      <div className="box">
-        <div className="img">
-          <img src={image} alt={title} loading="lazy" />
-        </div>
-        <div className="info">
-          <p className="subject">{title}</p>
-          <p className="summary">{summary}</p>
-        </div>
-        <div className="icon">
-          <span className="img_icon">
-            <img
-              src="https://image.wanted.co.kr/optimize?src=https%3A%2F%2Fwanted-public.s3.ap-northeast-2.amazonaws.com%2Fwanted_opengraph.png&amp;w=60&amp;q=90"
-              alt="Wanted"
-              className=""
-            />
-          </span>
-          <span className="icon_name">Wanted</span>
-        </div>
-      </div>
-    </li>
-  );
-}
-
 function Insite() {
-  const [articles, setArticles] = useState(InsiteTxt);
 
   return (
     <InsiteStyle>

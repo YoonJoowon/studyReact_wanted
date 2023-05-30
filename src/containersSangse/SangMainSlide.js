@@ -21,7 +21,6 @@ function SangMainSlide() {
               <div className="">
                 <button className="" type="button">
                   <div className="section2_high">응답률 매우 높음</div>
-                  {/* <!-- <div className="">지원 후 응답받을 확률이 95% 이상입니다.</div> --> */}
                 </button>
               </div>
               <span className="section2_korea">서울 한국</span>

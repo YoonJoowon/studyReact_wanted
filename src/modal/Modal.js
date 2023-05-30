@@ -17,7 +17,6 @@ function Modal(props) {
     let email = document.getElementById("email").value;
 
     if (email === "ysw6963@gmail.com") {
-      // setModal2Open(true);
       setLoginPasswordOpen(true);
     } else {
       setModal2Open(true);    
@@ -76,7 +75,6 @@ function Modal(props) {
                       type="email"
                       id="email"
                       placeholder="이메일을 입력하세요."
-                      // ref={email}
                     />
                     <p data-testid="Typography" color="" id="email_message"></p>
                     {/* <!-- modal2 open --> */}

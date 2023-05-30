@@ -4,7 +4,6 @@ import styled from "styled-components";
 import MainSlideNextButton from "../components/MainSlideNextButton";
 import MainSlidePrevButton from "../components/MainSlidePrevButton";
 import SearchListTxt from "./SearchListTxt.json";
-import { useState } from "react";
 import ChaeFollowBtn from "../containersChaeyong/ChaeFollowBtn";
 import { useLocation } from "react-router-dom";
 
@@ -28,8 +27,6 @@ function Dummy({ id, img, name, job, container, position }) {
 }
 
 function SearchList() {
-  const [dummys, setdummys] = useState(SearchListTxt);
-
   const location = useLocation();
   const searchInput = location.state.searchInput;
 
@@ -41,12 +38,10 @@ function SearchList() {
     <SearchhListStyle>
       <div>
         <div className="wrapper">
-          {/* {searchInput && ( */}
           <div className="searchInput">
             {searchInput}
             <hr />
           </div>
-          {/* )} */}
           <div className="searchCategory">
             <h2 className="searchCategoryTitle">
               연관 직무<span className="">5</span>
@@ -121,10 +116,8 @@ function SearchList() {
                 <input type="text" placeholder="결과 내 재검색"></input>
               </form>
             </div>
-
             <hr />
           </div>
-
           <SangPosition />
         </div>
       </div>

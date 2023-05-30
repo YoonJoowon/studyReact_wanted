@@ -60,24 +60,11 @@ function Modal2(porps2) {
   const handleSubmit = (event) => {
     event.preventDefault();
     if (!inputValue || verificationCode !== inputValue) {
-      console.log("인증 실패");
-      setVerificationMessage("인증번호가 올바르지 않습니다")
+      setVerificationMessage("인증번호가 올바르지 않습니다");
       return;
     }
-    console.log("인증 성공");
-    setShow(true);
-    // alert("회원가입되었습니다.");
     NewLogin();
   };
-
-  // 로그인 실패경고
-  const [show, setShow] = useState(false);
-
-  // if (show === true) {
-  //   return (
-
-  //   );
-  // }
 
   const NewLogin = () => {
     let password = document.getElementById("password").value;
@@ -197,17 +184,6 @@ function Modal2(porps2) {
             >
               <p>가입하기</p>
             </button>
-            
-            {/* <Alert
-              className="alertContainer"
-              variant="danger"
-              onClose={() => setShow(false)}
-              dismissible
-            >
-              <Alert.Heading></Alert.Heading>
-              <p>회원가입이 완료되었습니다.</p>
-            </Alert> */}
-
           </div>
         </div>
       </div>
@@ -470,6 +446,5 @@ const Modal2Style = styled.div`
   }
 
   .alertContainer {
- 
   }
 `;

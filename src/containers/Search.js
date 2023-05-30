@@ -72,7 +72,6 @@ function Search(props) {
                   id="searchInput"
                   onChange={handleSearch}
                   onKeyDown={handleKeyDown}
-                  // value={this.state.keyword}
                 />
                 <button
                   className="searchIcon"

@@ -6,7 +6,6 @@ import data from "./ChaeCompany.json";
 function ChaeCompanyGoTema() {
   const [articles, setArticles] = useState(data.companyIntro);
   const [text1, setText1] = useState(data.companyRecommand);
-  const [ComImg, setComImg] = useState(data.companyEx);
 
   return (
     <section>

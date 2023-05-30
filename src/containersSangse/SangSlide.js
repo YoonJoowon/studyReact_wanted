@@ -48,7 +48,7 @@ function SangSlide() {
             return (
               <SwiperSlide key={x.id}>
                 <div>
-                  <img src={x.image} />
+                  <img src={x.image} alt=""/>
                 </div>
               </SwiperSlide>
             );
