@@ -8,6 +8,7 @@ import { BrowserRouter, Route, Routes, Switch } from "react-router-dom";
 import SearchList from "./containerSearch/SearchList";
 import Bookmark from "./containerMy/Bookmark";
 import Event from "./containersEvent/Event";
+import Resume from "./Resume";
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
           <Route path="/SearchList" element={<SearchList />} />
           <Route path="/Bookmark" element={<Bookmark />} />
           <Route path="/Event" element={<Event />} />
+          <Route path="/Resume" element={<Resume />} />
         </Routes>
         <Footer />
       </BrowserRouter>

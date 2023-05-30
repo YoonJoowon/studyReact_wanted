@@ -132,7 +132,7 @@ function Nav(props) {
 
       .eventBtn {
         cursor: pointer;
-      }     
+      }
     }
 
     .underLine.underlined {
@@ -405,7 +405,16 @@ function Nav(props) {
                 }
                 onClick={() => handleItemClick("resume")}
               >
-                이력서
+                {" "}
+                <button
+                  className="eventBtn"
+                  type="button"
+                  onClick={() => {
+                    navigate("/Resume");
+                  }}
+                >
+                  이력서{" "}
+                </button>
               </li>
               <li className="li1">직군별 연봉</li>
               <li className="li2">
