@@ -3,6 +3,7 @@
     "rules": "database.rules.json"
   },
   "hosting": {
+    "site": "react-project-233f5",
     "public": "public",
     "ignore": [
       "firebase.json",

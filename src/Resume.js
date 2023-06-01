@@ -1,7 +1,92 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
+import firebase from "firebase/app";
+import "firebase/auth";
+import "firebase/firestore";
+import "firebase/storage";
+import { initializeApp } from "firebase/app";
+import { getAnalytics } from "firebase/analytics";
+import { getStorage, uploadString, ref } from "firebase/storage";
+import { v4 as uuidv4 } from "uuid";
+
+const firebaseConfig = {
+  apiKey: "AIzaSyD6eoL1PMMe-lMea_QjPnmgmScCx0EceSk",
+  authDomain: "react-project-233f5.firebaseapp.com",
+  databaseURL: "https://react-project-233f5-default-rtdb.firebaseio.com",
+  projectId: "react-project-233f5",
+  storageBucket: "react-project-233f5.appspot.com",
+  messagingSenderId: "513171211765",
+  appId: "1:513171211765:web:6700e0b971ca7acdca8cbc",
+  measurementId: "G-MDT3BZBNDQ",
+};
+
+const app = initializeApp(firebaseConfig);
+// const analytics = getAnalytics(app);
 
 function Resume() {
+  // const db = firebase.firestore();
+  // const storage = firebase.storage();
+
+  const [attachment, setAttachment] = useState();
+
+  const onFileChange = (event) => {
+    const files = event.target.files;
+    const theFile = files[0];
+
+    const reader = new FileReader();
+
+    reader.onloadend = (finishedEvent) => {
+      const result = finishedEvent.currentTarget.result;
+      setAttachment(result);
+      onSubmit(event);
+    };
+    reader.readAsDataURL(theFile);
+    // onSubmit(event);
+  };
+
+  const onClearAttachment = () => setAttachment(null);
+
+  const onSubmit = async (evt) => {
+    evt.preventDefault();
+    const storage = getStorage();
+    const fileRef = ref(storage, uuidv4());
+    const response = await uploadString(fileRef, attachment, "data-url");
+
+  };
+
+  // db.collection("product")
+  //   .get()
+  //   .then((result) => {
+  //     result.forEach((doc) => {
+  //       const templete = `<div className="resume-new-fileUpload" role="button">
+  //       <p>파일 업로드</p>
+  //     </div>`;
+  //     $('.contaiber').append(templete);
+  //     });
+  //   });
+
+  // $("#file-input").change(function () {
+  //   const file = document.getElementById("file-input").files[0];
+  //   const storageRef = storage.ref();
+  //   const store = storageRef.child("image/" + file.name);
+  //   const uploadTask = store.put(file);
+
+  //   let input = {
+  //     title: "Your Title",
+  //     date: new Date(),
+  //     success: false,
+  //   };
+
+  //   db.collection("file")
+  //     .add(input)
+  //     .then((result) => {
+  //       window.location.href = "/resume.html";
+  //     })
+  //     .catch((err) => {
+  //       console.log(err);
+  //     });
+  // });
+
   return (
     <ResumeStyle>
       <div>
@@ -82,6 +167,7 @@ function Resume() {
                 </svg>
               </div>
               <input
+                onChange={onFileChange}
                 id="file-input"
                 multiple=""
                 type="file"
@@ -285,7 +371,7 @@ const ResumeStyle = styled.div`
       background-color: #fff;
       cursor: pointer;
 
-      input{
+      input {
         display: none;
       }
 
