@@ -31,27 +31,26 @@ function Resume() {
 
   const onFileChange = (event) => {
     const files = event.target.files;
+    console.log("files == " + files[0]);
     const theFile = files[0];
 
     const reader = new FileReader();
 
     reader.onloadend = (finishedEvent) => {
       const result = finishedEvent.currentTarget.result;
-      setAttachment(result);
-      onSubmit(event);
+      onSubmit(event, result);
     };
     reader.readAsDataURL(theFile);
-    // onSubmit(event);
   };
 
-  const onClearAttachment = () => setAttachment(null);
+  // const onClearAttachment = () => setAttachment(null);
 
-  const onSubmit = async (evt) => {
-    evt.preventDefault();
+  const onSubmit = async (evt, result) => {
     const storage = getStorage();
-    const fileRef = ref(storage, uuidv4());
-    const response = await uploadString(fileRef, attachment, "data-url");
+    const fileRef = ref(storage, "asdf/jpeg/" + uuidv4());
+    // 파일경로만 설정
 
+    await uploadString(fileRef, result, "data_url");
   };
 
   // db.collection("product")
