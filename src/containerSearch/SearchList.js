@@ -110,10 +110,10 @@ function SearchList() {
             {/* <JobListContent></JobListContent> */}
 
             <div className="searchPositionBtn">
-              <button>지역</button>
-              <button>경력</button>
-              <button>기술스택</button>
-              <button>응답률순</button>
+              <button>지역 ▼</button>
+              <button>경력 ▼</button>
+              <button>기술스택 ▼</button>
+              <button>응답률순 ▼</button>
 
               <form action="">
                 <input type="text" placeholder="결과 내 재검색"></input>
@@ -338,7 +338,6 @@ const SearchhListStyle = styled.div`
         color: #000;
         padding: 0 16px;
         position: relative;
-        width: 120px;
         text-align: left;
         margin-right: 20px;
         display: flex;
