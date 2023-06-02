@@ -39,7 +39,8 @@ function Resume() {
   };
 
   const onSubmit = async (event, result, fileName) => {
-    const fileContainer = document.getElementById("fileContainer"); 
+    const fileContainer = document.getElementById("fileContainer");
+    const newDate = addDate(); 
     
     // 새로운 요소 생성
     const fileElement = document.createElement("div");
@@ -53,40 +54,28 @@ function Resume() {
     fileElementDown.classList.add("file-element-Down");
     fileElementDown.innerText = "다운로드";
 
-    fileElementDown.addEventListener("click", () => {
-      downloadFile(result, fileName);
-    });
-
     // 요소 추가
+    filenameElement.appendChild(newDate);
     fileElement.appendChild(filenameElement);
     fileElement.appendChild(fileElementDown);
     fileContainer.appendChild(fileElement);
 
-    addDate(filenameElement);
+    addDate();
   };
 
-  const addDate = (filenameElement) => {
+  const addDate = () => {
     const date = new Date();
     const year = date.getFullYear();
     const month = String(date.getMonth() + 1).padStart(2, "0");
     const day = String(date.getDate()).padStart(2, "0");
 
     const formattedDate = `${year}.${month}.${day}`;
-    
+
     const newDate = document.createElement("p");
     newDate.classList.add("dateParagraph");
     newDate.innerText = formattedDate;
-
-    filenameElement.appendChild(newDate);
   };
 
-  const downloadFile = (result, fileName) => {
-    const link = document.createElement("a");
-    link.href = result;
-    link.download = fileName;
-    link.click();
-  };
-  
   return (
     <ResumeStyle>
       <div>

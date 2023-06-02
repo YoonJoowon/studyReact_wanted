@@ -53,10 +53,6 @@ function Resume() {
     fileElementDown.classList.add("file-element-Down");
     fileElementDown.innerText = "다운로드";
 
-    fileElementDown.addEventListener("click", () => {
-      downloadFile(result, fileName);
-    });
-
     // 요소 추가
     fileElement.appendChild(filenameElement);
     fileElement.appendChild(fileElementDown);
@@ -80,13 +76,6 @@ function Resume() {
     filenameElement.appendChild(newDate);
   };
 
-  const downloadFile = (result, fileName) => {
-    const link = document.createElement("a");
-    link.href = result;
-    link.download = fileName;
-    link.click();
-  };
-  
   return (
     <ResumeStyle>
       <div>
