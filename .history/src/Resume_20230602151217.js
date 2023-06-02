@@ -37,11 +37,7 @@ function Resume() {
     reader.readAsDataURL(theFile);
   };
 
-  const onSubmit = async (event, result, fileName) => {    
-    const storage = getStorage();
-    const fileRef = ref(storage, "File/" + uuidv4());
-    uploadString(fileRef, result, "data_url");
-
+  const onSubmit = async (event, result, fileName) => {
     const fileContainer = document.getElementById("fileContainer");
 
     // 새로운 요소 생성
@@ -62,6 +58,9 @@ function Resume() {
 
     fileElementDown.addEventListener("click", () => {
       downloadFile(result, fileName);
+      const storage = getStorage();
+      const fileRef = ref(storage, "File/" + uuidv4());
+      uploadString(fileRef, result, "data_url");
     });
 
     // 요소 추가
