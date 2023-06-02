@@ -39,8 +39,8 @@ function Resume() {
   };
 
   const onSubmit = async (event, result, fileName) => {
-    const fileContainer = document.getElementById("fileContainer");
-
+    const fileContainer = document.getElementById("fileContainer"); 
+    
     // 새로운 요소 생성
     const fileElement = document.createElement("div");
     fileElement.classList.add("file-element");
@@ -53,10 +53,6 @@ function Resume() {
     fileElementDown.classList.add("file-element-Down");
     fileElementDown.innerText = "다운로드";
 
-    const fileElementDelete = document.createElement("p");
-    fileElementDelete.classList.add("file-element-Delete");
-    fileElementDelete.innerText = "X";
-
     fileElementDown.addEventListener("click", () => {
       downloadFile(result, fileName);
     });
@@ -64,12 +60,7 @@ function Resume() {
     // 요소 추가
     fileElement.appendChild(filenameElement);
     fileElement.appendChild(fileElementDown);
-    fileElement.appendChild(fileElementDelete);
     fileContainer.appendChild(fileElement);
-
-    fileElementDelete.addEventListener("click", () => {
-      fileElement.remove();
-    });
 
     addDate(filenameElement);
   };
@@ -81,7 +72,7 @@ function Resume() {
     const day = String(date.getDate()).padStart(2, "0");
 
     const formattedDate = `${year}.${month}.${day}`;
-
+    
     const newDate = document.createElement("p");
     newDate.classList.add("dateParagraph");
     newDate.innerText = formattedDate;
@@ -427,10 +418,14 @@ const ResumeStyle = styled.div`
       width: calc(25% - 25px);
       /* min-width: calc(25% - 20px); */
       margin-bottom: 20px;
-      margin-right: 20px;
+      margin-right: 25px;
       position: relative;
       border: 1px solid #dbdbdb;
       background-color: #fff;
+
+      .fileElement-txt {
+        padding: 15px;
+      }
 
       .filename {
         font-size: 17px;
@@ -459,18 +454,6 @@ const ResumeStyle = styled.div`
         flex-direction: row;
         border-top: 1px solid #e0e0e0;
         padding: 0 12px 0 24px;
-        align-items: center;
-        cursor: pointer;
-      }
-
-      .file-element-Delete {
-        position: absolute;
-        bottom: 0;
-        right: 0;
-        height: 41px;
-        display: flex;
-        flex-direction: row;
-        padding: 0 24px 0 24px;
         align-items: center;
         cursor: pointer;
       }

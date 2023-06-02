@@ -39,8 +39,8 @@ function Resume() {
   };
 
   const onSubmit = async (event, result, fileName) => {
-    const fileContainer = document.getElementById("fileContainer");
-
+    const fileContainer = document.getElementById("fileContainer"); 
+    
     // 새로운 요소 생성
     const fileElement = document.createElement("div");
     fileElement.classList.add("file-element");
@@ -55,7 +55,7 @@ function Resume() {
 
     const fileElementDelete = document.createElement("p");
     fileElementDelete.classList.add("file-element-Delete");
-    fileElementDelete.innerText = "X";
+    fileElementDelete.innerText = "삭제";
 
     fileElementDown.addEventListener("click", () => {
       downloadFile(result, fileName);
@@ -67,10 +67,6 @@ function Resume() {
     fileElement.appendChild(fileElementDelete);
     fileContainer.appendChild(fileElement);
 
-    fileElementDelete.addEventListener("click", () => {
-      fileElement.remove();
-    });
-
     addDate(filenameElement);
   };
 
@@ -81,7 +77,7 @@ function Resume() {
     const day = String(date.getDate()).padStart(2, "0");
 
     const formattedDate = `${year}.${month}.${day}`;
-
+    
     const newDate = document.createElement("p");
     newDate.classList.add("dateParagraph");
     newDate.innerText = formattedDate;
@@ -95,7 +91,7 @@ function Resume() {
     link.download = fileName;
     link.click();
   };
-
+  
   return (
     <ResumeStyle>
       <div>
@@ -463,6 +459,7 @@ const ResumeStyle = styled.div`
         cursor: pointer;
       }
 
+      
       .file-element-Delete {
         position: absolute;
         bottom: 0;
