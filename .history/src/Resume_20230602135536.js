@@ -306,8 +306,8 @@ const ResumeStyle = styled.div`
 
     .resume-new-make {
       height: 190px;
-      width: calc(25% - 25px);
-      /* min-width: calc(25% - 20px); */
+      width: calc(25% - 20px);
+      min-width: calc(25% - 20px);
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
@@ -353,8 +353,8 @@ const ResumeStyle = styled.div`
 
     .resume-new-fileUpload {
       height: 190px;
-      width: calc(25% - 25px);
-      /* min-width: calc(25% - 20px); */
+      width: calc(25% - 20px);
+      min-width: calc(25% - 20px);
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
@@ -402,8 +402,8 @@ const ResumeStyle = styled.div`
 
     .file-element {
       height: 190px;
-      width: calc(25% - 25px);
-      /* min-width: calc(25% - 20px); */
+      width: calc(25% - 20px);
+      min-width: calc(25% - 20px);
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;

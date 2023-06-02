@@ -45,11 +45,10 @@ function Resume() {
     const fileElement = document.createElement("div");
     fileElement.classList.add("file-element");
 
-    const filenameElement = document.createElement("p");
-    filenameElement.classList.add("filename");
+    const filenameElement = document.createElement("span");
     filenameElement.innerText = fileName;
 
-    const fileElementDown = document.createElement("p");
+    const fileElementDown = document.createElement("span");
     fileElementDown.classList.add("file-element-Down");
     fileElementDown.innerText = "다운로드";
 
@@ -69,8 +68,7 @@ function Resume() {
 
     const formattedDate = `${year}.${month}.${day}`;
 
-    const newDate = document.createElement("p");
-    newDate.classList.add("dateParagraph");
+    const newDate = document.getElementById("dateParagraph");
     newDate.innerText = formattedDate;
   };
 
@@ -119,7 +117,7 @@ function Resume() {
           </button>
         </div>
 
-        <div id="fileContainer">
+        <div className="resume-make">
           <div className="resume-new-make">
             <div className="resume-new-makeIcon">
               <svg
@@ -164,6 +162,20 @@ function Resume() {
             </label>
             <p>파일 업로드</p>
           </div>
+          <div id="fileContainer">
+            <div id="fileElement">
+              <div id="filename">
+                <div id="dateParagraph"></div>
+              </div>
+              <button id="fileDown"></button>
+            </div>
+          </div>
+          {/* <div id="fileElement">
+            <div id="filename">
+              <div id="dateParagraph"></div>
+            </div>
+            <button id="fileDown"></button>
+          </div> */}
         </div>
       </div>
     </ResumeStyle>
@@ -297,17 +309,14 @@ const ResumeStyle = styled.div`
     }
   }
 
-  #fileContainer {
+  .resume-make {
     margin: auto;
     width: 1060px;
-    height: 100%;
     display: flex;
-    flex-wrap: wrap;
 
     .resume-new-make {
       height: 190px;
-      width: calc(25% - 25px);
-      /* min-width: calc(25% - 20px); */
+      width: calc(25% - 20px);
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
@@ -353,8 +362,7 @@ const ResumeStyle = styled.div`
 
     .resume-new-fileUpload {
       height: 190px;
-      width: calc(25% - 25px);
-      /* min-width: calc(25% - 20px); */
+      width: calc(25% - 20px);
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
@@ -400,10 +408,10 @@ const ResumeStyle = styled.div`
       }
     }
 
+
     .file-element {
       height: 190px;
-      width: calc(25% - 25px);
-      /* min-width: calc(25% - 20px); */
+      width: calc(25% - 20px);
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
@@ -414,7 +422,7 @@ const ResumeStyle = styled.div`
         padding: 15px;
       }
 
-      .filename {
+      #filename {
         font-size: 17px;
         font-weight: 600;
         line-height: 1.33;
@@ -426,22 +434,22 @@ const ResumeStyle = styled.div`
         border: none;
         padding: 15px;
 
-        .dateParagraph {
+        #dateParagraph {
           color: #999;
           margin-top: 5px;
         }
       }
 
-      .file-element-Down {
+      #fileDown {
         position: absolute;
         bottom: 0;
         height: 41px;
-        width: 200px;
+        width: 100%;
         display: flex;
         flex-direction: row;
-        border-top: 1px solid #e0e0e0;
-        padding: 0 12px 0 24px;
+        padding: 0 12px 0 20px;
         align-items: center;
+        border-top: 1px solid #e0e0e0;
         cursor: pointer;
       }
     }

@@ -164,6 +164,11 @@ function Resume() {
             </label>
             <p>파일 업로드</p>
           </div>
+
+          {/* <div id="filename">
+            <div id="dateParagraph"></div>
+          </div>
+          <button id="fileDown"></button> */}
         </div>
       </div>
     </ResumeStyle>
@@ -306,8 +311,8 @@ const ResumeStyle = styled.div`
 
     .resume-new-make {
       height: 190px;
-      width: calc(25% - 25px);
-      /* min-width: calc(25% - 20px); */
+      width: calc(25% - 20px);
+      min-width: calc(25% - 20px);
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
@@ -353,8 +358,8 @@ const ResumeStyle = styled.div`
 
     .resume-new-fileUpload {
       height: 190px;
-      width: calc(25% - 25px);
-      /* min-width: calc(25% - 20px); */
+      width: calc(25% - 20px);
+      min-width: calc(25% - 20px);
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
@@ -402,8 +407,8 @@ const ResumeStyle = styled.div`
 
     .file-element {
       height: 190px;
-      width: calc(25% - 25px);
-      /* min-width: calc(25% - 20px); */
+      width: calc(25% - 20px);
+      min-width: calc(25% - 20px);
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
@@ -436,12 +441,12 @@ const ResumeStyle = styled.div`
         position: absolute;
         bottom: 0;
         height: 41px;
-        width: 200px;
+        width: 100%;
         display: flex;
         flex-direction: row;
-        border-top: 1px solid #e0e0e0;
-        padding: 0 12px 0 24px;
+        padding: 0 12px 0 20px;
         align-items: center;
+        border-top: 1px solid #e0e0e0;
         cursor: pointer;
       }
     }
