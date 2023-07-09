@@ -16,7 +16,6 @@ function Main() {
       <InsiteBar2 />
       <Carrer />
       <Information />
-
     </div>
   );
 }

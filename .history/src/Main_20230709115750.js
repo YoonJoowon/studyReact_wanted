@@ -3,20 +3,19 @@ import './css/main.css'
 
 import Insite from './containers/Insite';
 import Carrer from './containers/Carrer';
-import Slide from './containers/Slide';
 import Information from './containers/Information';
 import InsiteBar2 from './containers/InsiteBar2';
+import MainSlide from "./containers/MainSlide";
 
 function Main() {
   return (
     <div className="wrapper">
 
-      <Slide></Slide>
+      <MainSlide></MainSlide>
       <Insite></Insite>
       <InsiteBar2 />
       <Carrer />
       <Information />
-
     </div>
   );
 }
