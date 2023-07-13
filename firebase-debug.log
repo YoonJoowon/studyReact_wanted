@@ -1,0 +1,25 @@
+[debug] [2023-06-02T00:13:43.489Z] ----------------------------------------------------------------------
+[debug] [2023-06-02T00:13:43.491Z] Command:       C:\Program Files\nodejs\node.exe C:\Users\k\AppData\Roaming\npm\node_modules\firebase-tools\lib\bin\firebase.js init
+[debug] [2023-06-02T00:13:43.491Z] CLI Version:   9.23.1
+[debug] [2023-06-02T00:13:43.491Z] Platform:      win32
+[debug] [2023-06-02T00:13:43.491Z] Node Version:  v18.14.1
+[debug] [2023-06-02T00:13:43.492Z] Time:          Fri Jun 02 2023 09:13:43 GMT+0900 (대한민국 표준시)
+[debug] [2023-06-02T00:13:43.492Z] ----------------------------------------------------------------------
+[debug] 
+[debug] [2023-06-02T00:13:43.530Z] > command requires scopes: ["email","openid","https://www.googleapis.com/auth/cloudplatformprojects.readonly","https://www.googleapis.com/auth/firebase","https://www.googleapis.com/auth/cloud-platform"]
+[debug] [2023-06-02T00:13:43.530Z] > authorizing via signed-in user (ysw6963@gmail.com)
+[info] 
+     ######## #### ########  ######## ########     ###     ######  ########
+     ##        ##  ##     ## ##       ##     ##  ##   ##  ##       ##
+     ######    ##  ########  ######   ########  #########  ######  ######
+     ##        ##  ##    ##  ##       ##     ## ##     ##       ## ##
+     ##       #### ##     ## ######## ########  ##     ##  ######  ########
+
+You're about to initialize a Firebase project in this directory:
+
+  D:\코딩\study\wanted_web_rik\wanted_web_rik
+
+Before we get started, keep in mind:
+
+  * You are initializing within an existing Firebase project directory
+
