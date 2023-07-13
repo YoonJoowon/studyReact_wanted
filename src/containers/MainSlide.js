@@ -34,7 +34,6 @@ export default function MainSlide() {
                         }`}
                       >
                         <img src={x.imgSrc} alt="" />
-
                         <MainSlideCard header={x.header} content={x.content} />
                       </div>
                     )}

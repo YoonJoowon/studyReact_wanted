@@ -5,8 +5,7 @@ import "firebase/auth";
 import "firebase/firestore";
 import "firebase/storage";
 import { initializeApp } from "firebase/app";
-import { getAnalytics } from "firebase/analytics";
-import { getStorage, uploadString, ref } from "firebase/storage";
+import { getStorage, uploadString, ref, deleteObject } from "firebase/storage";
 import { v4 as uuidv4 } from "uuid";
 
 const firebaseConfig = {
@@ -21,70 +20,87 @@ const firebaseConfig = {
 };
 
 const app = initializeApp(firebaseConfig);
-// const analytics = getAnalytics(app);
 
 function Resume() {
-  // const db = firebase.firestore();
-  // const storage = firebase.storage();
-
-  const [attachment, setAttachment] = useState();
-
   const onFileChange = (event) => {
     const files = event.target.files;
-    console.log("files == " + files[0]);
     const theFile = files[0];
 
     const reader = new FileReader();
 
     reader.onloadend = (finishedEvent) => {
       const result = finishedEvent.currentTarget.result;
-      onSubmit(event, result);
+      const fileName = theFile.name;
+
+      onSubmit(event, result, fileName);
     };
     reader.readAsDataURL(theFile);
   };
 
-  // const onClearAttachment = () => setAttachment(null);
-
-  const onSubmit = async (evt, result) => {
+  const onSubmit = async (event, result, fileName) => {    
     const storage = getStorage();
-    const fileRef = ref(storage, "asdf/jpeg/" + uuidv4());
-    // 파일경로만 설정
+    const fileRef = ref(storage, "File/" + uuidv4());
+    uploadString(fileRef, result, "data_url");
 
-    await uploadString(fileRef, result, "data_url");
+    const fileContainer = document.getElementById("fileContainer");
+
+    const fileElement = document.createElement("div");
+    fileElement.classList.add("file-element");
+
+    const filenameElement = document.createElement("p");
+    filenameElement.classList.add("filename");
+    filenameElement.innerText = fileName;
+
+    const fileElementDown = document.createElement("p");
+    fileElementDown.classList.add("file-element-Down");
+    fileElementDown.innerText = "다운로드";
+
+    const fileElementDelete = document.createElement("p");
+    fileElementDelete.classList.add("file-element-Delete");
+    fileElementDelete.innerText = "X";
+
+    fileElementDown.addEventListener("click", () => {
+      downloadFile(result, fileName);
+    });
+
+    fileElement.appendChild(filenameElement);
+    fileElement.appendChild(fileElementDown);
+    fileElement.appendChild(fileElementDelete);
+    fileContainer.appendChild(fileElement);
+
+    fileElementDelete.addEventListener("click", async () => {
+      await deleteFile(fileRef);
+      fileElement.remove();
+    });
+
+    addDate(filenameElement);
   };
 
-  // db.collection("product")
-  //   .get()
-  //   .then((result) => {
-  //     result.forEach((doc) => {
-  //       const templete = `<div className="resume-new-fileUpload" role="button">
-  //       <p>파일 업로드</p>
-  //     </div>`;
-  //     $('.contaiber').append(templete);
-  //     });
-  //   });
+  const addDate = (filenameElement) => {
+    const date = new Date();
+    const year = date.getFullYear();
+    const month = String(date.getMonth() + 1).padStart(2, "0");
+    const day = String(date.getDate()).padStart(2, "0");
 
-  // $("#file-input").change(function () {
-  //   const file = document.getElementById("file-input").files[0];
-  //   const storageRef = storage.ref();
-  //   const store = storageRef.child("image/" + file.name);
-  //   const uploadTask = store.put(file);
+    const formattedDate = `${year}.${month}.${day}`;
 
-  //   let input = {
-  //     title: "Your Title",
-  //     date: new Date(),
-  //     success: false,
-  //   };
+    const newDate = document.createElement("p");
+    newDate.classList.add("dateParagraph");
+    newDate.innerText = formattedDate;
 
-  //   db.collection("file")
-  //     .add(input)
-  //     .then((result) => {
-  //       window.location.href = "/resume.html";
-  //     })
-  //     .catch((err) => {
-  //       console.log(err);
-  //     });
-  // });
+    filenameElement.appendChild(newDate);
+  };
+
+  const deleteFile = async (fileRef) => {
+    await deleteObject(fileRef);
+  };
+
+  const downloadFile = (result, fileName) => {
+    const link = document.createElement("a");
+    link.href = result;
+    link.download = fileName;
+    link.click();
+  };
 
   return (
     <ResumeStyle>
@@ -131,7 +147,7 @@ function Resume() {
           </button>
         </div>
 
-        <div className="resume-make">
+        <div id="fileContainer">
           <div className="resume-new-make">
             <div className="resume-new-makeIcon">
               <svg
@@ -309,14 +325,17 @@ const ResumeStyle = styled.div`
     }
   }
 
-  .resume-make {
+  #fileContainer {
     margin: auto;
     width: 1060px;
+    height: 100%;
     display: flex;
+    flex-wrap: wrap;
 
     .resume-new-make {
       height: 190px;
-      width: calc(25% - 20px);
+      width: calc(25% - 25px);
+      /* min-width: calc(25% - 20px); */
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
@@ -362,7 +381,8 @@ const ResumeStyle = styled.div`
 
     .resume-new-fileUpload {
       height: 190px;
-      width: calc(25% - 20px);
+      width: calc(25% - 25px);
+      /* min-width: calc(25% - 20px); */
       margin-bottom: 20px;
       margin-right: 20px;
       position: relative;
@@ -405,6 +425,60 @@ const ResumeStyle = styled.div`
         text-align: center;
         margin-top: 15px;
         font-weight: 600;
+      }
+    }
+
+    .file-element {
+      height: 190px;
+      width: calc(25% - 25px);
+      /* min-width: calc(25% - 20px); */
+      margin-bottom: 20px;
+      margin-right: 20px;
+      position: relative;
+      border: 1px solid #dbdbdb;
+      background-color: #fff;
+
+      .filename {
+        font-size: 17px;
+        font-weight: 600;
+        line-height: 1.33;
+        max-height: 46px;
+        max-width: 100%;
+        text-align: left;
+        color: #333;
+        overflow: hidden;
+        border: none;
+        padding: 15px;
+
+        .dateParagraph {
+          color: #999;
+          margin-top: 5px;
+        }
+      }
+
+      .file-element-Down {
+        position: absolute;
+        bottom: 0;
+        height: 41px;
+        width: 200px;
+        display: flex;
+        flex-direction: row;
+        border-top: 1px solid #e0e0e0;
+        padding: 0 12px 0 24px;
+        align-items: center;
+        cursor: pointer;
+      }
+
+      .file-element-Delete {
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        height: 41px;
+        display: flex;
+        flex-direction: row;
+        padding: 0 24px 0 24px;
+        align-items: center;
+        cursor: pointer;
       }
     }
   }
