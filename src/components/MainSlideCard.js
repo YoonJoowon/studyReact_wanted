@@ -8,7 +8,6 @@ function MainSlideCard(props) {
         <h2>{header}</h2>
         <h3>{content}</h3>
         <div className="line" />
-        
 
         <a href={linkSrc || "./"}>
           <p>바로가기 {">"}</p>
@@ -55,9 +54,8 @@ const SlideCardStyle = styled.div`
     background-color: #333;
   }
 
-  a{
+  a {
     text-decoration: none;
-
   }
   a p {
     margin: 6px 0 0 13px;
@@ -69,6 +67,5 @@ const SlideCardStyle = styled.div`
     display: flex;
     align-items: center;
     padding: 6px 8px;
-    
   }
 `;
