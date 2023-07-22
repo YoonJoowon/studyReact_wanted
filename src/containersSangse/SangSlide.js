@@ -48,7 +48,7 @@ function SangSlide() {
             return (
               <SwiperSlide key={x.id}>
                 <div>
-                  <img src={x.image} alt=""/>
+                  <img src={x.image} alt="" />
                 </div>
               </SwiperSlide>
             );
@@ -72,8 +72,8 @@ const SangSlideWrapper = styled.div`
   height: 504px;
   position: relative;
   overflow-x: hidden;
-    display: flex;
-    z-index: 3;
+  display: flex;
+  z-index: 3;
   /* overflow-y: hidden; */
 
   .swiper {
