@@ -54,6 +54,7 @@ export default function MainSlide() {
   );
 }
 
+
 const slideCards = [
   {
     id: 1,
