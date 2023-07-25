@@ -14,11 +14,9 @@ function ChaeCompanyGoTema() {
           <div className="title00">
             <div className="main4SubTitle">
               <ChaeCompanyBtnPrev></ChaeCompanyBtnPrev>
-
               <div className="subTitletxt">
                 <h2 className="subTitletxt1">{articles[2].title}</h2>
               </div>
-
               <ChaeCompanyBtnNext></ChaeCompanyBtnNext>
             </div>
           </div>
