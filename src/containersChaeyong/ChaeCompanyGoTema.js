@@ -20,7 +20,6 @@ function ChaeCompanyGoTema() {
               <ChaeCompanyBtnNext></ChaeCompanyBtnNext>
             </div>
           </div>
-
           <div className="subcard00">
             <div className="subcard1">
               <div className="subCard1_img00">
@@ -30,7 +29,6 @@ function ChaeCompanyGoTema() {
                   alt=""
                 />
               </div>
-
               <div className="temaCard_bot">
                 <div className="tema_txt00">
                   <div className="tema_txt">{text1[4].title}</div>
