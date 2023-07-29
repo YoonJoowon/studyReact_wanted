@@ -45,7 +45,6 @@ function SangSide() {
                 </span>
               </button>
             </div>
-
             <div className="aside1_bookmark_btn">
               <button className="" type="button">
                 북마크하기
