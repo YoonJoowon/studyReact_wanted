@@ -14,15 +14,12 @@ function ChaeCompanyGoTema() {
           <div className="title00">
             <div className="main4SubTitle">
               <ChaeCompanyBtnPrev></ChaeCompanyBtnPrev>
-
               <div className="subTitletxt">
                 <h2 className="subTitletxt1">{articles[2].title}</h2>
               </div>
-
               <ChaeCompanyBtnNext></ChaeCompanyBtnNext>
             </div>
           </div>
-
           <div className="subcard00">
             <div className="subcard1">
               <div className="subCard1_img00">
@@ -32,7 +29,6 @@ function ChaeCompanyGoTema() {
                   alt=""
                 />
               </div>
-
               <div className="temaCard_bot">
                 <div className="tema_txt00">
                   <div className="tema_txt">{text1[4].title}</div>
